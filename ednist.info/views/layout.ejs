@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico">
+
+    <!--title-->
+    <title>
+        <%= (typeof metaData !== 'undefined' && metaData.title) ? 'ЄДНІСТЬ: ' + metaData.title : 'ЄДНІСТЬ' %>
+    </title>
+    <meta property="og:title"
+          content="<%= (typeof metaData !== 'undefined' && metaData.title) ? 'ЄДНІСТЬ: ' + metaData.title: 'ЄДНІСТЬ' %>"
+    />
+
+    <!--description-->
+    <meta name="description"
+          content="<%= (typeof metaData !== 'undefined' && metaData.content) ?
+                  metaData.content :
+                  'Висвітлення актуальних новин дня України та світу' %>"
+    />
+    <meta property="og:description"
+          content="<%= (typeof metaData !== 'undefined' && metaData.content) ?
+                  metaData.content :
+                  'Висвітлення актуальних новин дня України та світу' %>"
+    />
+
+    <!--tags-->
+    <meta name="keywords"
+          content="<%= (typeof metaData !== 'undefined' && metaData.keyWords) ?
+                  metaData.keyWords.join(', ') :
+                  'новини, новини дня, останні новини, новини сьогодні, стрічка новин, онлайн новини, новини політики, новини України та світу, єдність, едність, еднисть, едность, едност, новыны, українська, Є, новости, последние нововсти, сегодняшние новости' %>"
+    />
+
+    <!--fb settings-->
+    <meta property="fb:pages" content="1640600432838075">
+    <meta property="og:site_name" content="Єдність"/>
+    <meta property="og:type" content="article">
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="800"/>
+    <meta property="og:image:height" content="400"/>
+
+    <!--main image-->
+    <meta property="og:image"
+          content="<%= (typeof metaData !== 'undefined' && metaData.image) ?
+                  metaData.image :
+                  'https://www.ednist.info/media/settings/soclogo.jpg' %>"
+    />
+    <link rel="image_src"
+          href="<%= (typeof metaData !== 'undefined' && metaData.image) ?
+                  metaData.image :
+                  'https://www.ednist.info/media/settings/soclogo.jpg' %>"
+    >
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/icon/icon.css">
+    <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46835384-4', {'cookieDomain':'ednist.info'});
+      ga('require', 'displayfeatures');
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<div class="wrapper-blur">
+    
+    <!-- HEADER STARTS -->
+    <header>
+        <div class="wrapper-top">
+            <!-- <div class="img">
+              <a href="#" id="navMenu"><img id="myImage" src ="/images/kub.png" alt=""></a>
+            </div> -->
+            <div class="top-hashtag">
+                <ul class="top-hashtag_list-item">
+                    <li><a href="/tags/Україна">#Україна</a></li>
+                    <li><a href="/tags/Росія">#Росія</a></li>
+                    <li><a href="/tags/Київ">#Київ</a></li>
+                    <li><a href="/tags/АТО">#АТО</a></li>
+                    <li><a href="/tags/Бойовики">#Бойовики</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="/">
+                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><title>
+                            logo_e</title>
+                        <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="240" height="240"/>
+                        <g id="Слой_1-2" data-name="Слой 1">
+                            <path id="Path_1" data-name="Path 1" class="cls-2"
+                                  d="M120.77,198.86a78.3,78.3,0,0,1-79.26-77.33c0-.27,0-.54,0-.81a79.52,79.52,0,0,1,79.27-79.59,80.65,80.65,0,0,1,77.49,62.34H159.31a42,42,0,0,0-77.49,0h39.91v29H81.82A37.19,37.19,0,0,0,120.69,159c17.82,0,33-7.18,39.1-26.53H198.5A79.09,79.09,0,0,1,120.77,198.86Z"/>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="social-icon">
+                <ul class="icon">
+                    <li><a href="https://www.facebook.com/ednist.info/"><span class="icon-facebook"></span></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCcgAcE6mWhLMsOz6jtny0tw"><span class="icon-youtube"></span></a></li>
+                    <li><a href="https://twitter.com/Ednist_info"><span class="icon-twitter"></span></a></li>
+                    <li><a href="/rss"><span class="icon-rss"></span></a></li>
+                    <li><a href="/about"><span class="icon-info"></span></a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="#" method="get" id="search-form">
+                    <div class="form-group">
+                        <input id="searchField" type="search" name="search">
+                        <input id="searchBtn" type="image" src="/images/search.png" alt="search" value="click">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER ENDS -->
+    
+    <!-- NAVIGATION STARTS -->
+    <nav class="responsive" id="menus">
+        <ul class="topnav" id="myTopnav">
+            <li><a href="/news/main" class="item-list_style">важливо!</a></li>
+            <li><a href="/news/resonance" class="item-list_style">резонанс</a></li>
+            <li><a href="/news/popular">популярне</a></li>
+            <li><a href="/news/ukraine">україна</a></li>
+            <li><a href="/news/accidents">події</a></li>
+            <li><a href="/news/politics">політика</a></li>
+            <li><a href="/news/economics">економіка та бізнес</a></li>
+            <li><a href="/news/world">світ</a></li>
+            <li><a href="/news/society">суспільство</a></li>
+        </ul>
+    </nav>
+    <!-- NAVIGATION ENDS -->
+    
+    <%- body %>
+    
+    <!-- FOOTER STARTS -->
+    <footer>
+        <div class="wrapper-footer">
+            <ul class="menu">
+                <li><a href="/about">про нас</a></li>
+                <li><a href="/use-material">правила використання матеріалів</a></li>
+                <li><a href="/jobs">вакансії</a></li>
+                <li><a href="/contacts">контакти</a></li>
+                <li><a href="/about">написати нам</a></li>
+            </ul>
+    
+            <div class="foot-info">
+                <p>Копіювання, публікації та інше поширення інформації, розміщеної без письмового дозволу, забороняється.
+                    Допускається<br/> цитування матеріалів без отримання попередньої згоди за умови розміщення у тексті
+                    обов'язкового посилання на цей ресурс. Для інтернет-видань є обов'язковим розміщення прямого, відкритого
+                    для пошукових систем гіперпосилання на цитовану статтю не нижче другого абзацу у тексті. Редакція може
+                    не поділяти думку авторів і не несе відповідальність за достовірність інформації.</p>
+            </div>
+            <div class="social-icon_footer">
+                <ul class="icon-footer">
+                    <li><a href="https://www.facebook.com/ednist.info/"><span class="icon-facebook"></span></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCcgAcE6mWhLMsOz6jtny0tw"><span class="icon-youtube"></span></a></li>
+                    <li><a href="https://twitter.com/Ednist_info"><span class="icon-twitter"></span></a></li>
+                    <li><a href="/rss"><span class="icon-rss"></span></a></li>
+                    <li><a href="/about"><span class="icon-info"></span></a></li>
+                </ul>
+            </div>
+            <p><span class="copy">&copy; 2015 Усі права застережені.</span></p>
+        </div>
+    </footer>
+</div>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/swiper.min.js"></script>
+<script src="/js/swiperSettings.js"></script>
+<script src="/js/script.js"></script>
+<!-- FOOTER ENDS -->
+</body>
+</html>

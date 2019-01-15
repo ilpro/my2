@@ -1,0 +1,147 @@
+@import 'mixin';
+@import 'vars';
+
+
+/* POPULAR */
+
+.popular-page {
+  width: 1130px;
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 15px 0 15px 20px;
+  cursor: pointer;
+  p {
+    font-family: $ff;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $violet;
+  }
+}
+
+/* POPULAR CONTENT */
+
+.wrapper-popular {
+  width: 1130px;
+  margin: 20px auto;
+  padding-bottom: 35px;
+  .button-more {
+    button {
+      display: none;
+      width: 244px;
+      height: 51px;
+      font-size: 25px;
+      font-weight: bold;
+      margin: 50px auto 0 auto;
+      color: #5E5D5D;
+      background-color: transparent;
+      border: 4px solid #5E5D5D;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+/* NEWS FEED */
+
+.popular-item_section {
+  width: 1128px;
+  height: 200px;
+  display: $df;
+  background-color: $white;
+  margin-bottom: 15px;
+  padding: 0;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 10px $violet;
+  }
+  article {
+    width: 100%;
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.popular-item_images {
+  position: relative;
+  width: 397px;
+  height: 200px;
+  font-size: 0;
+  .popular-grad {
+    position: absolute;
+    z-index: 1;
+    width: 397px;
+    height: 200px;
+    opacity: 0.5;
+    background-color: #000;
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.75), rgba(36, 116, 252, 0.75));
+    transition: 0s;
+  }
+  img {
+    width: 400px;
+    min-height: 100%;
+    max-height: 100%;
+
+  }
+  .signature-images {
+    p {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      display: block;
+      height: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 10px;
+      padding: 5px 11px 7px 7px;
+      border: 1px solid #ffffff;
+      z-index: 1;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.popular-style {
+  width: 100%;
+  padding-right: 25px;
+  .hashtag {
+    margin: 10px 0 10px 0;
+    ul{
+      li{
+        a {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  a {
+    display: block;
+    font-family: $ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0;
+    padding-bottom: 40px;
+    line-height: 26px;
+    cursor: pointer;
+    color: $black;
+    &:hover {
+      color: $violet;
+    }
+    &:active {
+      color: #ababab !important;
+    }
+  }
+  .text-block {
+    p:nth-child(2) {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: normal;
+      padding-right: 5px;
+    }
+  }
+}

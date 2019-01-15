@@ -1,0 +1,36 @@
+#mkLightBulb {
+
+    position: fixed;
+
+    top: 10px;
+
+    right: 30px;
+
+    display: none;
+
+}
+
+#mkLightBulb #mkLightBulbSprite {
+
+    width: 17px;
+    height: 25px;
+
+    background: url("../img/lightbulb.png") top left no-repeat;
+
+}
+
+#mkLightBulb.red #mkLightBulbSprite {
+    background-position: 0 0;
+}
+
+#mkLightBulb.green #mkLightBulbSprite {
+    background-position: 0 -25px;
+}
+
+#mkLightBulb.yellow #mkLightBulbSprite {
+    background-position: 0 -50px;
+}
+
+#mkLightBulb.blue #mkLightBulbSprite {
+    background-position: 0 -75px;
+}

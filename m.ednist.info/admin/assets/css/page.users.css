@@ -1,0 +1,11 @@
+
+.filter-active {
+    width: 30px;
+    border: 1px solid black;
+    height: 100%;
+    float: left;
+}
+
+.filter-password {
+    width: 193px;
+}

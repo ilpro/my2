@@ -1,0 +1,437 @@
+<div class="wrapper">
+  <div class="all-news">
+    <section>
+      <div class="news">
+        <!-- Swiper -->
+  <div class="main-news-container">
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+                <% listMain.forEach(newsObj => { %>
+                  <div class="about-news swiper-slide">
+                    <a href="/news/<%= newsObj.newsId %>">
+                    <div class="about-images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/<%= newsObj.newsImage %>); background-size: cover; background-position: 50%">
+                      <div class="about-grad"></div>
+                    </div>
+                    </a>
+                    <span class="signature-images"><a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a></span>
+                      <div class="news-style" >
+                          <div class="hashtag-block">
+                            <div class="hashtag">
+                              <ul>
+                                <% newsObj.newsTags.forEach(tag => { %>
+                                <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                <% }) %>
+                              </ul>
+                            </div>
+                          </div>
+                          <a href="/news/<%= newsObj.newsId %>"><div class="text-block">
+                              <p><%= newsObj.newsHeader %></p>
+                              <p><%= newsObj.newsSubheader%></p>
+                                                      <p>
+                                <span class="date"><%=newsObj.time%></span>
+                                                      </p>
+                            </div></a>
+                    </div>
+                  </div>
+                <%})%>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
+  </div></div>
+    </section>
+
+
+    <!-- POPULAR -->
+    <div class="popular-section">
+      <aside class="news-popular-container">
+        <div class="popular"><a href="#">Популярне за добу</a></div>
+        <% listPopular.forEach(newsObj => { %>
+        <div class="popular-item section-item_style">
+          <a href="/news/<%= newsObj.newsId %>"></a>
+          <div class="popular-item_style popular-item_text">
+            <div class="hashtag">
+              <ul>
+                <% newsObj.newsTags.forEach(tag => { %>
+                  <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                <% }) %>
+              </ul>
+            </div>
+            <div class="popular-link_news">
+              <a href="/news/<%= newsObj.newsId %>"><%= newsObj.newsHeader %></a>
+            </div>
+            <div class="popular-text_section">
+                <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+                <span class="date">
+                    <%=newsObj.time%>
+                </span>
+            </div>
+          </div>
+        </div>
+        <%})%>
+        <div class="more">
+          <a href="/news/popular">Більше</a>
+          <span class="more-arrow">&rarr;</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- DOSSIER -->
+    <div class="dossier">
+      <div class="dossier-container">
+          <%listRandomDossiers.forEach(dossier => { %>
+          <figure>
+                <a href="/dossier/<%= dossier.dossierId %>">
+                  <div class="images-block">
+                    <div class="dossier-images" style="background-image: url(https://www.ednist.info/media/brand/<%= dossier.dossierId %>/main/400.jpg); background-size: cover; background-position: 50%">
+                      <div class="dossier-grad"></div>
+                    </div>
+                  </div>
+                </a>
+                
+              <div class="signature-block">
+                <span class="signature-images"><a href="/dossier/<%= dossier.category%>">Досьє</a></span>
+              </div>
+
+              <figcaption>
+                  <a href="/dossier/<%= dossier.dossierId %>">
+                    <div class="block-text">
+                      <div class="dossier-text">
+                        <p><%= dossier.dossierName %></p>
+                      </div>
+                    </div>
+                  </a>
+              </figcaption>
+          </figure>
+          <%})%>
+      </div>
+    </div>
+
+  <!-- NEWS FEED -->
+  <div class="news-feed">
+      <%
+        const firstFeedArr = listFeed.splice(0, 7);
+        const secondFeedArr = listFeed.splice(0, 10);
+        const thirdFeedArr = listFeed.splice(0, 10);
+      %>
+
+      <!-- feed container #1 -->
+      <div class="news-feed-container">
+
+        <div class="news-feed_sidebar">
+            <%firstFeedArr.splice(0, 4).forEach(newsObj => { %>
+              <div class="news-feed_item">
+                <a href="/news/<%= newsObj.newsId %>">
+                  <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg);">
+                    <div class="news-feed_grad"></div>
+                  </div>
+                </a>
+                <span class="signature-images">
+                    <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+                </span>
+                <article>
+                    <div class="news-feed_style">
+                        <div class="hashtag-block">
+                          <div class="hashtag">
+                              <ul>
+                                  <% newsObj.newsTags.forEach(tag => { %>
+                                    <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                        </div>
+                        <a href="/news/<%= newsObj.newsId %>">
+                          <div class="text-block">
+                            <p><%= newsObj.newsHeader %></p>
+                            <p>
+                              <span class="date">
+                                 <%=newsObj.time%>
+                              </span>
+                            </p>
+                          </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <%})%>
+        </div>
+
+        <div class="news-feed_sidebar2 con2">
+            <%firstFeedArr.forEach(newsObj => { %>
+              <div class="news-feed_item2 style-feed_item2">
+                  <a href="/news/<%= newsObj.newsId %>">
+                    <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg); background-size: cover; background-position: 50%;">
+                     <div class="news-feed_grad2"></div>
+                    </div>
+                  </a>
+              <span class="signature-images">
+                  <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+              </span>
+              <article>
+                  <div class="news-feed_item2-text news-feed_style">
+                      <div class="hashtag-block">
+                        <div class="hashtag">
+                            <ul>
+                                <% newsObj.newsTags.forEach(tag => { %>
+                                <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                      </div>
+                      <a href="/news/<%= newsObj.newsId %>">
+                        <div class="text-block">
+                          <p><%= newsObj.newsHeader %></p>
+                          <p>
+                              <span class="date"><%= newsObj.time %></span>
+                          </p>
+                        </div>
+                      </a>
+                  </div>
+              </article>
+          </div>
+            <%})%>
+        </div>
+      </div>
+
+
+      <!-- feed container #2 -->
+      <div class="news-feed-container">
+
+        <div class="news-feed_sidebar sid2">
+            <%secondFeedArr.splice(0, 5).forEach(newsObj => { %>
+            <div class="news-feed_item">
+                <a href="/news/<%= newsObj.newsId %>">
+                  <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg); background-size: cover; background-position: 50%;">
+                     <div class="news-feed_grad"></div>
+                  </div>
+                </a>
+                <span class="signature-images">
+                    <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+                </span>
+                <article>
+                    <div class="news-feed_style">
+                       <div class="hashtag-block">
+                          <div class="hashtag">
+                             <ul>
+                                 <% newsObj.newsTags.forEach(tag => { %>
+                                 <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                 <% }) %>
+                             </ul>
+                         </div>
+                       </div>
+                        <a href="/news/<%= newsObj.newsId %>">
+                          <div class="text-block">
+                            <p><%= newsObj.newsHeader %></p>
+                            <p>
+                              <span class="date">
+                                 <%=newsObj.time%>
+                              </span>
+                            </p>
+                          </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <%})%>
+        </div>
+
+        <div class="news-feed_sidebar2 sid3">
+            <%secondFeedArr.forEach(newsObj => { %>
+              <div class="news-feed_item">
+                <a href="/news/<%= newsObj.newsId %>">
+                  <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg); background-size: cover; background-position: 50%;">
+                    <div class="news-feed_grad3"></div>
+                  </div>
+                </a>
+                <span class="signature-images">
+                    <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+                </span>
+                <article>
+                    <div class="news-feed_style">
+                        <div class="hashtag-block">
+                          <div class="hashtag">
+                              <ul>
+                                  <% newsObj.newsTags.forEach(tag => { %>
+                                  <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                        </div>
+                        <a href="/news/<%= newsObj.newsId %>"><div class="text-block">
+                            <p><%= newsObj.newsHeader %></p>
+                            <p>
+                              <span class="date">
+                                 <%=newsObj.time%>
+                              </span>
+                            </p>
+                          </div></a>
+                    </div>
+                </article>
+            </div>
+            <%})%>
+        </div>
+      </div>
+
+      <!-- feed container #3 -->
+      <div class="news-feed-container">
+
+        <div class="news-feed_sidebar sid2">
+            <%thirdFeedArr.splice(0, 5).forEach(newsObj => { %>
+
+            <div class="news-feed_item">
+                <a href="/news/<%= newsObj.newsId %>">
+                  <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg); background-size: cover; background-position: 50%;">
+                    <div class="news-feed_grad"></div>
+                  </div>
+                </a>
+                <span class="signature-images">
+                    <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+                </span>
+                <article>
+                    <div class="news-feed_style">
+                        <div class="hashtag-block">
+                          <div class="hashtag">
+                              <ul>
+                                  <% newsObj.newsTags.forEach(tag => { %>
+                                  <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                        </div>
+                        <a href="/news/<%= newsObj.newsId %>"><div class="text-block">
+                            <p><%= newsObj.newsHeader %></p>
+                            <p>
+                              <span class="date">
+                                 <%=newsObj.time%>
+                              </span>
+                            </p>
+                          </div></a>
+                    </div>
+                </article>
+            </div>
+            <%})%>
+        </div>
+
+        <div class="news-feed_sidebar2 sid3">
+            <%thirdFeedArr.forEach(newsObj => { %>
+            <div class="news-feed_item">
+                <a href="/news/<%= newsObj.newsId %>">
+                  <div class="news-feed_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/400.jpg); background-size: cover; background-position: 50%;">
+                      <div class="news-feed_grad3"></div>
+                  </div>
+                </a>
+                <span class="signature-images">
+                    <a href="<%= newsObj.categoryUkr %>"><%= newsObj.categoryUkr %></a>
+                </span>
+                <article>
+                    <div class="news-feed_style">
+                        <div class="hashtag-block">
+                          <div class="hashtag">
+                              <ul>
+                                  <% newsObj.newsTags.forEach(tag => { %>
+                                  <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                  <% }) %>
+                              </ul>
+                          </div>
+                        </div>
+                        <a href="/news/<%= newsObj.newsId %>"><div class="text-block">
+                            <p><%= newsObj.newsHeader %></p>
+                            <p>
+                              <span class="date">
+                                 <%=newsObj.time%>
+                              </span>
+                            </p>
+                          </div></a>
+                    </div>
+                </article>
+            </div>
+            <%})%>
+        </div>
+      </div>
+  </div>
+
+  <a href="/news" class="test-button">
+    <button>Читати більше</button>
+  </a>
+</div>
+
+  <!-- EXCLUSIVE NEWS -->
+
+  <div class="popular-news-wrapper">
+      <div class="wrapper">
+        <div class="exclusive-container">
+      <div class="exclusive">
+          <%listPolitics.forEach(newsObj => { %>
+          <div class="exclusive-item">
+              <a href="/news/<%= newsObj.newsId %>">
+                <div class="exclusive-images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/<%= newsObj.newsImage %>); background-size: cover; background-position: 50%">
+                <div class="exclusive-grad"></div>
+                </div>
+              </a>
+              <span class="signature-images">
+                  <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+              </span>
+              <article>
+                  <div class="exclusive-item_text">
+                      <div class="hashtag-block">
+                        <div class="hashtag">
+                            <ul>
+                                <% newsObj.newsTags.forEach(tag => { %>
+                                <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                      </div>
+                      <a href="/news/<%= newsObj.newsId %>"><div class="text-block">
+                          <p><%= newsObj.newsHeader %></p>
+                          <p>
+                              <span class="date"><%=newsObj.time%></span>
+                          </p>
+                        </div></a>
+                  </div>
+              </article>
+          </div>
+          <%})%>
+      </div>
+    </div>
+          <a href="/news/politics"><button>Читати більше</button></a>
+      </div>
+  </div>
+
+  <!-- RESONANCE -->
+<div class="wrapper">
+<section class="resonance-list">
+    <%listResonance.forEach(newsObj => { %>
+    <div class="resonance-list_item">
+        <a href="/news/<%= newsObj.newsId %>">
+          <div class="resonance-images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/<%= newsObj.newsImage %>); background-size: cover; background-position: 50%;">
+            <div class="resonance-grad"></div>
+          </div>
+        </a>
+        <span class="signature-images">
+          <a href="/news/<%= newsObj.category %>"><%= newsObj.categoryUkr %></a>
+        </span>
+        <div class="resonance-list_item-style">
+            <div class="hashtag-block">
+              <div class="hashtag">
+                  <ul>
+                      <% newsObj.newsTags.forEach(tag => { %>
+                      <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+                      <% }) %>
+                  </ul>
+              </div>
+            </div>
+            <a href="/news/<%= newsObj.newsId %>">
+              <div class="text-block">
+                <p><%= newsObj.newsHeader %></p>
+                <p>
+                    <span class="date"><%=newsObj.time%></span>
+                </p>
+              </div>
+            </a>
+        </div>
+    </div>
+    <% })%>
+
+</section>
+</div>

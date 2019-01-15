@@ -1,0 +1,33 @@
+<%- include('header') %>
+<div class="profile-image">
+
+	<div class="single-photo">
+		<a href="/profile/<%=row.userId%>" class="main-info">
+			<div class="avatar-holder">
+				<div class="user-avatar" title="">
+					<img src="<%=row.userPhoto%>" alt="user" style="max-width: 100%;">
+				</div>
+			</div>
+			<div class="info-holder">
+				<div class="main-info-row">
+					<div class="name"><%=row.userName%></div>
+				</div>
+				<div class="publish-date"><%=row.imageTime%></div>
+			</div>
+		</a>
+		<img class="profile-img" src="<%=row.imagePath%>" alt="photo">
+		<div class="photo-info">
+			<div class="like">
+				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 16">
+					<path fill="#313133" d="M8.5 2.94C9.16 1.28 10.55 0 12.28 0c1.45 0 2.66.76 3.6 1.83 1.32 1.46 1.9
+						  4.67-.5 7.02-1.25 1.2-6.85 7.13-6.85 7.13s-5.6-5.94-6.84-7.13C-.75 6.53-.2 3.32 1.16 1.83 2.12.77
+						  3.32 0 4.75 0c1.74 0 3.1 1.28 3.75 2.94"></path>
+				</svg>
+				<div class="like-amount"><%=row.like%></div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<%- include('footer') %>

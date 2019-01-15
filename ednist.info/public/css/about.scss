@@ -1,0 +1,158 @@
+@import 'mixin';
+@import 'vars';
+
+/* ABOUT US */
+
+.about-us {
+  width: 1130px;
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 2px 0 2px 20px;
+  cursor: pointer;
+  p {
+    font-family: $ff;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $violet;
+  }
+}
+
+.wrapper-about_us {
+  display: $df;
+  width: 1130px;
+  height: 385px;
+  background-color: $white;
+  margin: 20px auto;
+}
+
+.logotype {
+  background-color: #f3f3f3;
+}
+
+.about-us_history {
+  text-align: center;
+  padding: 10px 35px 0 35px;
+  p {
+    font-family: $ff;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  button {
+    margin-top: 10px;
+    padding: 17px 0 15px 0;
+    width: 200px;
+    background-color: $white;
+    border: 2px solid $violet;
+    outline: none;
+    cursor: pointer;
+    font-family: $ff;
+    font-size: 18px;
+    color: $violet;
+    text-transform: uppercase;
+    transition: box-shadow 1s;
+    &:hover {
+      box-shadow: 0 0 15px $violet;
+    }
+    &:active {
+      background: $violet;
+      color: $white;
+    }
+  }
+}
+
+/* FORM */
+
+.wrapper-form {
+  width: 1130px;
+  margin: 0 auto;
+  display: $df;
+  justify-content: center;
+}
+
+.form {
+  display: none;
+  position: absolute;
+  top: 100px;
+  width: 680px;
+  height: 480px;
+  padding: 16px 13px 50px 19px;
+  background-color: $white;
+  box-shadow: 0 0 15px #959595;
+  h3 {
+    font-family: $ffrs;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  label {
+    font-family: $ffrm;
+    font-size: 18px;
+  }
+  input {
+    margin-top: 16px;
+    &[type="email"] {
+      width: 485px;
+      height: 30px;
+      margin-left: 108px;
+      border: 1px solid #959595;
+      outline: none;
+    }
+    &[type="text"] {
+      width: 485px;
+      height: 30px;
+      margin-left: 26px;
+      border: 1px solid #959595;
+      outline: none;
+    }
+  }
+  textarea {
+    width: 482px;
+    height: 170px;
+    margin-left: 191px;
+    resize: none;
+    border: 1px solid #959595;
+    outline: none;
+  }
+  input[type="number"] {
+    width: 242px;
+    height: 30px;
+    margin-left: 66px;
+    border: 1px solid #959595;
+    margin-top: 16px;
+    outline: none;
+  }
+  img {
+    margin: -8px 25px;
+  }
+}
+
+input {
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+  }
+}
+
+.form input[type="submit"] {
+  margin: 16px 0 0 240px;
+  padding: 17px 42px 13px;
+  cursor: pointer;
+  background-color: $violet;
+  border: none;
+  outline: none;
+  font-family: $ff;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $white;
+  transition: box-shadow 1s;
+  &:hover {
+    box-shadow: $bs;
+  }
+  &:active {
+    background-color: #a0a3a7;
+    color: $violet;
+  }
+}

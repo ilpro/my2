@@ -1,0 +1,398 @@
+<%- include('header') %>
+<%- include('sidemenu') %>
+<div class="page-profile-edit">
+    <div class="other-info">
+        <div class="other-info-title">Information</div>
+        <a href="/profile" class="save clickable">Back</a>
+        <!-- <a href="/profile" class="save clickable">Save</a> -->
+        <div class="divider"></div>
+
+        <div class="wtv-container country-old" style="padding: 10px 0;">
+            <svg style="left: 10px;" class="search__icosearch " xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24.88 24.88">
+                <path fill="gray" d="M24.66,23.61l-6-6a10.62,10.62,0,1,0-1,1l6,6a.75.75,0,0,0,.52.22.73.73,0,0,0,.52-.22.75.75,0,0,0,0-1Zm-23.18-13a9.12,9.12,0,1,1,9.12,9.12,9.13,9.13,0,0,1-9.12-9.12Zm0,0"></path>
+            </svg>
+            <div id="country-to-visit" style="display: none;"></div>
+            <input id="i-live-in" class="google-places-input" style=" width: 100%" type="text" placeholder="I live in...">
+            <svg style="right: 10px;" class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg>
+        </div>
+
+        <div id="i-live-in-container" style="padding: 10px 0;" class="tag-place-container">
+            <% if(user.userCity){%>
+            <div class="tag-place" style="text-transform: capitalize">
+                <%= user.userCity %>, <%= user.userCountry %>
+            </div>
+            <% }%>
+        </div>
+
+        <div class="info-items-container single-row">
+            <div class="info-item user-status clearfix">
+                <div class="info-name">Status</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="is not filled..." data-name="userStatus"><%= user.userStatus %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="info-item nickname clearfix">
+                <div class="info-name">Nickname</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="is not filled..." data-name="userNickname"><%= user.userNickname %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-item residence clearfix">
+                <div class="info-name">I live in</div>
+                <div class="info-parameter">
+                    <select name="userResidenceId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">&#45;&#45;Choose&#45;&#45;</option>
+                        <% city.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userResidenceId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>-->
+            <div class="info-item birthdate clearfix">
+                <div class="info-name">Birthdate</div>
+                <div class="info-parameter">
+                    <select name="birthDay" class="one-option-select chosen-select-birthday">
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% for(var i=1; i<=31; i++){ %>
+                        <option class="one-option-item" value="<%= i %>" <% if (user.userBdate[0]  == i) { %>selected="selected"<% } %>><%= i %></option>
+                        <% } %>
+                    </select>
+                    <select name="birthMonth" class="one-option-select chosen-select-birthmonth">
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <option class="one-option-item" value="1" <% if (user.userBdate[1] == 1) { %>selected="selected"<% } %>><%=lang.lMonthJanuary%></option>
+                        <option class="one-option-item" value="2" <% if (user.userBdate[1] == 2) { %>selected="selected"<% } %>><%=lang.lMonthFebruary%></option>
+                        <option class="one-option-item" value="3" <% if (user.userBdate[1] == 3) { %>selected="selected"<% } %>><%=lang.lMonthMarch%></option>
+                        <option class="one-option-item" value="4" <% if (user.userBdate[1] == 4) { %>selected="selected"<% } %>><%=lang.lMonthApril%></option>
+                        <option class="one-option-item" value="5" <% if (user.userBdate[1] == 5) { %>selected="selected"<% } %>><%=lang.lMonthMay%></option>
+                        <option class="one-option-item" value="6" <% if (user.userBdate[1] == 6) { %>selected="selected"<% } %>><%=lang.lMonthJune%></option>
+                        <option class="one-option-item" value="7" <% if (user.userBdate[1] == 7) { %>selected="selected"<% } %>><%=lang.lMonthJuly%></option>
+                        <option class="one-option-item" value="8" <% if (user.userBdate[1] == 8) { %>selected="selected"<% } %>><%=lang.lMonthAugust%></option>
+                        <option class="one-option-item" value="9" <% if (user.userBdate[1] == 9) { %>selected="selected"<% } %>><%=lang.lMonthSeptember%></option>
+                        <option class="one-option-item" value="10" <% if (user.userBdate[1] == 10) { %>selected="selected"<% } %>><%=lang.lMonthOctober%></option>
+                        <option class="one-option-item" value="11" <% if (user.userBdate[1] == 11) { %>selected="selected"<% } %>><%=lang.lMonthNovember%></option>
+                        <option class="one-option-item" value="12" <% if (user.userBdate[1] == 12) { %>selected="selected"<% } %>><%=lang.lMonthDecember%></option>
+                    </select>
+                    <select name="birthYear" class="one-option-select chosen-select-birthyear">
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% for(var i=1940; i<=2005; i++){ %>
+                        <option class="one-option-item" value="<%= i %>" <% if (user.userBdate[2] == i) { %>selected="selected"<% } %>><%= i %></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+			<!--<div class="info-item clearfix">
+                <div class="info-name">Телефон</div>
+                <div class="parameter-field">
+                    <div id="userPhone" class="parameter-text info-parameter changeable" contenteditable="true" placeholder="is not filled..." data-name="userPhone"><%= user.userPhone %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-item clearfix">
+                <div class="info-name">Viber</div>
+                <div class="info-parameter clickable">
+                    <div class="check-container">
+                        <input name="useViber" type="checkbox" id="useViber" <% if(user.useViber == 1){ %>checked="checked"<% } %>>
+                        <label for="useViber">
+                            <i class="ico check-img"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">Telegram</div>
+                <div class="info-parameter clickable">
+                    <div class="check-container">
+                        <input name="useTelegram" type="checkbox" id="useTelegram" <% if(user.useTelegram == 1){ %>checked="checked"<% } %>>
+                        <label for="useTelegram">
+                            <i class="ico check-img"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">useWhatsApp</div>
+                <div class="info-parameter clickable">
+                    <div class="check-container">
+                        <input name="useWhatsApp" type="checkbox" id="useWhatsApp" <% if(user.useWhatsApp == 1){ %>checked="checked"<% } %>>
+                        <label for="useWhatsApp">
+                            <i class="ico check-img"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">Сторінка Facebook</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="http://..." data-name="userUrlFacebook"><%= user.userUrlFacebook %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">Сторінка Instagram</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="http://..." data-name="userUrlInstagram"><%= user.userUrlInstagram %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">Сторінка Twitter</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="http://..." data-name="userUrlTwitter"><%= user.userUrlTwitter %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+			<div class="info-item clearfix">
+                <div class="info-name">Сторінка Goggle+</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="http://..." data-name="userUrlGogglePlus"><%= user.userUrlGogglePlus %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="info-item gender clearfix">
+                <div class="info-name">Gender</div>
+                <div class="info-parameter">
+                    <select name="userGenderId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% gender.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userGenderId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item eyes clearfix">
+                <div class="info-name">Eyes</div>
+                <div class="info-parameter">
+                    <select name="userEyesId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% eyes.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userEyesId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+
+            </div>
+            <div class="info-item hair clearfix">
+                <div class="info-name">Hair</div>
+                <div class="info-parameter">
+                    <select name="userHairId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% hair.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userHairId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item body-type clearfix">
+                <div class="info-name">Body type</div>
+                <div class="info-parameter">
+                    <select name="userBodyId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% body.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userBodyId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item weight clearfix">
+                <div class="info-name">Weight</div>
+                <div class="info-parameter changeable decimals kg" contenteditable="true" placeholder="0?.." data-name="userWeight"><%= user.userWeight %></div>
+                <div class="info-parameter units">kg</div>
+            </div>
+            <div class="info-item height clearfix">
+                <div class="info-name">Height</div>
+                <div class="info-parameter changeable decimals sm" contenteditable="true" placeholder="0?.." data-name="userHeight"><%= user.userHeight %></div>
+                <div class="info-parameter units">cm</div>
+            </div>
+            <div class="info-item religion clearfix">
+                <div class="info-name">Religion</div>
+                <div class="info-parameter">
+                    <select name="userReligionId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% religion.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userReligionId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item education clearfix">
+                <div class="info-name">Education</div>
+                <div class="info-parameter">
+                    <select name="userEducationId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% education.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userEducationId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item occupation clearfix">
+                <div class="info-name">Occupation</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter changeable" contenteditable="true" placeholder="is not filled..." data-name="userOccupation"><%= user.userOccupation %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-item marital-status clearfix">
+                <div class="info-name">Marital status</div>
+                <div class="info-parameter">
+                    <select name="userMaritalStatusId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% marital_status.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userMaritalStatusId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item children clearfix">
+                <div class="info-name">Children</div>
+                <div class="info-parameter">
+                    <select name="userChildren" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+                        <% for(var i=0; i<=10; i++){ %>
+                        <option class="one-option-item" value="<%= i %>" <% if (user.userChildren == i) { %>selected="selected"<% } %>><%= i %></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item smoke clearfix">
+                <div class="info-name">Smoke</div>
+                <div class="info-parameter">
+                    <select name="userSmokeId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+						<% smoke.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userSmokeId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                        <!-- <option class="one-option-item" value="Да" <% if (user.userSmoke == "Да") { %>selected="selected"<% } %>><%=lang.lInfoEditOptionYes%></option>
+                        <option class="one-option-item" value="Нет" <% if (user.userSmoke == "Нет") { %>selected="selected"<% } %>><%=lang.lInfoEditOptionNo%></option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="info-item drink clearfix">
+                <div class="info-name">Drink</div>
+                <div class="info-parameter">
+                    <select name="userDrinkId" class="one-option-select chosen-select-deselect" >
+                        <option class="one-option-item" value="">--Choose--</option>
+						<% drink.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userDrinkId == row.paramId) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                        <!-- <option class="one-option-item" value="Да" <% if (user.userDrink == "Да") { %>selected="selected"<% } %>><%=lang.lInfoEditOptionYes%></option>
+                        <option class="one-option-item" value="Нет" <% if (user.userDrink == "Нет") { %>selected="selected"<% } %>><%=lang.lInfoEditOptionNo%></option> -->
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-items-container single-row">
+            <div class="info-item hobbies clearfix">
+                <div class="info-name">Hobbies</div>
+                <div class="info-parameter">
+                    <select name="userHobbiesId" multiple class="one-option-select chosen-select-deselect" >
+                        <% hobbie.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userHobbiesId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item favorite-color clearfix">
+                <div class="info-name">Favorite color</div>
+                <div class="info-parameter">
+                    <select name="userFavoriteColorId" multiple class="one-option-select chosen-select-deselect" >
+                        <% color.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userFavoriteColorId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item sport clearfix">
+                <div class="info-name">Sport</div>
+                <div class="info-parameter">
+                    <select name="userSportId" multiple class="one-option-select chosen-select-deselect" >
+                        <% sport.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userSportId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item been-abroad clearfix">
+                <div class="info-name">Been aboard</div>
+                <div class="info-parameter">
+                    <select name="userBeenAbroadId" multiple class="one-option-select chosen-select-deselect" >
+                        <% country.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userBeenAbroadId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item interests clearfix">
+                <div class="info-name">Interests</div>
+                <div class="info-parameter">
+                    <select name="userInterestId" multiple class="one-option-select chosen-select-deselect" >
+                        <% interest.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userInterestId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="info-item character-traits clearfix">
+                <div class="info-name">Character traits</div>
+                <div class="info-parameter">
+                    <select name="userCharacterId" multiple class="one-option-select chosen-select-deselect" >
+                        <% character.forEach(function(row){ %>
+                        <option class="one-option-item" value="<%= row.paramId %>" <% if (user.userCharacterId.indexOf(row.paramId.toString()) !== -1) { %>selected="selected"<% } %>><%= row.paramName %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="info-items-container single-row">
+            <div class="about-text info-item flexcol clearfix">
+                <div class="about-text-title">About myself</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter about-text-content changeable" contenteditable="true" placeholder="is not filled..." data-name="userAboutMyself"><%= user.userAboutMyself %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text info-item flexcol clearfix">
+                <div class="about-text-title">About fellow traveler</div>
+                <div class="parameter-field">
+                    <div class="parameter-text info-parameter about-text-content changeable" contenteditable="true" placeholder="is not filled..." data-name="userAboutPartner"><%= user.userAboutPartner %></div>
+                    <div class="save-button-holder clearfix" style="display: none;">
+                        <div class="save-status-btn">Save</div>
+                        <div class="cancel-status-btn">Cancel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('footer-info') %>
+<%- include('footer') %>

@@ -1,0 +1,94 @@
+<!-- NEWS -->
+<div class="news news-page">
+    <a href="/news">новини</a>
+</div>
+
+<!-- CONTENT -->
+<div class="wrapper-news">
+    <div class="caption-news">
+        <h1><%= news.newsHeader %></h1>
+        <p><%= news.newsSubheader %></p>
+    </div>
+    <div class="wrapper-page_news">
+        <div class="content">
+                <div class="caption-news_images">
+                    <img src="https://www.ednist.info/media/images/<%= news.newsId %>/big/<%= news.newsImage %>"/>
+                    <span class="caption-news_images-link"><a href="#">Політика</a></span>
+                </div>
+                <div class="hashtag">
+                    <ul class="hashtag-news">
+                        <% news.newsTags.forEach(tag => { %>
+                        <li><a href="/tags/<%= tag %>">#<%= tag %></a></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            <!-- ABOUT NEWS -->
+            <div class="about-news_page">
+                <div class="page-news">
+                    <%- news.newsText %>
+                </div>
+                <div class="news-videos">
+                    <% if(news.newsVideo) { %>
+                    <iframe width="800" height="450" src="<%= news.newsVideo %>" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    <% } %>
+                </div>
+
+                <div class="foot-page_news">
+                    <div class="date-page">
+                        <p>
+              <span class="date">
+                <%= news.time %><!--  |
+                  <% news.newsTags.forEach(tag => { %>
+                  #<%= tag %>
+                  <% }) %> -->
+              </span>
+                        </p>
+                    </div>
+                    <!-- SHARE -->
+                    <div class="share">
+                        <p>Поділитися:</p>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ednist.info/news/<%= news.newsId %>">
+                            <span class="icon-facebook"></span>
+                        </a>
+                        <a href="https://plus.google.com/share?url=https://www.ednist.info/news/<%= news.newsId %>"><span class="icon-google-plus"></span></a>
+                        <a href="http://www.twitter.com/share?url=https://www.ednist.info/news/<%= news.newsId %>"><span class="icon-twitter"></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- READ-ALSO -->
+            <% if(news.relatedLink) { %>
+            <div class="read-also">
+                    <h2><a href="/news/<%= news.relatedLink %>" class="read-also_caption">Читайте також:</a></h2>
+                    <a href="/news/<%= news.relatedLink %>"><%= news.relatedText %></a>
+            </div>
+            <% } %>
+            
+        </div>
+    </div>
+</div>
+    <div class="wrapper-news_topic">
+        <div class="caption-topic">
+            <h3>До теми</h3>
+        </div>
+            <div class="topic-content">
+            <!--RELATED-->
+                <% if(news.relatedNews) {
+                news.relatedNews.forEach(relatedNewsObj => { %> 
+                <a href="/news/<%= relatedNewsObj.newsId %>" class="topic">
+                    <div class="topic-images" style="background-image: url(https://www.ednist.info/media/images/<%= relatedNewsObj.newsId %>/big/<%= relatedNewsObj.newsImage %>); background-size: cover; background-position: 50%;">
+                        <div class="topic-grad"></div>
+                    </div>
+                    <div class="topic-text">
+                        <p><%= relatedNewsObj.newsHeader %></p>
+                    </div>
+                </a>
+                <% })} %>
+            </div>
+        <div class="seo-block">
+            <p class="social-title">Цю публікацію можна знайти за такими запитами:</p>
+            <div class="center-block-inner"></div>
+        </div>
+    </div>
+ 

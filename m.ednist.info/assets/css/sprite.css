@@ -1,0 +1,311 @@
+.ico{
+    display: inline-block;
+    background: url("../img/sprite.png") top left no-repeat;
+}
+.ico-logo{
+    width: 72px;
+    height: 72px;
+    background-position: 0 0;
+}
+.ico-arrowRight{
+    width: 10px;
+    height: 15px;
+    background-position: -230px -34px;
+}
+.ico-fb{
+    width: 32px;
+    height: 32px;
+    background-position: -74px 0;
+}
+.ico-vk{
+    width: 32px;
+    height: 32px;
+    background-position: -107px 0;
+}
+.ico-ok{
+    width: 32px;
+    height: 32px;
+    background-position: -141px 0;
+}
+.ico-gp{
+    width: 32px;
+    height: 32px;
+    background-position: -175px 0;
+}
+.ico-tw{
+    width: 32px;
+    height: 32px;
+    background-position: -73px -34px;
+}
+.ico-rss{
+    width: 32px;
+    height: 32px;
+    background-position: -107px -34px;
+}
+.ico-yt{
+    width: 70px;
+    height: 32px;
+    background-position: -141px -34px;
+}
+.ico-about{
+    width: 37px;
+    height: 36px;
+    background-position: 0 -74px;
+}
+.ico-search{
+    width: 16px;
+    height: 16px;
+    background-position: -73px -67px;
+}
+.ico-menuPhoto{
+    width: 23px;
+    height: 17px;
+    background-position: -119px -67px;
+}
+.ico-menuVideo{
+    width: 23px;
+    height: 17px;
+    background-position: -143px -67px;
+}
+.ico-menuDropdown{
+    width: 18px;
+    height: 12px;
+    background-position: -213px -52px;
+}
+.ico-importantBig{
+    width: 33px;
+    height: 33px;
+    background-position: -213px 0;
+}
+.ico-popular{
+    width: 20px;
+    height: 20px;
+    background-position: -162px -88px;
+}
+.ico-important{
+    width: 16px;
+    height: 16px;
+    background-position: -213px -35px;
+}
+.ico-exclusive{
+    width: 15px;
+    height: 14px;
+    background-position: -166px -68px;
+}
+.ico-video{
+    width: 16px;
+    height: 12px;
+    background-position: -204px -68px;
+}
+.ico-photo{
+    width: 19px;
+    height: 15px;
+    background-position: -183px -68px;
+}
+.ico-lastPhoto{
+    width: 19px;
+    height: 15px;
+    background-position: -90px -93px;
+}
+.ico-lastVideo{
+    width: 20px;
+    height: 14px;
+    background-position: -221px -68px;
+}
+.ico-arrowPrev{
+    width: 14px;
+    height: 21px;
+    background-position: -90px -67px;
+}
+.ico-arrowNext{
+    width: 14px;
+    height: 21px;
+    background-position: -103px -67px;
+}
+.ico-infographics{
+    width: 15px;
+    height: 17px;
+    background-position: -73px -91px;
+}
+.ico-exclusiveBig{
+    width: 22px;
+    height: 21px;
+    background-position: -213px -87px;
+}
+.ico-dossier{
+    width: 21px;
+    height: 21px;
+    background-position: -111px -87px;
+}
+.ico-resonance{
+    width: 26px;
+    height: 21px;
+    background-position: -134px -87px;
+}
+.ico-blogs{
+    width: 27px;
+    height: 22px;
+    background-position: -184px -87px;
+}
+.ico-fbGray{
+    width: 12px;
+    height: 21px;
+    background-position: 0 -111px;
+}
+.ico-vkGray{
+    width: 16px;
+    height: 12px;
+    background-position: -14px -111px;
+}
+.ico-okGray{
+    width: 11px;
+    height: 20px;
+    background-position: -32px -112px;
+}
+.ico-gpGray{
+    width: 17px;
+    height: 18px;
+    background-position: -45px -113px;
+}
+.ico-twGray{
+    width: 15px;
+    height: 15px;
+    background-position: -65px -111px;
+}
+.ico-ytGray{
+    width: 28px;
+    height: 13px;
+    background-position: -83px -111px;
+}
+.ico-rssGray{
+    width: 16px;
+    height: 18px;
+    background-position: -113px -111px;
+}
+.ico-aboutBig{
+    width: 26px;
+    height: 25px;
+    background-position: 0 -134px;
+}
+.ico-rulesBig{
+    width: 30px;
+    height: 18px;
+    background-position: -27px -134px;
+}
+.ico-vacanciesBig{
+    width: 30px;
+    height: 18px;
+    background-position: -57px -134px;
+}
+.ico-contactsBig{
+    width: 22px;
+    height: 15px;
+    background-position: -91px -134px;
+}
+.ico-writeBig{
+    width: 29px;
+    height: 15px;
+    background-position: -114px -134px;
+}
+.ico-write{
+    width: 29px;
+    height: 15px;
+    background-position: -233px -48px;
+}
+.ico-close{
+    width: 16px;
+    height: 16px;
+    background-position: -263px -47px;
+}
+.ico-clip{
+    width: 38px;
+    height: 39px;
+    background-position: -248px 0;
+}
+.ico-newsline{
+    width: 21px;
+    height: 17px;
+    background-position: -50px -91px;
+}
+.textCloud{
+    width:38px;
+    height:25px;
+    background-position:-245px -68px;
+}
+.specPrjArrowLeft{
+    width:12px;
+    height:19px;
+    background-position:-243px -96px;
+}
+.specPrjArrowRight{
+    width:12px;
+    height:19px;
+    background-position:-271px -96px;
+}
+
+/** start NEW YEAR icons **/
+.ico-NY-branch {
+  position: absolute;
+  display: inline-block;
+  width: 168px;
+  height: 52px;
+  top: calc(50% - 24px);
+  left: calc(50% - 84px);
+  background: url("images/sprite.png") -1px -256px no-repeat;
+  z-index: 1;
+}
+
+.ico-NY-arrive{
+  display: inline-block;
+  width: 92px;
+  height: 44px;
+  margin-top: 57px;
+  background: url("images/sprite.png") -1px -209px no-repeat;
+}
+
+.ico-NY-entertainment {
+  display: inline-block;
+  width: 135px;
+  height: 62px;
+  margin-top: 39px;
+  background: url("images/sprite.png") -1px -309px no-repeat;
+}
+
+.ico-NY-star {
+  display: inline-block;
+  width: 96px;
+  height: 50px;
+  margin-top: 51px;
+  background: url("images/sprite.png") -170px -232px no-repeat;
+}
+
+.ico-NY-monkey {
+  display: inline-block;
+  width: 114px;
+  height: 59px;
+  margin-top: 42px;
+  background: url("images/sprite.png") 0 -372px no-repeat;
+}
+
+.ico-NY-gifts {
+  display: inline-block;
+  width: 77px;
+  height: 59px;
+  margin-top: 42px;
+  background: url("images/sprite.png") -138px -310px no-repeat;
+}
+
+.ico-NY-snow {
+  display: inline-block;
+  width: 102px;
+  height: 71px;
+  margin-top: 30px;
+  background: url("images/sprite.png") -154px -160px no-repeat;
+}
+/** ends NEW YEAR icons **/
+
+.ico-quote {
+    width: 31px;
+    height: 28px;
+    background-position: -118px -375px;
+}

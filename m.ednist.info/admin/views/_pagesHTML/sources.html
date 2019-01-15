@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.dropdown.css">
+
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <link href="flat/green.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.js"></script>
+
+    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var add = false;
+
+            $('.add-line').hide();
+
+            $('.add').click(function () {
+
+                if (add == false) {
+
+                    $('.add-line').show();
+
+                    add = true;
+
+                } else {
+
+                    $('.add-line').hide();
+
+                    add = false;
+
+                }
+
+
+            });
+
+
+        });
+
+        function toggle(el) {
+
+            myEl = document.getElementById(el);
+
+            myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
+
+
+        }
+
+        $(function () {
+
+
+            var newSelection = "";
+
+
+            $("#flavor-nav p").click(function () {
+
+
+                $("#all-flavors").fadeTo(200, 1.0);
+
+
+                $("#flavor-nav p").removeClass("current");
+
+                $(this).addClass("current");
+
+
+                newSelection = $(this).attr("rel");
+
+
+                $(".flavor").not("." + newSelection).slideUp();
+
+                $("." + newSelection).slideDown();
+
+
+                $("#all-flavors").fadeTo(600, 1);
+
+
+            });
+
+
+        });
+
+        $(function () {
+
+            var availableTags = [
+
+                "ActionScript",
+
+                "AppleScript",
+
+                "Asp",
+
+                "BASIC",
+
+                "C"
+
+
+            ];
+
+            $("#tags").autocomplete({
+
+                source: availableTags
+
+            });
+
+        });
+
+    </script>
+
+
+</head>
+
+<body class="light">
+
+
+<div class="wrapper box sources" id="auth">
+
+<div class="head">
+
+    <div class="clear"></div>
+
+    <h1 class="sortnews"><span>SORT</span>NEWS</h1>
+
+
+    <div class="nav" data-dropdown="#dropdown-1">
+
+        <i class="nav-icon"></i>
+
+        <p>Источник</p>
+
+
+    </div>
+
+    <div class="search">
+
+        <form>
+
+            <i class="search-icon"></i>
+
+            <input type="text" name="country" id="tags" placeholder="Поиск">
+
+
+        </form>
+
+        <div id="dropdown-1" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+
+            <ul class="dropdown-menu">
+
+                <li><a href="#1">Item 1</a></li>
+
+                <li><a href="#2">Item 2</a></li>
+
+                <li><a href="#3">Item 3</a></li>
+
+
+                <li><a href="#4">Item 4</a></li>
+
+                <li><a href="#5">Item 5</a></li>
+
+                <li><a href="#5">Item 6</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="filter">
+
+        <div class="people" data-dropdown="#dropdown-2">
+
+            <p>Люди/учереждения <i class="caret"></i></p>
+
+
+        </div>
+
+
+        <div class="add">
+
+            <i></i>
+
+        </div>
+
+        <div class="exit">
+
+            <i></i>
+
+        </div>
+
+    </div>
+
+    <div id="dropdown-2" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+
+        <ul class="dropdown-menu">
+
+            <li><a href="#1">Item 1</a></li>
+
+            <li><a href="#2">Item 2</a></li>
+
+            <li><a href="#3">Item 3</a></li>
+
+
+            <li><a href="#4">Item 4</a></li>
+
+            <li><a href="#5">Item 5</a></li>
+
+            <li><a href="#5">Item 6</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="clear"></div>
+
+
+    <!--
+
+    <div id="flavor-nav">
+
+        <a rel="all" class="current">All</a>
+
+        <a rel="cla">Classic</a>
+
+        <a rel="adv">Adventurous</a>
+
+        <a rel="tea">Tea-Inspired</a>
+
+    </div>-->
+
+
+</div>
+
+
+<div class="clear"></div>
+
+
+<div class="content" id="all-flavors">
+
+    <form>
+
+        <div class="row flavor all adv add-line ">
+
+
+            <div class="link-src"><input type="text" value="" placeholder="Ссылка на источник"></div>
+
+            <div class="pull-right">
+
+
+                <div class="delete-src"><a href="#"><i></i></a></div>
+
+                <div class="check-top"><a href="#"><i></i></a></div>
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="row flavor all adv">
+
+            <div class="check">
+
+                <input type="checkbox" id="c1" name="myPublication"/>
+
+                <label for="c1"><span></span></label>
+
+            </div>
+
+
+            <div class="link-src"><input type="text" value="http://tsn.ua" disabled placeholder="Ссылка на источник">
+            </div>
+
+            <div class="pull-right">
+
+                <div class="check on-off">
+
+                    <input type="checkbox" id="s1" name="sw1"/>
+
+                    <label for="s1"><span></span></label>
+
+                </div>
+
+
+                <div class="edit"><a href="#"><i></i></a></div>
+
+                <div class="delete"><a href="#"><i></i></a></div>
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+        <!--Содержимое неактивный инпут-->
+
+        <div class="row flavor all adv">
+
+            <div class="check">
+
+                <input type="checkbox" id="c2" name="myPublication"/>
+
+                <label for="c2"><span></span></label>
+
+            </div>
+
+
+            <div class="link-src"><input type="text" value="http://tsn.ua" disabled placeholder="Ссылка на источник">
+            </div>
+
+            <div class="pull-right">
+
+                <div class="check on-off">
+
+                    <input type="checkbox" id="s2" name="sw1"/>
+
+                    <label for="s2"><span></span></label>
+
+                </div>
+
+
+                <div class="edit"><a href="#"><i></i></a></div>
+
+                <div class="delete"><a href="#"><i></i></a></div>
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <!--Пример содержимое ссылка-->
+
+        <div class="row flavor all adv">
+
+            <div class="check">
+
+                <input type="checkbox" id="c3" name="myPublication"/>
+
+                <label for="c3"><span></span></label>
+
+            </div>
+
+
+            <div class="link-src"><p><a href="#">http://tsn.ua</a></p></div>
+
+            <div class="pull-right">
+
+                <div class="check on-off">
+
+                    <input type="checkbox" id="s3" name="sw1"/>
+
+                    <label for="s3"><span></span></label>
+
+                </div>
+
+
+                <div class="edit"><a href="#"><i></i></a></div>
+
+                <div class="delete"><a href="#"><i></i></a></div>
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="row flavor all adv ">
+
+            <div class="check">
+
+                <input type="checkbox" id="c4" name="myPublication"/>
+
+                <label for="c4"><span></span></label>
+
+            </div>
+
+
+            <div class="link-src"><input type="text" value="http://tsn.ua" placeholder="Ссылка на источник"></div>
+
+            <div class="pull-right">
+
+
+                <div class="delete-src"><a href="#"><i></i></a></div>
+
+                <div class="check-top"><a href="#"><i></i></a></div>
+
+
+            </div>
+
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <form>
+
+
+</div>
+
+
+<script src="js/jquery.checkable.js"></script>
+
+<script>
+
+    $(".switch").checkable()
+
+    $("[data-name=human]").checkable("check", false)
+
+    $("[data-name=alien]").checkable("check", true)
+
+</script>
+
+</div>
+
+<div class="helper"></div>
+
+
+<script type="text/javascript" src="js/jquery.mockjax.js"></script>
+
+<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+
+<script type="text/javascript" src="js/countries.js"></script>
+
+<script type="text/javascript" src="js/demo.js"></script>
+
+</body>
+
+
+</html>

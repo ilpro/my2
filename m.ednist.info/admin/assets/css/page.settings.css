@@ -1,0 +1,319 @@
+.content {
+    background-color: #fff;
+}
+#logout{
+    float: right;
+}
+input,textarea{
+   background-color: #f5f9fb;
+}
+input[type="text"],
+textarea {
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.dropdown{
+    z-index: 1;
+}
+.newsStripe {
+    font-size: 14px;
+}
+
+.newsarea {
+    background-color: #f5f9fb;
+    font-size: 16px;
+    border: 1px solid #f5f9fb;
+    margin-bottom: 3px;
+}
+
+select.newsarea option {
+    padding: 10px;
+}
+
+.checkboxes.selects select {
+    width: 500px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.newsarea:focus {
+    background-color: #FCFFFF;
+    box-shadow: 0px 0px 5px 0px #6E5AFF;
+}
+
+.newsarea:first-child {
+    font-size: 20px;
+}
+.clear,.clear2{
+    clear:both;
+}
+.clear:after,.clear2:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#settingsParserInterval,#settingsParserDelete,#settingsSiteName,#settingsSiteTitle,#settingsTimeZona,#settingsEmail,#settingsPageFb,#settingsPageTw,#settingsPageVk,
+#settingsPageGl,#settingsPageIn,#settingsPageOk,#settingsPageYou,#settingsPageRss{
+    width: 30%;
+    margin-bottom: 3px;
+   // background-color: #e4ebee;
+}
+#settingsDescription,#settingsCounter{
+    height: 100px;
+}
+.btn.low {
+    padding: 15px;
+    text-align: center;
+}
+
+#publicNow {
+    width: auto;
+}
+.btn {
+    border: 0;
+    cursor: pointer;
+    background-color: #3f5163;
+    text-align: right;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    width: 180px;
+    box-sizing: border-box;
+    padding: 25px 15px;
+    margin: 0 2px 3px;
+}
+
+
+#gallery .item {
+    border-bottom: 0px solid #f1c210;
+    margin: 17px 7px 0px 10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 178px;
+    height: 178px;
+    float: left;
+    position: relative;
+    box-shadow: 0px 0px 3px 1px #333;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+#gallery2 .item {
+    border-bottom: 0px solid #f1c210;
+    margin: 0px 7px 0px 10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 178px;
+    height: 178px;
+    position: relative;
+    box-shadow: 0px 0px 3px 1px #333;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+#gallery .item.focus,#gallery2 .item.focus {
+    box-shadow: 0px 0px 9px 4px #6E5AFF;
+}
+
+#gallery .item > a,
+#gallery .item .sill {
+    position: absolute;
+    display: inline-block;
+}
+#gallery2 .item > a,
+#gallery2 .item .sill {
+    position: absolute;
+    display: inline-block;
+}
+#gallery .item .sill,#gallery2 .item .sill {
+    opacity: 0;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    background-color: rgba(255, 255, 255, .7);
+    color: #333;
+    bottom: 0;
+    left: -3px;
+    right: -3px;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+#gallery .item a,#gallery2 .item a {
+    text-decoration: none;
+}
+
+#gallery .item .del i,
+#attach .card .del i {
+    background: url(../img/sprite.png) no-repeat -575px 0px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+#gallery2 .item .del i,
+#attach .card .del i {
+    background: url(../img/sprite.png) no-repeat -575px 0px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#gallery .item .show i,#gallery2 .item .show i {
+    background: url(../img/sprite.png) no-repeat -576px -33px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#gallery .item .link i,#gallery2 .item .link i {
+    background: url(../img/sprite.png) no-repeat 3px -104px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#gallery .item .cut i,#gallery2 .item .cut i {
+    background: url(../img/sprite.png) no-repeat -485px -95px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#gallery .item .cut,#gallery2 .item .cut {
+    left: 36px;
+}
+
+#gallery .item .del,
+#attach .card .del,
+#gallery .item .show,
+#gallery .item .link,
+#gallery .item .cut {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+#gallery2 .item .del,
+#attach .card .del,
+#gallery2 .item .show,
+#gallery2 .item .link,
+#gallery2 .item .cut {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+#gallery .item .show,#gallery2 .item .show {
+    right: auto;
+    left: 0;
+}
+
+#gallery .item .link,#gallery2 .item .link {
+    right: auto;
+    left: 72px;
+}
+
+#gallery .item .sill:hover,
+#gallery .item .link:hover,
+#gallery .item .del:hover,
+#attach .card .del:hover,
+#gallery .item .show:hover,
+#gallery .item .cut:hover {
+    background: #fff;
+}
+#gallery2 .item .sill:hover,
+#gallery2 .item .link:hover,
+#gallery2 .item .del:hover,
+#attach .card .del:hover,
+#gallery2 .item .show:hover,
+#gallery2 .item .cut:hover {
+    background: #fff;
+}
+
+#gallery .item:hover .sill,#gallery2 .item:hover .sill,
+#gallery .item.focus .sill,#gallery2 .item.focus .sill,
+#gallery .item:hover .link,#gallery2 .item:hover .link,
+#gallery .item.focus .link,#gallery2 .item.focus .link,
+#gallery .item:hover .del,#gallery2 .item:hover .del,
+#gallery .item.focus .del,#gallery2 .item.focus .del,
+#gallery .item:hover .cut,#gallery2 .item:hover .cut,
+#gallery .item.focus .cut,#gallery2 .item.focus .cut,
+#attach .card:hover .del,
+#attach .card.focus .del,
+#gallery .item:hover .show,#gallery2 .item:hover .show,
+#gallery .item.focus .show,#gallery2 .item.focus .show  {
+    display: inline-block;
+    opacity: 1;
+}
+
+#gallery .item .sill.main,#gallery2 .item .sill.main {
+    opacity: 1;
+    background-color: rgb(107, 107, 189);
+    color: #fff;
+    cursor: default;
+}
+#setting-name{
+    padding-top: 20px;
+    margin: 0px 0px 20px 0px;
+}
+#parser-name,#settingsParserInterval-name,#settingsParserDelete-name,#site-name,#site-title,#settingsDescription-name,#settingsTimeZona-name,#settingsEmail-name,#settingsPageFb-name,#settingsPageVk-name,#settingsPageTw-name,#settingsCounter-name,
+#settingsPageGl-name,#settingsPageIn-name,#settingsPageOk-name,#settingsPageYou-name,#settingsPageRss-name,#settingsPasteByCursor-name{
+    margin: 0px 0px 10px 20px;
+}
+#settingsTechWork-name{
+   margin: 0px 0px 10px 0px; 
+}
+
+#newsGallery,#newsGallery2 {
+    padding: 10px 0;
+    position: relative;
+    margin: 0px 0px 0px 20px;
+}
+
+#newsGallery .left,#newsGallery2 .left2 {
+    width: 187px;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+#newsGallery .left .btn,#newsGallery2 .left2 .btn {
+    line-height: 38px;
+    margin-top: 0px;
+}
+#save-settings{
+margin: 0px 0px 10px 20px;  
+}

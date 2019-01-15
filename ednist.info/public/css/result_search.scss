@@ -1,0 +1,43 @@
+@import 'mixin';
+@import 'vars';
+
+/* RESULT SEARCH */
+
+.result-search {
+  width: 1130px;
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 2px 0 2px 20px;
+  cursor: pointer;
+  p {
+    font-family: $ff;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $violet;
+  }
+}
+
+/* NOTHING FOUND*/
+
+.wrapper-nothing_found {
+  width: 1130px;
+  height: 335px;
+  margin: 20px auto;
+  padding-bottom: 35px;
+  background-color: $white;
+}
+
+.nothing-found {
+  padding: 2px 0 0 20px;
+  p {
+    font-family: $ffrm;
+    font-size: 18px;
+  }
+}
+
+.icon-nothing_found {
+  width: 104px;
+  margin: 100px auto;
+  font-size: 91px;
+}

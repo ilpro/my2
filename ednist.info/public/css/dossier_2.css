@@ -1,0 +1,89 @@
+/* DOSSIER */
+.wrapper-dossier_page-human {
+  width: 1130px;
+  margin: 0 auto; }
+
+.dossier-page, .alphabet {
+  margin: 16px auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 2px 0 2px 20px;
+  cursor: pointer; }
+
+.dossier-page h4 {
+  font-family: RobotoSlab-Regular, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #372a6e; }
+
+.alphabet_menu {
+  display: flex;
+  justify-content: space-around; }
+  .alphabet_menu a {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase; }
+    .alphabet_menu a:hover {
+      color: #372a6e;
+      text-decoration: underline; }
+
+/* ABOUT HUMAN */
+.about-human {
+  width: 1130px;
+  padding: 30px 0 32px 0;
+  background-color: #ffffff;
+  box-sizing: border-box; }
+  .about-human p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7; }
+  .about-human h2 {
+    font-family: RobotoSlab-Regular, sans-serif;
+    font-size: 24px; }
+
+.about-human_page {
+  display: flex; }
+  .about-human_page .photo-dossier {
+    width: 500px;
+    height: 250px;
+    margin: 16px auto;
+    box-sizing: border-box;
+    padding: 2px 0 2px 0;
+    cursor: pointer; }
+    .about-human_page .photo-dossier img {
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 100%;
+      min-height: 100%; }
+
+.short-about {
+  width: 545px;
+  margin-left: 20px; }
+  .short-about h1 {
+    font-family: RobotoSlab-Regular, sans-serif;
+    font-size: 48px; }
+
+/* HUMAN PAGE */
+.human-page {
+  margin: 35px 25px 0 25px; }
+
+.foot-human_page {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0; }
+  .foot-human_page p {
+    font-size: 14px; }
+
+.share-dossier {
+  display: flex;
+  align-items: center; }
+  .share-dossier p {
+    margin-right: 25px; }
+  .share-dossier a {
+    font-size: 28px;
+    margin-right: 10px;
+    transition: color 1s; }
+    .share-dossier a:hover {
+      color: #ababab; }
+
+/*# sourceMappingURL=dossier_2.css.map */

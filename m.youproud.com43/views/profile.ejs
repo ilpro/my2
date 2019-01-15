@@ -1,0 +1,278 @@
+<%- include('header')%>
+<%- include('sidemenu')%>
+<div class="page-profile">
+
+    <p class="title-for-tags">
+        Popular places
+    </p>
+    <div class="tag-place-container popular-places">
+        <% if(popularPlaces.length > 0){%>
+        <% popularPlaces.forEach((row, i) => {%>
+        <div class="tag-place" style="text-transform: capitalize">
+            <%=row.place%>
+        </div>
+        <% })%>
+        <% }%>
+    </div>
+
+    <div class="wtv-container country-old" style="margin-top: 15px; padding: 0 10px;">
+        <svg class="search__icosearch " xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24.88 24.88">
+            <path fill="gray" d="M24.66,23.61l-6-6a10.62,10.62,0,1,0-1,1l6,6a.75.75,0,0,0,.52.22.73.73,0,0,0,.52-.22.75.75,0,0,0,0-1Zm-23.18-13a9.12,9.12,0,1,1,9.12,9.12,9.13,9.13,0,0,1-9.12-9.12Zm0,0"></path>
+        </svg>
+        <div id="country-to-visit" style="display: none;"></div>
+        <input class="google-places-input place-visit" style=" width: 100%" type="text" placeholder="I want to visit...">
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg>
+    </div>
+
+    <div class="tag-place-container want-to-visit-container">
+        <% if(user.userWantToVisit){%>
+		  <% user.userWantToVisit.split(", ").forEach(function(row, i){%>
+		    <% var item = row.split(":");%>
+		    <div class="tag-place"  data-id="<%=item[0]%>" style="text-transform: capitalize">
+                <span  class="place-name"><%=item[1]%></span>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg>
+            </div>
+		  <% })%>
+		<% }%>
+    </div>
+
+    <div class="ribbons-menu">
+        <!--<div class="ribbons-menu-item" data-heading="subFeed"><%=lang.lProfileDropdownFeed%></div>-->
+        <div class="ribbons-menu-item active" data-heading="subPhotos">Photos</div>
+        <div class="ribbons-menu-item" data-heading="subInfo">Information</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="ribbons-body">
+		<div class="sub-page subPhotos active">
+            <div class="profile-photo-btn-wrap">
+                <div class="add-common-photo-button">Add photo</div>
+            </div>
+			<div class="photos-wrapper" >
+                <% imagesGeneral.reverse().forEach(function(row, i){%>
+                <div class="single-photo" data-imageid="<%=row.id%>">
+                    <div class="main-info">
+                        <div class="avatar-holder">
+                            <div class="user-avatar" title="">
+                                <img src="<%=user.userPhoto%>" alt="user" style="max-width: 100%;">
+                            </div>
+                        </div>
+                        <div class="info-holder">
+                            <div class="main-info-row">
+                                <div class="name">@<%=user.userNickname%></div>
+                            </div>
+                            <div class="settings-dots">
+                                <div class="settings-dot"></div>
+                                <div class="settings-dot"></div>
+                                <div class="settings-dot"></div>
+                            </div>
+                            <div class="publish-date">
+                                <% if(row.imageTime == 'offline'){%>
+                                long time ago
+                                <%} else if(row.imageTime == 'online'){%>
+                                just now
+                                <%} else {%>
+                                <%=row.imageTime%>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/image/<%=row.id%>">
+                        <img class="profile-img inloading" data-src="<%=row.path%>" src="/img/loader-bw.gif" alt="photo">
+                    </a>
+                    <div class="photo-info">
+                        <div class="like <%=(row.mylike) ? "active" : ""%>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 16">
+                                <path fill="#313133" d="M8.5 2.94C9.16 1.28 10.55 0 12.28 0c1.45 0 2.66.76 3.6 1.83 1.32 1.46 1.9
+						4.67-.5 7.02-1.25 1.2-6.85 7.13-6.85 7.13s-5.6-5.94-6.84-7.13C-.75 6.53-.2 3.32 1.16 1.83 2.12.77
+						3.32 0 4.75 0c1.74 0 3.1 1.28 3.75 2.94"></path>
+                            </svg>
+                            <div class="like-amount">
+                                <%=row.like%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% });%>
+            </div>
+        </div>
+
+        <div class="sub-page subInfo">
+            <!--<div class="soc-buttons">
+                <a href="mailto:1@youproud.com" target="_blank" class="soc-btn" data-link="socialEmail" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.316" height="17" viewBox="0 0 22.316 17"><polygon points="21.138 2.695 19.713 17 2.603 17 1.455 2.972 11.158 8.404 21.138 2.695 21.138 2.695" fill="#f7f8f8"></polygon><polygon points="20.655 0 11.158 8.921 1.661 0 11.158 0 20.655 0 20.655 0" fill="#f7f8f8"></polygon><path d="M2.6,4.119V17H1.052A1.052,1.052,0,0,1,0,15.948V2.222l1.7.046.9,1.851Z" fill="#e7362c"></path><path d="M22.316,2.222V15.948A1.052,1.052,0,0,1,21.263,17h-1.55V4.119l.858-2.028,1.744.131Z" fill="#d1241c"></path><path d="M22.316,1.052v1.17l-2.6,1.9-8.555,6.236L2.6,4.119,0,2.222V1.052A1.052,1.052,0,0,1,1.052,0h.609l9.5,6.922L20.655,0h.609a1.052,1.052,0,0,1,1.053,1.052Z" fill="#e7362c"></path><polygon points="2.603 4.119 0 3.716 0 2.222 2.603 4.119 2.603 4.119" fill="#d1241c"></polygon></svg>
+                </a>
+                <a href="//facebook.com" target="_blank" class="soc-btn soc-link" data-link="fbLink" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17.3,0H2.7A2.7,2.7,0,0,0,0,2.7V17.3A2.7,2.7,0,0,0,2.7,20H9.9l.012-7.147H8.056a.438.438,0,0,1-.438-.436l-.009-2.3a.438.438,0,0,1,.438-.44H9.9V7.447a3.637,3.637,0,0,1,3.882-3.99h1.891a.438.438,0,0,1,.438.438V5.838a.438.438,0,0,1-.438.438h-1.16c-1.253,0-1.5.6-1.5,1.469V9.673h2.754a.438.438,0,0,1,.435.49l-.273,2.3a.438.438,0,0,1-.435.387H13.03L13.018,20H17.3A2.7,2.7,0,0,0,20,17.305V2.7A2.7,2.7,0,0,0,17.3,0Z" fill="#49528f"></path></svg>
+                </a>
+                <a href="//instagram.com" target="_blank" class="soc-btn soc-link" data-link="instaLink" style="display: none;">
+                    <img src="/img/instagram.png" width="20.07" height="20.052">
+                </a>
+                <a href="//twitter.com" target="_blank" class="soc-btn soc-link" data-link="twitLink" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 112.197 112.197">
+                        <circle cx="56.099" cy="56.098" r="56.098" fill="#55ACEE"></circle>
+                        <path d="M90.46 40.316c-2.403 1.066-4.99 1.787-7.7 2.11 2.768-1.66 4.893-4.285 5.896-7.418-2.59 1.537-5.462 2.652-8.515 3.253-2.445-2.604-5.93-4.232-9.79-4.232-7.403 0-13.408 6.005-13.408 13.41 0 1.05.12 2.073.35 3.055-11.145-.56-21.026-5.897-27.64-14.012-1.154 1.98-1.816 4.286-1.816 6.743 0 4.65 2.37 8.757 5.965 11.16-2.196-.068-4.265-.67-6.072-1.678v.17c0 6.497 4.623 11.916 10.756 13.147-1.124.308-2.31.47-3.532.47-.866 0-1.705-.082-2.523-.238 1.705 5.326 6.656 9.203 12.525 9.312-4.59 3.597-10.37 5.74-16.655 5.74-1.08 0-2.15-.063-3.197-.188 5.93 3.806 12.98 6.025 20.553 6.025 24.664 0 38.152-20.432 38.152-38.153 0-.58-.013-1.16-.04-1.734 2.623-1.89 4.896-4.25 6.693-6.94z" fill="#F1F2F2"></path>
+                    </svg>
+                </a>
+                <a href="//plus.google.com" target="_blank" class="soc-btn soc-link" data-link="gpLink" style="display: none;">
+                    <svg class="gplus-ico svg-ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30">
+                        <circle fill="#DC4F42" cx="15" cy="15" r="15"></circle>
+                        <path fill="#FFF" d="M5.22 15.67C5.1 12.47 7.9 9.53 11.1 9.5c1.6-.14 3.2.5 4.43 1.52-.5.56-1.02
+                    1.1-1.57 1.62-1.08-.66-2.4-1.16-3.66-.72-2.04.6-3.28 3-2.52 5 .62 2.08 3.16 3.23 5.15 2.35 1.04-.37
+                    1.7-1.32 2-2.34-1.17-.02-2.35 0-3.53-.04v-2.1c1.97-.02 3.94-.02 5.9 0 .13 1.72-.12 3.56-1.24
+                    4.94-1.53 1.97-4.37 2.55-6.67 1.78-2.45-.8-4.23-3.27-4.18-5.85zM21.15 13h1.76l.02
+                    1.78h1.77v1.77H22.9v1.78h-1.77v-1.77h-1.78v-1.77c.6 0 1.17 0 1.77-.02V13z"></path>
+                    </svg>
+                </a>
+                <div class="soc-btn" data-link="hasTelegram" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" fill="#4fb0d6"></path><path d="M14.854,4.26a.333.333,0,0,0-.328-.027l-10.746,5a.525.525,0,0,0,.012.958L13.7,14.508a.53.53,0,0,0,.742-.447L15,4.555a.333.333,0,0,0-.145-.3Z" fill="#ececec"></path><polygon points="6.704 11.462 7.374 15.937 14.811 4.236 6.704 11.462 6.704 11.462" fill="#d6d4d4"></polygon><path d="M14.526,4.233l-10.746,5a.525.525,0,0,0,.012.958L6.7,11.462l8.107-7.226a.333.333,0,0,0-.285,0Z" fill="#fff"></path><polygon points="8.259 12.139 7.374 15.937 14.811 4.236 8.259 12.139 8.259 12.139" fill="#ececec"></polygon><path d="M14.854,4.26a.322.322,0,0,0-.043-.024l-6.553,7.9,5.44,2.369a.53.53,0,0,0,.742-.447L15,4.555a.333.333,0,0,0-.145-.3Z" fill="#fff"></path></svg>
+                    <div class="soc-tooltip"></div>
+                </div>
+                <div class="soc-btn" data-link="hasViber" style="display: none;">
+                    <img src="/img/viber.png" width="18.002" height="20">
+                    <div class="soc-tooltip"></div>
+                </div>
+                <a href="//whatsapp.com" target="_blank" class="soc-btn" data-link="hasWhatsapp" style="display: none;">
+                    <img src="/img/whatsapp.png" width="19.838" height="20">
+                    <div class="soc-tooltip"></div>
+                </a>
+            </div>-->
+
+            <div class="profile-edit-btn-wrap">
+                <a href="/profile/edit" class="profile-edit-button"><%=lang.lProfileEditBtn%></a>
+            </div>
+            <!--<div class="divider"></div>-->
+            <div class="info-items-container">
+                <div class="info-item residence"  <%=(!user.userResidence) ? 'style= display:none' : ''%>>
+                    <div class="info-name">I live in</div>
+                    <div class="info-parameter"><%=user.userResidence%></div>
+                </div>
+                <div class="info-item birthdate" <%=(!user.userBdateText) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoBdate%></div>
+                    <div class="info-parameter" ><%=user.userBdateText%></div>
+                </div>
+                <div class="info-item gender" <%=(!user.userGender) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoGender%></div>
+                    <div class="info-parameter"><%=user.userGender%></div>
+                </div>
+                <div class="info-item eyes" <%=(!user.userEyes) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoEues%></div>
+                    <div class="info-parameter"><%=user.userEyes%></div>
+                </div>
+                <div class="info-item hair" <%=(!user.userHair) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoHair%></div>
+                    <div class="info-parameter"><%=user.userHair%></div>
+                </div>
+                <div class="info-item body-type" <%=(!user.userBody) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoBodyType%></div>
+                    <div class="info-parameter"><%=user.userBody%></div>
+                </div>
+                <div class="info-item weight" <%=(!user.userWeight) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoWeight%></div>
+                    <div class="info-parameter kg"><%=user.userWeight%></div>
+                    <div class="info-parameter"><%=lang.lProfileInfoKG%></div>
+                </div>
+                <div class="info-item height" <%=(!user.userHeight) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoHeight%></div>
+                    <div class="info-parameter sm"><%=user.userHeight%></div>
+                    <div class="info-parameter units"><%=lang.lProfileInfoSM%></div>
+                </div>
+                <div class="info-item religion" <%=(!user.userReligion) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoReligion%></div>
+                    <div class="info-parameter"><%=user.userReligion%></div>
+                </div>
+                <div class="info-item education" <%=(!user.userEducation) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoEducation%></div>
+                    <div class="info-parameter"><%=user.userEducation%></div>
+                </div>
+                <div class="info-item occupation" <%=(!user.userOccupation) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoOccupation%></div>
+                    <div class="info-parameter"><%=user.userOccupation%></div>
+                </div>
+                <div class="info-item smoke" <%=(!user.userSmoke) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoSmoke%></div>
+                    <div class="info-parameter"><%=user.userSmoke%></div>
+                </div>
+                <div class="info-item drink" <%=(!user.userDrink) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoDrink%></div>
+                    <div class="info-parameter"><%=user.userDrink%></div>
+                </div>
+                <div class="info-item hobbies" <%=(!user.userHobbies) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoHobbies%></div>
+                    <div class="info-parameter"><%=user.userHobbies%></div>
+                </div>
+                <div class="info-item favorite-color" <%=(!user.userFavoriteColor) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoColors%></div>
+                    <div class="info-parameter"><%=user.userFavoriteColor%></div>
+                </div>
+                <div class="info-item sport" <%=(!user.userSport) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoSport%></div>
+                    <div class="info-parameter"><%=user.userSport%></div>
+                </div>
+                <div class="info-item been-abroad" <%=(!user.userBeenAbroad) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoAbroad%></div>
+                    <div class="info-parameter"><%=user.userBeenAbroad%></div>
+                </div>
+                <div class="info-item interests" <%=(!user.userInterest) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoInterests%></div>
+                    <div class="info-parameter"><%=user.userInterest%></div>
+                </div>
+                <div class="info-item character-traits" <%=(!user.userCharacter) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoCharacter%></div>
+                    <div class="info-parameter"><%=user.userCharacter%></div>
+                </div>
+                <div class="info-item marital-status" <%=(!user.userMaritalStatus) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoMarital%></div>
+                    <div class="info-parameter"><%=user.userMaritalStatus%></div>
+                </div>
+                <div class="info-item children" <%=(!user.userChildren) ? 'style= display:none' : ''%>>
+                    <div class="info-name"><%=lang.lProfileInfoChildren%></div>
+                    <div class="info-parameter"><%=user.userChildren%></div>
+                </div>
+            </div>
+            
+			<% if(user.userAboutMyself) { %>
+			<div class="divider"></div>
+            <div class="text-title">
+                <%=lang.lProfileDropdownAboutMyself%>
+            </div>
+            <div class="divider"></div>
+            <div class="about-text">
+                <%=user.userAboutMyself%>
+            </div>
+			<% }%>
+			
+			<% if(user.userAboutPartner) { %>
+            <div class="divider"></div>
+            <div class="text-title">
+                <%=lang.lProfileDropdownAboutPartner%>
+            </div>
+            <div class="divider"></div>
+            <div class="about-text">
+                <%=user.userAboutPartner%>
+            </div>
+            <% }%>
+        </div>
+    </div>
+	
+	<div class="modal-wrapper">
+		<div id="croppic-modal" class="crop-modal"></div>
+	</div>
+
+    <div class="popup-modal-wrapper modal-wrapper-style">
+        <div class="popup-modal modal-style">
+            <div class="popup-bg modal-bg-style"></div>
+            <div class="image-control modal-popup-style">
+                <div class="menu-item make-main-option">
+                    <div class="item-title"><%=lang.lProfilePhotoMain%></div>
+                </div>
+                <div class="menu-item delete-option">
+                    <div class="item-title"><%=lang.lProfilePhotoDeleteBtn%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('footer-info') %>
+<%- include('footer')%>

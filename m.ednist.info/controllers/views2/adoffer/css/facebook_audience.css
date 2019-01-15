@@ -1,0 +1,120 @@
+/* Main Content */
+.main-content {
+    padding: 37px 0 30px 40px;
+    color : #3F476E;
+}
+
+.statistics-title{
+    font-size : 17px;
+    text-transform : uppercase;
+}
+
+.statistics-title-bold {
+    font-weight : bold;
+}
+
+
+/* Woman info block */
+.woman-info {
+    margin: 90px 0 0 0;
+}
+
+    .woman-percentage {
+        width: 96px;
+        height: 120px;
+        background-position: -462px -811px;
+        margin: 0 30px 0 13px;
+    }
+
+    .woman-age-diagram {
+        width: 431px;
+        height: 183px;
+        background-position: -1px -647px;
+        margin: 0 70px 0 0;
+    }
+
+    .facebook-ico {
+        width: 67px;
+        height: 67px;
+        background-position: -436px -737px;
+        margin: 0 auto;
+    }
+
+    .coverage-number {
+        font-weight : bold;
+        font-size : 42px;
+        line-height : 33.74px;
+        letter-spacing : 1.26px;
+
+        text-align: center;
+        padding: 27px 0 8px 0;
+    }
+
+    .coverage-description {
+        font-size : 17px;
+        text-align: center;
+    }
+
+
+/* Woman info block */
+.man-info {
+    margin: 62px 0 0 0;
+}
+
+    .man-percentage {
+        width: 122px;
+        height: 122px;
+        background-position: -449px -936px;
+        margin: 0 20px 0 0;
+    }
+
+    .man-age-diagram {
+        width: 431px;
+        height: 218px;
+        background-position: -1px -837px;
+        margin: 0 70px 0 0;
+    }
+
+    .man-auditory {
+        font-weight : bold;
+        text-transform: uppercase;
+        font-size : 24px;
+        line-height : 29.94px;
+        letter-spacing : 0.72px;
+        margin: 0 auto;
+    }
+
+    .man-audit-number {
+        font-size : 30px;
+        text-align: center;
+    }
+
+    .smaller-font {
+        padding: 3px 0 0 0;
+    }
+
+    .small-percent {
+        margin: 3px 0 0 0;
+    }
+
+    .man-auditory-description {
+        font-size : 17px;
+        line-height : 26px;
+        letter-spacing : 0.51px;
+        text-align: center;
+        margin: 2px 0 0 0;
+    }
+
+    .viewers-number {
+        font-weight : bold;
+        font-size : 42px;
+        line-height : 33.74px;
+        letter-spacing : 1.26px;
+        text-align: center;
+        margin: 66px 0 7px 0;
+    }
+
+    .viewers-description {
+        font-size : 17px;
+        text-align: center;
+    }

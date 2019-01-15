@@ -1,0 +1,136 @@
+#brandconnectInlay{
+    width: 980px;
+    height: 800px;
+    background-color: white;
+}
+#formSave{
+   background-color: #fff; 
+
+}
+.content {
+    background-color: #fff;
+    margin-top: 100px;
+}
+input,textarea{
+   background-color: #f5f9fb;
+}
+input[type="text"],
+textarea {
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.inputblock {
+  padding: 20px 15px 20px;
+  clear: both;
+}
+.inputblock h3 {
+  width: 200px;
+  float: left;
+  padding: 15px 0;
+}
+.inputblock.teg .newsarea {
+  width: 340px;
+}
+.inputblock .brand {
+  position: relative;
+  display: inline-block;
+  margin-right: 65px;
+}
+.inputblock .keyword, .inputblock .brand span {
+  background-color: #8192a2;
+  color: #fff;
+  padding: 2px 10px;
+  margin: 13px 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  z-index: 15;
+}
+.inputblock .brand .smile{
+    display: none;
+}
+.inputblock .keyword:hover,
+.inputblock .brand:hover span {
+    box-shadow: 0px 0px 8px 1px #a3a3a3;
+    background-color: #70a8db;
+}
+
+.inputblock .keyword.in:active {
+    opacity: 0;
+}
+.inputblock .keyword.in, .inputblock .brand.in span {
+  background-color: #5894cf;
+  margin: 10px 2px;
+  padding: 5px 13px;
+}
+#connectName{
+    width: 300px;
+}
+.inputblock .btn {
+  padding-top: 10px;
+}
+.btn.low {
+  padding: 15px;
+  text-align: center;
+}
+.btn {
+  border: 0;
+  cursor: pointer;
+  background-color: #3f5163;
+  text-align: right;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  width: 180px;
+  box-sizing: border-box;
+  padding: 25px 15px;
+  margin: 0 2px 3px;
+}
+#list_brand_connects{
+    margin: 20px;
+}
+#list_brand_connects td{
+    padding-left: 30px;
+}
+#list_brand_connects input{
+    margin-bottom: 30px;
+}
+.td_main_name{
+    width: 250px;
+    font-size: 17px;
+    color: green;
+}
+.td_main{
+    color:green;
+    padding-left: 30px;
+}
+.edit_connect {
+  border: 0;
+  cursor: pointer;
+  background-color: #3f5163;
+  text-align: right;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  width: 110px;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  margin: 0 2px 3px;
+}
+.delete_connect {
+  border: 0;
+  cursor: pointer;
+  background-color: #3f5163;
+  text-align: right;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  width: 80px;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  margin: 0 2px 3px;
+}

@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  background-color: #2E2943;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 12px; }
+  .footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 10px auto; }
+    .footer ul li {
+      list-style: none;
+      margin-bottom: 5px; }
+      .footer ul li a {
+        text-transform: uppercase;
+        color: #fff; }
+  .footer .soc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0; }
+    .footer .soc ul li a svg {
+      width: 24px;
+      height: 24px; }
+  .footer .text {
+    text-align: center;
+    color: #959595; }
+  .footer .copy {
+    text-align: center;
+    padding-top: 10px; }
+
+/*# sourceMappingURL=1.1.footer.css.map */

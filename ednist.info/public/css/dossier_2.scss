@@ -1,0 +1,114 @@
+@import 'mixin';
+@import 'vars';
+
+
+/* DOSSIER */
+
+.wrapper-dossier_page-human {
+  width: 1130px;
+  margin: 0 auto;
+}
+
+.dossier-page, .alphabet {
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 2px 0 2px 20px;
+  cursor: pointer;
+}
+
+.dossier-page h4 {
+  font-family: $ffrs;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $violet;
+}
+
+.alphabet_menu {
+  @include dflexa(flex, space-around);
+  a {
+    font-family: $ffrm;
+    font-size: 20px;
+    text-transform: uppercase;
+    &:hover {
+      color: $violet;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ABOUT HUMAN */
+
+.about-human {
+  width: 1130px;
+  padding: 30px 0 32px 0;
+  background-color: $white;
+  box-sizing: $bxb;
+  p {
+    font-family: $ff;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  h2 {
+    font-family: $ffrs;
+    font-size: 24px;
+  }
+}
+
+.about-human_page {
+  display: $df;
+  .photo-dossier {
+    width: 500px;
+    height: 250px;
+    margin: 16px auto;
+    box-sizing: border-box;
+    padding: 2px 0 2px 0;
+    cursor: pointer;
+    img {
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.short-about {
+  width: 545px;
+  margin-left: 20px;
+  h1 {
+    font-family: $ffrs;
+    font-size: 48px;
+  }
+}
+
+/* HUMAN PAGE */
+
+.human-page {
+  margin: 35px 25px 0 25px;
+}
+
+.foot-human_page {
+  @include dflexb(flex, space-between);
+  margin: 30px 0;
+  p {
+    font-size: 14px;
+  }
+}
+
+.share-dossier {
+  display: $df;
+  align-items: center;
+  p {
+    margin-right: 25px;
+  }
+  a {
+    font-size: 28px;
+    margin-right: 10px;
+    transition: color 1s;
+    &:hover {
+      color: #ababab;
+    }
+  }
+}
+

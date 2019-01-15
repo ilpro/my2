@@ -1,0 +1,34 @@
+<%- include('header') %>
+<%- include('sidemenu') %>
+<div class="page-ribbon">
+
+    <a href="https://play.google.com/store/apps/details?id=com.emoment">
+        <div class="banner-app">
+            <img src="/img/there_and_now.png" class="slogan">
+            <img src="/img/screen-android.png" class="screenshot-android">
+            <img src="/img/gplay.png" class="google-play">
+        </div>
+    </a>
+
+    <div class="photos-wrapper">
+
+        <%- include('multi-parts/userpost-template') %>
+
+    </div>
+</div>
+
+<div class="popup-post-wrapper modal-wrapper-style">
+    <div class="popup-post-modal modal-style">
+        <div class="popup-post-bg modal-bg-style"></div>
+        <div class="post-control modal-popup-style">
+            <div class="menu-item post-delete-option">
+                <div class="item-title">Видалити</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('multi-parts/popups/claim-post-popup') %>
+<%- include('multi-parts/popups/share-popup') %>
+
+<%- include('footer') %>

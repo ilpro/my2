@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "0.0.mixins";
+@import "0.1.font-colors-variables";
+
+.footer{
+  width: 100%;
+  background-color:#2E2943;
+  color: #fff;
+  padding: 10px 0;
+  font-size:12px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 10px auto;
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+      a {
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+  .soc{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    ul {
+      li {
+        a {
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+  .text{
+    text-align: center;
+    color: #959595;
+  }
+  .copy{
+    text-align: center;
+    padding-top: 10px;
+  }
+}

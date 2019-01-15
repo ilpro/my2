@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/ednist.info/webstat"
+AuthUserFile /var/www/developer/data/etc/861339.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

@@ -1,0 +1,93 @@
+/* Main Content */
+.main-content {
+    padding: 37px 0 30px 40px;
+}
+
+.demography {
+    font-weight : bold;
+    font-size : 17px;
+    text-transform : uppercase;
+    color : #3F476E;
+}
+
+    /* Auditory info block */
+    .diagram{
+        width: 429px;
+        height: 222px;
+        background-position: -1px -413px;
+        margin: 35px 20px 0 0;
+    }
+
+    .man-percentage {
+        width: 120px;
+        height: 190px;
+        background-position: -438px -410px;
+        margin: 80px 65px 0 65px;
+    }
+
+    .woman-percentage {
+        width: 120px;
+        height: 137px;
+        background-position: -438px -600px;
+        margin: 130px 0 0 0;
+    }
+
+
+
+
+.auditory{
+    font-weight : bold;
+    font-size : 17px;
+    text-transform : uppercase;
+    color : #3F476E;
+    margin: 35px 0 0 0;
+}
+
+
+.demography-info{
+    margin: 30px 0 0 0;
+}
+
+    .man-ico {
+        width: 13px;
+        height: 32px;
+        background-position: -237px -58px;
+        margin: 8px 6px 0 5px;
+    }
+
+    .man-title {
+        font-weight : bold;
+        font-size : 17px;
+        line-height : 18px;
+        color : #45549F;
+        padding: 5px 20px 5px 5px;
+    }
+
+    .man-info {
+        font-size : 15px;
+        line-height : 20px;
+        color : #353B57;
+    }
+
+
+
+    .woman-ico {
+        width: 16px;
+        height: 32px;
+        background-position: -253px -58px;
+        margin: 8px 6px 0 6px;
+    }
+
+    .woman-title {
+        font-weight : bold;
+        font-size : 17px;
+        line-height : 18px;
+        color : #E42D27;
+        padding: 5px 20px 5px 5px;
+    }
+
+    .woman-info {
+        font-size : 15px;
+        line-height : 20px;
+        color : #353B57;
+    }

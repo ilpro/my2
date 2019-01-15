@@ -1,0 +1,48 @@
+<%- include('header') %>
+<%- include('sidemenu') %>
+<div class="page-notifications">
+    <div class="notifications-head">
+        <div class="notification-title">Notifications</div>
+        <div class="clear-all"><%=lang.lNotifClearBtn%></div>
+    </div>
+    <div class="notifications-ribbon">
+        <% for(var i=0; i<rows.length; i++) {%>
+		<div class="message-row <%=(!rows[i].notificationRead)?"unreaded":""%>">
+			<figure class="user-avatar" title="">
+				<img src="<%-rows[i].userPhoto%>" alt="user" class="" style="max-width: 100%;">
+			</figure>
+			<div class="message-text-controls-wrap">
+				<div class="message-text"><%-rows[i].notificationText%></div>
+			</div>
+			<% if(rows[i].notificationType == "PhotoLike") {%>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 14 13" class="message-type">
+				<path fill="#ccc" d="M14 4c-.2-2.4-1.8-4-3.8-4C9 0 7.6.7 7 2 6.3.6 5 0 3.8 0 1.8 0 .2 1.6 0 4v1.3c.4 1.3 1 2.4 2 3.3L7 13l5-4.4c1-1 1.6-2 2-3.3V4zm0 0"></path>
+			</svg>
+            <% } else if(rows[i].notificationType == "PostLike") {%>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 14 13" class="message-type">
+				<path fill="#ccc" d="M14 4c-.2-2.4-1.8-4-3.8-4C9 0 7.6.7 7 2 6.3.6 5 0 3.8 0 1.8 0 .2 1.6 0 4v1.3c.4 1.3 1 2.4 2 3.3L7 13l5-4.4c1-1 1.6-2 2-3.3V4zm0 0"></path>
+			</svg>
+			<% } else if(rows[i].notificationType == "UserFavorite") {%>
+			<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" class="message-type">
+				<g fill="#ccc">
+					<path d="M3.67 1.27c.3-.3.3-.76 0-1.05-.3-.3-.76-.3-1.05 0-3.25 3.24-3.25 8.52 0 11.76.14.15.33.22.52.22.2 
+					0 .4-.07.53-.22.3-.3.3-.76 0-1.05-2.66-2.66-2.66-7 0-9.66zm0 0M14.38.22c-.3-.3-.76-.3-1.05 0-.3.3-.3.76 0 
+					1.05 1.3 1.3 2 3 2 4.83 0 1.82-.7 3.54-2 4.83-.3.3-.3.76 0 1.05.14.15.33.22.52.22.2 0 .4-.07.53-.22 
+					1.57-1.57 2.44-3.66 2.44-5.88s-.87-4.3-2.44-5.88zm0 0"></path>
+					<path d="M4.62 9.97c.15.15.34.22.53.22.2 0 .38-.08.53-.22.3-.3.3-.77 0-1.06-1.56-1.55-1.56-4.08 0-5.64.3-.3.3-.76 
+					0-1.05-.3-.3-.77-.3-1.06 0-2.13 2.13-2.13 5.6 0 7.74zm0 0M11.32 9.97c.14.15.33.22.52.22.2 0 .4-.08.53-.22 
+					1.04-1.04 1.6-2.42 1.6-3.88s-.56-2.84-1.6-3.87c-.3-.3-.76-.3-1.05 0-.3.3-.3.76 0 1.05.75.75 1.17 1.76 1.17 
+					2.82s-.43 2.07-1.18 2.82c-.3.3-.3.76 0 1.05zm0 0M8.5 8c1.04 0 1.9-.85 1.9-1.9 0-1.04-.86-1.9-1.9-1.9s-1.9.85-1.9 1.9c0 
+					1.05.85 1.9 1.9 1.9zm0 0M9.2 9.05c-.1-.3-.38-.52-.7-.52-.32 0-.6.2-.7.52l-3.24 9.97c-.13.4.08.82.48.94.07.03.15.04.23.04.3 
+					0 .6-.2.7-.52l.4-1.2h4.26l.4 1.2c.12.4.54.6.93.48.4-.12.6-.54.48-.94L9.2 9.05zm-.7 2.64l.62 
+					1.92H7.87l.63-1.92zm-1.65 5.08l.54-1.67h2.2l.54 1.68h-3.3zm0 0"></path>
+				</g>
+			</svg>
+			<% } %>
+		</div>
+		<% }%>
+    </div>
+</div>
+
+<%- include('footer-info') %>
+<%- include('footer') %>

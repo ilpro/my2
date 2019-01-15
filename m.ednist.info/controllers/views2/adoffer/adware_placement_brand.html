@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Розміщення</title>
+
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/header1.css">
+    <link rel="stylesheet" href="css/adware_placement.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+
+</head>
+<body>
+
+<style scoped>
+.back{
+    background: url('../adoffer/img/back1.jpg') center fixed;
+    background-size: 60%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width:960px) {
+    .back{
+        background-size: 40%;
+    }
+}
+
+</style>
+<div class="back" ></div>
+<div class="wrapper">
+    <!-- Header -->
+    <div class="header flexcol">
+
+        <div class="ad-name">Реклама на нашому сайті</div>
+
+        <div class="menu1 flexrow">
+
+            <a href="territory_coverage.html" class="map-ref">
+                <div class="menu-item flexcol">
+                    <div class="sprite-wrapper map-wrapper header-map"></div>
+                    <p class="menu-name">Територіальне охоплення</p>
+                </div>
+            </a>
+
+            <a href="audience_core.html" class="people-ref">
+                <div class="menu-item flexcol">
+                    <div class="sprite-wrapper people-wrapper header-people"></div>
+                    <p class="menu-name">Цільова аудиторія</p>
+                </div>
+            </a>
+
+            <a href="facebook_audience.html" class="fb-ref">
+                <div class="menu-item flexcol">
+                    <div class="fb-wrapper sprite-wrapper header-fb"></div>
+                    <p class="menu-name">Аудиторія Facebook</p>
+                </div>
+            </a>
+
+            <a href="#" class="pc-ref">
+                <div class="menu-item flexcol">
+                    <div class="sprite-wrapper pc-wrapper header-pc-active"></div>
+                    <p class="menu-name active">Розміщення</p>
+                </div>
+            </a>
+
+        </div>
+        <!-- Menu end-->
+
+
+        <!-- Submenu-->
+        <div class="submenu flexrow">
+
+            <a href="//ednist.info/adoffer" class="ad ad1">
+                <div class="menu-item">
+                    <p class="ad-text">Головна сторінка</p>
+                </div>
+            </a>
+
+            <a href="//ednist.info/adfullnews" class="ad ad2">
+                <div class="menu-item">
+                    <p class="ad-text">Сторінка публікації</p>
+                </div>
+            </a>
+
+            <a href="//ednist.info/adpublic" class="ad ad3">
+                <div class="menu-item">
+                    <p class="ad-text">Сторінка списку публікацій</p>
+                </div>
+            </a>
+
+            <a href="#" class="ad ad4">
+                <div class="menu-item">
+                    <p class="ad-text active">Брендінги</p>
+                </div>
+            </a>
+
+
+        </div>
+
+    </div>
+    <!-- Header end-->
+    <div class="site-img-wrapper">
+        <img class="site-img" src="../adoffer/img/ednist_site.png" alt="Site" >
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    <!-- Main Content -->
+    <div class="main-content flexcol">
+
+
+
+        <!--ADoffer add ------------------------------------------------------------------------------------------>
+        <div class="adware-main-footer flexrow">
+            <div class="crosss">
+                <div class="cross-high"></div>
+                <div class="cross-low"></div>
+            </div>
+            <p class="ad-places-text">
+                Брендінг 2 <br>
+                Ширина: 100% <br>
+                Висота: до 240px
+            </p>
+        </div>
+
+
+        <div class="adware-popup flexrow">
+            <div class="crosss-popup">
+                <div class="cross-high"></div>
+                <div class="cross-low"></div>
+            </div>
+            <p class="ad-places-text">
+                Брендінг 3 <br>
+                Ширина: 40% <br>
+                Висота: 50-70%
+            </p>
+        </div>
+
+
+
+
+
+
+        <script>
+            $(document).ready(function() {
+
+                $(".adware-main-footer").css("opacity", 1);
+                $(".adware-popup").css("opacity", 1);
+
+
+                $(".crosss").click(function () {
+                    $(".adware-main-footer").css("display", "none");
+                });
+
+
+                $(".crosss-popup").click(function () {
+                    $(".adware-popup").css("display", "none");
+                });
+
+
+            });
+
+
+
+        </script>
+        <!--ADoffer add END------------------------------------------------------------------------------------------>
+
+
+    </div>
+
+
+
+</body>
+</html>

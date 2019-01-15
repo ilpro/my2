@@ -1,0 +1,43 @@
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+
+Options +FollowSymLinks
+Options All -Indexes
+
+RewriteEngine on
+
+# С www на без www
+#RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+#RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# С без www на www
+#RewriteCond %{HTTP_HOST} ^ednist.info
+#RewriteRule ^(.*)$ http://www.ednist.info/admin/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^ednist\.info$ [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/admin/$1 [R=301,L]
+
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
+RewriteRule ^sitemap([^/]*)\.xml$ /sitemap.php?page=$1 [L]
+
+RewriteRule ^img/([^/]*)/([^/]*)/(.*)$ /views/img/index.php?type=$1&id=$2&img=$3 [L]
+
+ErrorDocument 404 /index.php?page=404.html
+
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]*)$ index.php?page=$1 [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]*)/([^/]*)$ index.php?page=$1&id=$2 [L,QSA]
+
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]*)/([^/]*)/$ index.php?page=$1&id=$2 [L,QSA]
+
+</IfModule>

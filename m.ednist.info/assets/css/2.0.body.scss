@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "0.0.mixins";
+@import "0.1.font-colors-variables";
+
+.body-mobile {
+  position: absolute;
+  width: 100vw;
+  top: 42px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@import "2.01.core";

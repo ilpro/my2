@@ -1,0 +1,59 @@
+/* DOSSIER */
+.wrapper-dossier_page {
+  width: 1130px;
+  margin: 0 auto; }
+
+.dossier-page, .alphabet {
+  margin: 16px auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 2px 0 2px 20px;
+  cursor: pointer; }
+
+.dossier-page h4 {
+  font-family: RobotoSlab-Regular, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #372a6e; }
+
+.alphabet_menu {
+  display: flex;
+  justify-content: space-around; }
+  .alphabet_menu a {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase; }
+    .alphabet_menu a:hover {
+      color: #372a6e;
+      text-decoration: underline; }
+
+/* PEOPLES NAMES */
+.peoples-names {
+  width: 1130px;
+  background-color: #ffffff;
+  padding: 18px 18px 30px 18px;
+  box-sizing: border-box; }
+
+.letter p {
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #372a6e;
+  text-decoration: underline;
+  cursor: pointer; }
+
+.all-peoples_names {
+  display: flex;
+  justify-content: space-between; }
+  .all-peoples_names a {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    transition: color 1s; }
+    .all-peoples_names a:hover {
+      color: #372a6e; }
+
+.list-item_people {
+  width: 220px; }
+
+/*# sourceMappingURL=dossier.css.map */

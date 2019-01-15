@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "0.0.mixins";
+@import "0.1.font-colors-variables";
+
+.side-menu {
+  position: fixed;
+  background-color: #271D50;
+  width: $menu-width;
+  z-index: $z-side-menu;
+  @include transform(translateX(-275px) translateZ(0));
+  height: 100vh;
+  overflow: auto;
+  top: 0;
+  left: 0;
+
+  .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0 0 0;
+    .logo-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 25px;
+      font-family: "MyriadPro-Semibold", sans-serif;
+      text-transform: uppercase;
+      svg {
+        path {
+          fill: #ffffff;
+        }
+      }
+      .logo-ico{
+        margin-right: 10px;
+        background-color: #372A6E;
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+
+}
+
+.side-menu-close-cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 100vh;
+  @include calc(width, '100% - 275px');
+  @include transform(translateX(275px) translateZ(0));
+  background-color: rgba(0, 0, 0, .5);
+  z-index: $z-side-menu;
+}

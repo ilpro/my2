@@ -1,0 +1,110 @@
+.content {
+    background-color: #fff;
+}
+#logout{
+    float: right;
+}
+input,textarea{
+   background-color: #f5f9fb;
+}
+input[type="text"],
+textarea {
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.dropdown{
+    z-index: 1;
+}
+.newsStripe {
+    font-size: 14px;
+}
+
+.newsarea {
+    background-color: #f5f9fb;
+    font-size: 16px;
+    border: 1px solid #f5f9fb;
+    margin-bottom: 3px;
+}
+
+select.newsarea option {
+    padding: 10px;
+}
+
+.checkboxes.selects select {
+    width: 500px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.newsarea:focus {
+    background-color: #FCFFFF;
+    box-shadow: 0px 0px 5px 0px #6E5AFF;
+}
+
+.newsarea:first-child {
+    font-size: 20px;
+}
+.clear,.clear2{
+    clear:both;
+}
+.clear:after,.clear2:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.main-statistics{
+    height: 100%;
+    width: 960px;
+    background-color: white;
+    border-bottom: 1px solid black;
+   // padding-top: 30px;
+}
+.some-user{
+    height: 50px;
+    width: 960px;
+    background-color: white;
+    color:black;
+    display: block;
+    border-top: 1px solid black;
+}
+.user_name{
+    width: 210px;
+    padding: 15px 10px 10px 30px;
+}
+.news_count,.news_visits,.news_efficiency{
+    width: 180px;
+    font-size: 18px;
+   padding: 15px 10px 15px 40px;
+}
+.statistics-row-name,.statistics-row-see{
+    padding-left: 30px;
+    width: 195px;
+    font-size: 18px;
+    color:green;
+}
+.statistics-row-count{
+    padding-left: 30px;
+    width: 175px;
+    font-size: 18px;
+    color:green;
+}
+.statistics-row-efficiency{
+     padding-left: 50px;
+    width: 225px;
+    font-size: 18px;
+    color:green;
+}
+.statistics-table{
+    height: 30px; 
+}
+.statistics-select{
+    width: 960px;
+    height: 50px;
+ background-color: white;
+}
+#statisticsSelect{
+    width: 360px;
+    height: 50px;
+        float:right;
+}

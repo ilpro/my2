@@ -1,0 +1,2 @@
+<?php
+$htmlString = '<span class="keyword in" data-source=\'{"id":"' . $source['sourceId'] . '","sourceName":"' . $source['sourceName'] . ',"sourceLink":"' . $source['sourceLink'] . '"}\'>' . $source['sourceName'] . '</span>';

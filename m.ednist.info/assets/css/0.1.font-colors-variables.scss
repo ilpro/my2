@@ -1,0 +1,67 @@
+@charset "utf-8";
+// Base
+$font-family-base: 'PT Sans', sans-serif;
+$font-size-base: 13px;
+$font-size-large: 15px;
+$menu-width: 275px;
+
+$w-light: 300;
+
+$z-header: 10;
+$z-side-menu:10;
+$z-login-register:100;
+$z-quote-slider: 10;
+
+
+//Colors
+$body-color: #fff;
+$send-box-color: #f2f2f2;
+$messages-color: #6FB5EF;
+$chat-bg: #C3D2DB;
+$chat-send-button-bg: #4A4A4D;
+$chat-bach-button: #4A4A4D;
+$radio-color: #F05644;
+$rating-star-active: #FBB03B;
+$main-color: #313133;
+$main-second-color: #e6c12e;
+$main-color-antagonist: #efefef;
+$main-color-complement: #345e91;
+$complement-color: #cccccc;
+$complement-color-darker: #5C5C5E;
+$complement-color-lighter: #B3B4B4;
+
+$border-color-main: #fff;
+$border-color-main-inverse: $main-color;
+$border-color-complement: #cccccc;
+
+$background-color-main: #fff;
+$background-color-main-second: $main-second-color;
+$background-color-main-inverse: $main-color;
+$background-color-complement: $complement-color;
+$background-color-complement-darker: $complement-color-darker;
+$background-color-complement-lighter: $complement-color-lighter;
+
+$font-color-main: $main-color;
+$font-color-main-second: $main-second-color;
+$font-color-main-inverse: #fff;
+$font-color-complement: #B3B4B4;
+$font-color-complement-antagonist: #333333;
+
+$bg-color--allow: #39B54A;
+$bg-color--not-allow: #FF0000;
+
+//export colors
+$font-color--light: #313133;
+$font-color--orange: #4A4A4D;
+$font-color--middle: #999;
+$font-color--dark: #222222;
+
+$bg-color--lighter: #f2f2f2;
+$bg-color--orange: #4A4A4D;
+$bg-color--soft-light: #666666;
+$bg-color--light-grey: #e0e0e0;
+
+$border-color--orange: #4A4A4D;
+$border-color--black: #000;
+
+

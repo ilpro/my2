@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.dropdown.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link href="flat/green.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C"
+
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+
+
+</head>
+<body class="light">
+
+<div class="wrapper box sources journal" id="auth">
+    <div class="head">
+        <div class="clear"></div>
+        <h1 class="sortnews"><span>SORT</span>NEWS</h1>
+
+        <div id="dropdown-1" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+            <ul class="dropdown-menu">
+                <li><a href="#1">Item 1</a></li>
+                <li><a href="#2">Item 2</a></li>
+                <li><a href="#3">Item 3</a></li>
+
+                <li><a href="#4">Item 4</a></li>
+                <li><a href="#5">Item 5</a></li>
+                <li><a href="#5">Item 6</a></li>
+            </ul>
+        </div>
+        <div class="nav" data-dropdown="#dropdown-1">
+            <i class="nav-icon"></i>
+
+            <p>Журнал синхронизации</p>
+
+        </div>
+        <div class="search">
+            <form>
+                <i class="search-icon"></i>
+                <input type="text" name="country" id="tags" placeholder="Поиск">
+
+
+            </form>
+
+        </div>
+        <div class="filter">
+            <div class="people" data-dropdown="#dropdown-2">
+                <p>Люди/учереждения <i class="caret"></i></p>
+
+            </div>
+
+
+            <div class="exit">
+                <i></i>
+            </div>
+        </div>
+        <div id="dropdown-2" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+            <ul class="dropdown-menu">
+                <li><a href="#1">Item 1</a></li>
+                <li><a href="#2">Item 2</a></li>
+                <li><a href="#3">Item 3</a></li>
+
+                <li><a href="#4">Item 4</a></li>
+                <li><a href="#5">Item 5</a></li>
+                <li><a href="#5">Item 6</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+        <!--
+        <div id="flavor-nav">
+            <a rel="all" class="current">All</a>
+            <a rel="cla">Classic</a>
+            <a rel="adv">Adventurous</a>
+            <a rel="tea">Tea-Inspired</a>
+        </div>-->
+
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <div class="content" id="all-flavors">
+        <form>
+            <div class="row all cla">
+                <div class="check">
+                    <input type="checkbox" id="c1" name="myPublication"/>
+                    <label for="c1"><span></span></label>
+                </div>
+
+                <div class="identifier"><p>1</p></div>
+                <div class="site"><p>pravda.ua</p></div>
+                <div class="title"><p>Джастин Бибер объявил об уходе из музыки</p></div>
+                <div class="date"><p>12/12/12,18:22</p></div>
+                <div class="icon-status red tooltips">
+                    <div class="tool">15 августа 2013, 18.30</div>
+                    <span class="new-icon"></span><i class="checked"></i></div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="row all cla">
+                <div class="check">
+                    <input type="checkbox" id="c2" name="myPublication"/>
+                    <label for="c2"><span></span></label>
+                </div>
+
+                <div class="identifier"><p>3</p></div>
+                <div class="site"><p>pravda.ua</p></div>
+                <div class="title"><p>Джастин Бибер объявил об уходе из музыки</p></div>
+                <div class="date"><p>12/12/12,18:22</p></div>
+                <div class="icon-status yellow tooltips">
+                    <div class="tool">15 августа 2013, 18.30</div>
+                    <span class="clock-icon"></span><i class="checked"></i></div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="row all cla">
+                <div class="check">
+                    <input type="checkbox" id="c3" name="myPublication"/>
+                    <label for="c3"><span></span></label>
+                </div>
+
+                <div class="identifier"><p>4</p></div>
+                <div class="site"><p>pravda.ua</p></div>
+                <div class="title"><p>Джастин Бибер объявил об уходе из музыки</p></div>
+                <div class="date"><p>12/12/12,18:22</p></div>
+                <div class="icon-status blue tooltips">
+                    <div class="tool">15 августа 2013, 18.30</div>
+                    <span class="checked-icon"></span><i class="checked"></i></div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="row all cla">
+                <div class="check">
+                    <input type="checkbox" id="c4" name="myPublication"/>
+                    <label for="c4"><span></span></label>
+                </div>
+
+                <div class="identifier"><p>4</p></div>
+                <div class="site"><p>pravda.ua</p></div>
+                <div class="title"><p>Джастин Бибер объявил об уходе из музыки</p></div>
+                <div class="date"><p>12/12/12,18:22</p></div>
+                <div class="icon-status grey tooltips">
+                    <div class="tool">15 августа 2013, 18.30</div>
+                    <span class="status-icon"></span><i class="checked"></i></div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="row all cla">
+                <div class="check">
+                    <input type="checkbox" id="c5" name="myPublication"/>
+                    <label for="c5"><span></span></label>
+                </div>
+
+                <div class="identifier"><p>5</p></div>
+                <div class="site"><p>pravda.ua</p></div>
+                <div class="title"><p>Джастин Бибер объявил об уходе из музыки</p></div>
+                <div class="date"><p>12/12/12,18:22</p></div>
+                <div class="icon-status green tooltips">
+                    <div class="tool">15 августа 2013, 18.30</div>
+                    <span class="checkin-icon"></span><i class="checked"></i></div>
+                <div class="clear"></div>
+
+            </div>
+
+
+            <form>
+
+
+    </div>
+
+
+    <script>
+        $(".switch").checkable()
+        $("[data-name=human]").checkable("check", false)
+        $("[data-name=alien]").checkable("check", true)
+    </script>
+</div>
+<div class="helper"></div>
+
+<script type="text/javascript" src="js/jquery.mockjax.js"></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="js/countries.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+</body>
+
+</html>

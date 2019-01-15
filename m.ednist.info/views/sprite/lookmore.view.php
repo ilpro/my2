@@ -1,0 +1,1 @@
+<div class="morelink">Читайте также: <a href="/news/<?=$item['newsId']?>"><?=$item['newsHeader']?></a></div>

@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import "0.0.mixins";
+@import "0.1.font-colors-variables";
+
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
+@viewport {
+  width: 320px auto;
+  zoom: 1.0;
+  min-zoom: 1;
+  max-zoom: 1;
+  width: extend-to-zoom;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+html, body {
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: $body-color;
+  font-family: 'Roboto','Open Sans','Helvetica Neue',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-size: $font-size-base;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  &.sidemenu-opened {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .header-mobile {
+      @include transform(translateX(0) translateZ(0));
+      /*left:0;*/
+/*      width: 100%;*/
+    }
+
+    .side-menu {
+      @include transform(translateX(0) translateZ(0));
+      /*left: 0;*/
+    }
+
+    .side-menu-close-cover {
+      display: block;
+    }
+
+    .hamburger {
+
+    }
+
+    .center-content {
+      opacity: 0;
+    }
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $background-color-complement;
+}
+
+.flexcol {
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+//** Adding placeholders to contenteditable fields***
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; // For Firefox
+  padding-right: 5px;
+}
+
+
+.btn-clear {
+  display: block;
+  font: inherit;
+  line-height: normal;
+  color: inherit;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: button;  //for input
+  -webkit-user-select: none;  // for button
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

@@ -1,0 +1,362 @@
+<%- include('header') %>
+<%- include('sidemenu') %>
+<div class="page-profile">
+	<div class="main-info">
+		<div class="avatar-holder">
+			<div class="user-avatar" title="">
+				<img src="<%=user.userPhoto%>" alt="user" class="" style="max-width: 100%;">
+			</div>
+		</div>
+		<div class="info-holder">
+			<div class="main-info-row">
+				<!--<div class="id">id:<%= user.userId %></div>-->
+				<div class="name">@<%= user.userNickname %></div>
+				<% if(user.age){ %><div class="age"><%= user.age %> years</div><% } %>
+				<% if(user.userResidence){ %><div class="city">I live in <%= user.userResidence %></div><% } %>
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="menu-item favorite <%= (user.inFavorite) ? "active" : "" %>" data-id="<%= user.userId %>">
+			<div class="icon-holder">
+				<svg xmlns="http://www.w3.org/2000/svg" width="31.508" height="30.166" viewBox="0 0 31.508 30.166"><title>in-following</title><circle cx="26.166" cy="24.823" r="4.843" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.339,25.114a5.516,5.516,0,0,1,.924-3.06l-2.6-1.417a1.4,1.4,0,0,1-.73-1.23V17.651a11.1,11.1,0,0,0,1.857-3.837,2.1,2.1,0,0,0,.795-1.649V10.044a2.11,2.11,0,0,0-.531-1.39V5.831a4.742,4.742,0,0,0-1.108-3.459C16.858,1.129,15.093.5,12.7.5s-4.163.629-5.253,1.872A4.74,4.74,0,0,0,6.334,5.831V8.654a2.11,2.11,0,0,0-.531,1.39v2.121A2.1,2.1,0,0,0,6.6,13.814a11.1,11.1,0,0,0,1.857,3.837v1.755a1.4,1.4,0,0,1-.73,1.23l-4.73,2.581A4.78,4.78,0,0,0,.5,27.418v2.248H21.721A5.545,5.545,0,0,1,19.339,25.114Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><line x1="26.166" y1="21.785" x2="26.166" y2="27.861" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><line x1="23.128" y1="24.823" x2="29.203" y2="24.823" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</div>
+			<div class="menu-item-text">Favorite</div>
+		</div>
+		<div class="vert-divider"></div>
+		<!--Chat item removed-->
+		<div class="vert-divider"></div>
+		<a href="/chat#id=<%= user.userId %>" class="menu-item message">
+			<div class="icon-holder">
+				<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"><title>in-chat</title><path d="M.5,16.088a15.71,15.71,0,0,1,31.418,0,15.424,15.424,0,0,1-2.253,8.049L32.5,32.5l-8.7-2.764A15.735,15.735,0,0,1,.5,16.088Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd"/></svg>
+			</div>
+			<div class="menu-item-text">Message</div>
+		</a>
+	</div>
+
+	<div class="tag-place-container">
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="ribbons-body">
+		<% if(imagesGeneral.length) { %>
+		<div class="sub-page subPhotos active">
+			<div class="photos-wrapper" >
+				<% imagesGeneral.reverse().forEach(function(row, i){ %>
+				<div class="single-photo" data-imageid="<%= row.id %>" data-blacklist="<%= (row.blacklist) ? 1 : 0 %>" data-claim="<%= (row.claim) ? 1 : 0 %>">
+					<div class="main-info">
+						<div class="avatar-holder">
+							<div class="user-avatar" title="">
+								<img src="<%=user.userPhoto%>" alt="user" style="max-width: 100%;">
+							</div>
+						</div>
+						<div class="info-holder">
+							<div class="main-info-row">
+								<div class="name">@<%= user.userNickname %></div>
+							</div>
+							<div class="settings-dots">
+								<div class="settings-dot"></div>
+								<div class="settings-dot"></div>
+								<div class="settings-dot"></div>
+							</div>
+						</div>
+					</div>
+					<a href="/image/<%= row.id %>">
+						<img class="profile-img inloading" data-src="<%=row.path%>" src="/img/loader-bw.gif" alt="photo" >
+					</a>
+					<div class="photo-info">
+						<div class="like <%= (row.mylike) ? "active" : "" %>">
+							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 16">
+								<path fill="#666" d="M8.5 2.94C9.16 1.28 10.55 0 12.28 0c1.45 0 2.66.76 3.6 1.83 1.32 1.46 1.9
+					4.67-.5 7.02-1.25 1.2-6.85 7.13-6.85 7.13s-5.6-5.94-6.84-7.13C-.75 6.53-.2 3.32 1.16 1.83 2.12.77
+					3.32 0 4.75 0c1.74 0 3.1 1.28 3.75 2.94"></path>
+							</svg>
+							<div class="like-amount">
+								<%= row.like %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% }); %>
+			</div>
+		</div>
+		<% } %>
+		<div class="sub-page subInfo ">
+			<% if(user.userResidence ||
+					user.userBdateText ||
+					user.userGender ||
+					user.userEyes ||
+					user.userHair ||
+					user.userBody ||
+					user.userWeight ||
+					user.userHeight ||
+					user.userReligion ||
+					user.userEducation ||
+					user.userOccupation ||
+					user.userSmoke ||
+					user.userDrink ||
+					user.userHobbies ||
+					user.userFavoriteColor ||
+					user.userSport ||
+					user.userBeenAbroad ||
+					user.userInterest ||
+					user.userCharacter ||
+					user.userMaritalStatus ||
+					user.userChildren){%>
+			<div class="soc-buttons">
+				<a href="mailto:1@youproud.com" target="_blank" class="soc-btn" data-link="socialEmail" style="display: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="22.316" height="17" viewBox="0 0 22.316 17"><polygon points="21.138 2.695 19.713 17 2.603 17 1.455 2.972 11.158 8.404 21.138 2.695 21.138 2.695" fill="#f7f8f8"></polygon><polygon points="20.655 0 11.158 8.921 1.661 0 11.158 0 20.655 0 20.655 0" fill="#f7f8f8"></polygon><path d="M2.6,4.119V17H1.052A1.052,1.052,0,0,1,0,15.948V2.222l1.7.046.9,1.851Z" fill="#e7362c"></path><path d="M22.316,2.222V15.948A1.052,1.052,0,0,1,21.263,17h-1.55V4.119l.858-2.028,1.744.131Z" fill="#d1241c"></path><path d="M22.316,1.052v1.17l-2.6,1.9-8.555,6.236L2.6,4.119,0,2.222V1.052A1.052,1.052,0,0,1,1.052,0h.609l9.5,6.922L20.655,0h.609a1.052,1.052,0,0,1,1.053,1.052Z" fill="#e7362c"></path><polygon points="2.603 4.119 0 3.716 0 2.222 2.603 4.119 2.603 4.119" fill="#d1241c"></polygon></svg>
+				</a>
+				<a href="//facebook.com" target="_blank" class="soc-btn soc-link" data-link="fbLink" style="display: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17.3,0H2.7A2.7,2.7,0,0,0,0,2.7V17.3A2.7,2.7,0,0,0,2.7,20H9.9l.012-7.147H8.056a.438.438,0,0,1-.438-.436l-.009-2.3a.438.438,0,0,1,.438-.44H9.9V7.447a3.637,3.637,0,0,1,3.882-3.99h1.891a.438.438,0,0,1,.438.438V5.838a.438.438,0,0,1-.438.438h-1.16c-1.253,0-1.5.6-1.5,1.469V9.673h2.754a.438.438,0,0,1,.435.49l-.273,2.3a.438.438,0,0,1-.435.387H13.03L13.018,20H17.3A2.7,2.7,0,0,0,20,17.305V2.7A2.7,2.7,0,0,0,17.3,0Z" fill="#49528f"></path></svg>
+				</a>
+				<a href="//instagram.com" target="_blank" class="soc-btn soc-link" data-link="instaLink" style="display: none;">
+					<img src="/img/instagram.png" width="20.07" height="20.052">
+				</a>
+				<a href="//twitter.com" target="_blank" class="soc-btn soc-link" data-link="twitLink" style="display: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 112.197 112.197">
+						<circle cx="56.099" cy="56.098" r="56.098" fill="#55ACEE"></circle>
+						<path d="M90.46 40.316c-2.403 1.066-4.99 1.787-7.7 2.11 2.768-1.66 4.893-4.285 5.896-7.418-2.59 1.537-5.462 2.652-8.515 3.253-2.445-2.604-5.93-4.232-9.79-4.232-7.403 0-13.408 6.005-13.408 13.41 0 1.05.12 2.073.35 3.055-11.145-.56-21.026-5.897-27.64-14.012-1.154 1.98-1.816 4.286-1.816 6.743 0 4.65 2.37 8.757 5.965 11.16-2.196-.068-4.265-.67-6.072-1.678v.17c0 6.497 4.623 11.916 10.756 13.147-1.124.308-2.31.47-3.532.47-.866 0-1.705-.082-2.523-.238 1.705 5.326 6.656 9.203 12.525 9.312-4.59 3.597-10.37 5.74-16.655 5.74-1.08 0-2.15-.063-3.197-.188 5.93 3.806 12.98 6.025 20.553 6.025 24.664 0 38.152-20.432 38.152-38.153 0-.58-.013-1.16-.04-1.734 2.623-1.89 4.896-4.25 6.693-6.94z" fill="#F1F2F2"></path>
+					</svg>
+				</a>
+				<a href="//plus.google.com" target="_blank" class="soc-btn soc-link" data-link="gpLink" style="display: none;">
+					<svg class="gplus-ico svg-ico" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30">
+						<circle fill="#DC4F42" cx="15" cy="15" r="15"></circle>
+						<path fill="#FFF" d="M5.22 15.67C5.1 12.47 7.9 9.53 11.1 9.5c1.6-.14 3.2.5 4.43 1.52-.5.56-1.02
+                    1.1-1.57 1.62-1.08-.66-2.4-1.16-3.66-.72-2.04.6-3.28 3-2.52 5 .62 2.08 3.16 3.23 5.15 2.35 1.04-.37
+                    1.7-1.32 2-2.34-1.17-.02-2.35 0-3.53-.04v-2.1c1.97-.02 3.94-.02 5.9 0 .13 1.72-.12 3.56-1.24
+                    4.94-1.53 1.97-4.37 2.55-6.67 1.78-2.45-.8-4.23-3.27-4.18-5.85zM21.15 13h1.76l.02
+                    1.78h1.77v1.77H22.9v1.78h-1.77v-1.77h-1.78v-1.77c.6 0 1.17 0 1.77-.02V13z"></path>
+					</svg>
+				</a>
+				<div class="soc-btn" data-link="hasTelegram" style="display: none;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" fill="#4fb0d6"></path><path d="M14.854,4.26a.333.333,0,0,0-.328-.027l-10.746,5a.525.525,0,0,0,.012.958L13.7,14.508a.53.53,0,0,0,.742-.447L15,4.555a.333.333,0,0,0-.145-.3Z" fill="#ececec"></path><polygon points="6.704 11.462 7.374 15.937 14.811 4.236 6.704 11.462 6.704 11.462" fill="#d6d4d4"></polygon><path d="M14.526,4.233l-10.746,5a.525.525,0,0,0,.012.958L6.7,11.462l8.107-7.226a.333.333,0,0,0-.285,0Z" fill="#fff"></path><polygon points="8.259 12.139 7.374 15.937 14.811 4.236 8.259 12.139 8.259 12.139" fill="#ececec"></polygon><path d="M14.854,4.26a.322.322,0,0,0-.043-.024l-6.553,7.9,5.44,2.369a.53.53,0,0,0,.742-.447L15,4.555a.333.333,0,0,0-.145-.3Z" fill="#fff"></path></svg>
+					<div class="soc-tooltip"></div>
+				</div>
+				<div class="soc-btn" data-link="hasViber" style="display: none;">
+					<img src="/img/viber.png" width="18.002" height="20">
+					<div class="soc-tooltip"></div>
+				</div>
+				<a href="//whatsapp.com" target="_blank" class="soc-btn" data-link="hasWhatsapp" style="display: none;">
+					<img src="/img/whatsapp.png" width="19.838" height="20">
+					<div class="soc-tooltip"></div>
+				</a>
+			</div>
+			<div class="info-items-container" >
+				<div class="info-item residence"  <%= (!user.userResidence) ? 'style= display:none' : '' %>>
+					<div class="info-name">I live in</div>
+					<div class="info-parameter"><%= user.userResidence %></div>
+				</div>
+				<div class="info-item birthdate" <%= user.userBdateText === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoBdate%></div>
+					<div class="info-parameter" ><%= user.userBdateText %></div>
+				</div>
+				<div class="info-item gender" <%= (!user.userGender) ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoGender%></div>
+					<div class="info-parameter"><%= user.userGender %></div>
+				</div>
+				<div class="info-item eyes" <%= user.userEyes === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoEues%></div>
+					<div class="info-parameter"><%= user.userEyes %></div>
+
+				</div>
+				<div class="info-item hair" <%= user.userHair === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoHair%></div>
+					<div class="info-parameter"><%= user.userHair %></div>
+				</div>
+				<div class="info-item body-type" <%= user.userBody === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoBodyType%></div>
+					<div class="info-parameter"><%= user.userBody %></div>
+				</div>
+				<div class="info-item weight" <%= user.userWeight === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoWeight%></div>
+					<div class="info-parameter kg"><%= user.userWeight %></div>
+					<div class="info-parameter"><%=lang.lProfileInfoKG%></div>
+				</div>
+				<div class="info-item height" <%= user.userHeight === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoHeight%></div>
+					<div class="info-parameter sm"><%= user.userHeight %></div>
+					<div class="info-parameter units"><%=lang.lProfileInfoSM%></div>
+				</div>
+				<div class="info-item religion" <%= user.userReligion === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoReligion%></div>
+					<div class="info-parameter"><%= user.userReligion %></div>
+				</div>
+				<div class="info-item education" <%= user.userEducation === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoEducation%></div>
+					<div class="info-parameter"><%= user.userEducation %></div>
+				</div>
+				<div class="info-item occupation" <%= user.userOccupation === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoOccupation%></div>
+					<div class="info-parameter"><%= user.userOccupation %></div>
+				</div>
+				<div class="info-item smoke" <%= user.userSmoke === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoSmoke%></div>
+					<div class="info-parameter"><%= user.userSmoke %></div>
+				</div>
+				<div class="info-item drink" <%= user.userDrink === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoDrink%></div>
+					<div class="info-parameter"><%= user.userDrink %></div>
+				</div>
+				<div class="info-item hobbies" <%= user.userHobbies === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoHobbies%></div>
+					<div class="info-parameter"><%= user.userHobbies %></div>
+				</div>
+				<div class="info-item favorite-color" <%= user.userFavoriteColor === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoColors%></div>
+					<div class="info-parameter"><%= user.userFavoriteColor %></div>
+				</div>
+				<div class="info-item sport" <%= user.userSport === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoSport%></div>
+					<div class="info-parameter"><%= user.userSport %></div>
+				</div>
+				<div class="info-item been-abroad" <%= user.userBeenAbroad === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoAbroad%></div>
+					<div class="info-parameter"><%= user.userBeenAbroad %></div>
+				</div>
+				<div class="info-item interests" <%= user.userInterest === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoInterests%></div>
+					<div class="info-parameter"><%= user.userInterest %></div>
+				</div>
+				<div class="info-item character-traits" <%= user.userCharacter === "" ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoCharacter%></div>
+					<div class="info-parameter"><%= user.userCharacter %></div>
+				</div>
+				<div class="info-item marital-status" <%= user.userMaritalStatus === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoMarital%></div>
+					<div class="info-parameter"><%= user.userMaritalStatus %></div>
+				</div>
+				<div class="info-item children" <%= user.userChildren === '' ? 'style= display:none' : '' %>>
+					<div class="info-name"><%=lang.lProfileInfoChildren%></div>
+					<div class="info-parameter"><%= user.userChildren %></div>
+				</div>
+			</div>
+
+			<% }%>
+			
+			<% if(user.userAboutMyself){%>
+			<div class="divider"></div>
+			<div class="text-title"><%=lang.lProfileDropdownAboutMyself%></div>
+			<div class="divider"></div>
+			<div class="about-text">
+				<%= user.userAboutMyself %>
+			</div>
+			<% }%>
+			
+			<% if(user.userAboutPartner){%>
+			<div class="divider"></div>
+			<div class="text-title"><%=lang.lProfileDropdownAboutPartner%></div>
+			<div class="divider"></div>
+			<div class="about-text">
+				<%= user.userAboutPartner %>
+			</div>
+			<% }%>
+		</div>
+	</div>
+
+</div>
+
+<div class="modal-wrapper-style claim-modal-wrapper">
+	<div class="claim-modal modal-style">
+		<div class="claim-bg modal-bg-style"></div>
+		<div class="claim-popup claim modal-popup-style">
+			<div class="menu-item block-user" <%- (user.inBlacklist) ? 'style="display: none;"' : '' %>>
+				<svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" viewBox="0 0 17 25">
+					<path fill="#333" d="M4.64 5.45c0-2.12 1.73-3.85 3.86-3.85s3.86 1.73 3.86 3.85V8.5h1.6V5.46c0-3-2.45-5.45-5.46-5.45S3.05
+				2.45 3.05 5.45V8.5h1.6V5.46zm0 0M.12 10.1V25h16.76V10.1H.12zm11.26 9.2l-1.13 1.13-1.75-1.75-1.75
+				1.75-1.13-1.13 1.75-1.75-1.75-1.75 1.13-1.12 1.75 1.75 1.75-1.75 1.13 1.12-1.75 1.75 1.75 1.75zm0 0"/>
+				</svg>
+				<div class="item-title"><%=lang.lProfileBlockUserOption%></div>
+			</div>
+			<div class="menu-item block-user" <%- (!user.inBlacklist) ? 'style="display: none;"' : '' %>>
+				<svg xmlns="http://www.w3.org/2000/svg" width="23.21" height="24.99" viewBox="0 0 23.208 24.99">
+					<path fill="#333" d="M13.9 5.44c0-2.12 1.72-3.85 3.85-3.85S21.6 3.3 21.6 5.43V8.5h1.6V5.44c0-3-2.44-5.45-5.45-5.45S12.3 2.44 12.3 
+				5.44V8.5h1.6V5.44zM0 10.1V25h16.76V10.1H0zm9.22 7.28v1.8c0 .47-.4.85-.85.85-.46 0-.83-.38-.83-.84v-1.8c-.3-.24-.48-.6-.48-1 
+				0-.75.6-1.34 1.32-1.34.72 0 1.32.6 1.32 1.32 0 .4-.17.77-.47 1z"/></svg>
+				<div class="item-title"><%=lang.lProfileUnBlockUserOption%></div>
+			</div>
+			<div class="menu-item claim-user">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+					<g fill="#333">
+						<path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18.7c-4.8
+					0-8.7-4-8.7-8.7 0-4.8 4-8.7 8.7-8.7 4.8 0 8.7 4 8.7 8.7 0 4.8-4 8.7-8.7 8.7zm0 0"/>
+						<path d="M10 3.7c-.7 0-1.2.6-1.2 1.3v6.2c0 .7.5 1.3 1.2 1.3s1.2-.6 1.2-1.3V5c0-.7-.5-1.3-1.2-1.3zm0
+					0M11.2 15c0 .7-.5 1.2-1.2 1.2s-1.2-.5-1.2-1.2.5-1.3 1.2-1.3 1.2.6 1.2 1.3zm0 0"/>
+					</g>
+				</svg>
+				<div class="item-title"><%=lang.lProfileClaimUser%></div>
+			</div>
+		</div>
+		<div class="claim-popup claim-reason modal-popup-style">
+			<div class="header"><%=lang.lProfileClaimOptionsTitle%></div>
+			<div class="option">
+				<div class="check-container">
+					<input name="claimType[]" value="1" type="checkbox" <%- (user.claim.indexOf("1") != -1) ? 'checked="checked"' : '' %> id="claimPub">
+					<label for="claimPub">
+						<i class="ico check-img"></i>
+						<div class="option-text"><%=lang.lProfileClaimOptionsPublications%> <br><%= user.userNickname %></div>
+					</label>
+				</div>
+			</div>
+			<div class="option">
+				<div class="check-container">
+					<input name="claimType[]" value="2" type="checkbox" <%- (user.claim.indexOf("2") != -1) ? 'checked="checked"' : '' %> id="claimProf">
+					<label for="claimProf">
+						<i class="ico check-img"></i>
+						<div class="option-text"><%=lang.lProfileClaimOptionsProfile%></div>
+					</label>
+				</div>
+			</div>
+			<div class="claim-button"><%=lang.lProfileClaimSend%></div>
+		</div>
+	</div>
+</div>
+<div class="modal-wrapper-style claim-photo-modal-wrapper">
+	<div class="claim-photo-modal modal-style">
+		<div class="claim-photo-bg modal-bg-style"></div>
+		<div class="claim-photo-popup modal-popup-style">
+			<!-- <div class="menu-item block-user">
+				<svg xmlns="http://www.w3.org/2000/svg" width="17" height="25" viewBox="0 0 17 25">
+					<path fill="#333" d="M4.64 5.45c0-2.12 1.73-3.85 3.86-3.85s3.86 1.73 3.86 3.85V8.5h1.6V5.46c0-3-2.45-5.45-5.46-5.45S3.05
+					2.45 3.05 5.45V8.5h1.6V5.46zm0 0M.12 10.1V25h16.76V10.1H.12zm11.26 9.2l-1.13 1.13-1.75-1.75-1.75
+					1.75-1.13-1.13 1.75-1.75-1.75-1.75 1.13-1.12 1.75 1.75 1.75-1.75 1.13 1.12-1.75 1.75 1.75 1.75zm0 0"/>
+				</svg>
+				<div class="item-title"><%=lang.lProfileBlockUserOption%></div>
+			</div>
+			<div class="menu-item block-user" style="display: none;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="23.21" height="24.99" viewBox="0 0 23.208 24.99">
+					<path fill="#333" d="M13.9 5.44c0-2.12 1.72-3.85 3.85-3.85S21.6 3.3 21.6 5.43V8.5h1.6V5.44c0-3-2.44-5.45-5.45-5.45S12.3 2.44 12.3
+					5.44V8.5h1.6V5.44zM0 10.1V25h16.76V10.1H0zm9.22 7.28v1.8c0 .47-.4.85-.85.85-.46 0-.83-.38-.83-.84v-1.8c-.3-.24-.48-.6-.48-1
+					0-.75.6-1.34 1.32-1.34.72 0 1.32.6 1.32 1.32 0 .4-.17.77-.47 1z"/></svg>
+				<div class="item-title"><%=lang.lProfileUnBlockUserOption%></div>
+			</div> -->
+			<div class="menu-item claim-user">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+					<g fill="#333">
+						<path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18.7c-4.8
+						0-8.7-4-8.7-8.7 0-4.8 4-8.7 8.7-8.7 4.8 0 8.7 4 8.7 8.7 0 4.8-4 8.7-8.7 8.7zm0 0"/>
+						<path d="M10 3.7c-.7 0-1.2.6-1.2 1.3v6.2c0 .7.5 1.3 1.2 1.3s1.2-.6 1.2-1.3V5c0-.7-.5-1.3-1.2-1.3zm0
+						0M11.2 15c0 .7-.5 1.2-1.2 1.2s-1.2-.5-1.2-1.2.5-1.3 1.2-1.3 1.2.6 1.2 1.3zm0 0"/>
+					</g>
+				</svg>
+				<div class="item-title"><%=lang.lProfileClaimUser%></div>
+			</div>
+			<div class="menu-item claim-user" style="display: none;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+					<g fill="#333">
+						<path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 18.7c-4.8
+						0-8.7-4-8.7-8.7 0-4.8 4-8.7 8.7-8.7 4.8 0 8.7 4 8.7 8.7 0 4.8-4 8.7-8.7 8.7zm0 0"/>
+						<path d="M10 3.7c-.7 0-1.2.6-1.2 1.3v6.2c0 .7.5 1.3 1.2 1.3s1.2-.6 1.2-1.3V5c0-.7-.5-1.3-1.2-1.3zm0
+						0M11.2 15c0 .7-.5 1.2-1.2 1.2s-1.2-.5-1.2-1.2.5-1.3 1.2-1.3 1.2.6 1.2 1.3zm0 0"/>
+					</g>
+				</svg>
+				<div class="item-title">Відмінити скаргу</div>
+			</div>
+		</div>
+	</div>
+</div>
+<%- include('multi-parts/popups/claim-post-popup') %>
+<%- include('multi-parts/popups/share-popup') %>
+<%- include('footer-info') %>
+<%- include('footer') %>

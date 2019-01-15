@@ -1,0 +1,100 @@
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+@viewport {
+  width: 320px auto;
+  zoom: 1.0;
+  min-zoom: 1;
+  max-zoom: 1;
+  width: extend-to-zoom; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-text-size-adjust: none; }
+
+html, body {
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto','Open Sans','Helvetica Neue',sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-size: 13px;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+  body.sidemenu-opened {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    body.sidemenu-opened .header-mobile {
+      -webkit-transform: translateX(0) translateZ(0);
+      -moz-transform: translateX(0) translateZ(0);
+      -o-transform: translateX(0) translateZ(0);
+      -ms-transform: translateX(0) translateZ(0);
+      transform: translateX(0) translateZ(0);
+      /*left:0;*/
+      /*      width: 100%;*/ }
+    body.sidemenu-opened .side-menu {
+      -webkit-transform: translateX(0) translateZ(0);
+      -moz-transform: translateX(0) translateZ(0);
+      -o-transform: translateX(0) translateZ(0);
+      -ms-transform: translateX(0) translateZ(0);
+      transform: translateX(0) translateZ(0);
+      /*left: 0;*/ }
+    body.sidemenu-opened .side-menu-close-cover {
+      display: block; }
+    body.sidemenu-opened .center-content {
+      opacity: 0; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #cccccc; }
+
+.flexcol {
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  padding-right: 5px; }
+
+.btn-clear {
+  display: block;
+  font: inherit;
+  line-height: normal;
+  color: inherit;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+/*# sourceMappingURL=0.2.common-multiuse.css.map */

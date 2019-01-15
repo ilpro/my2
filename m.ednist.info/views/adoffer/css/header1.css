@@ -1,0 +1,246 @@
+/* Style minor reset*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, serif;
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    background: url("../img/back.jpg") no-repeat center fixed;
+    background-size: cover;
+
+}
+
+.back{
+    background: url('../img/back.jpg') center fixed;
+    background-size: 110%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+.back-ad{
+    background: url('../img/back1.jpg') center fixed;
+}
+
+@media screen and (max-width:960px) {
+    .back-ad{
+        background-size: 40%;
+    }
+}
+
+/* Main style*/
+.wrapper {
+    width: 960px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.main-content {
+    background-color: #f1f1f1;
+}
+
+    .flexrow {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .flexcol {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .flexend {
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+
+    .common-lh-ls {
+        line-height : 18.7px;
+        letter-spacing : 0.51px;
+    }
+
+
+
+
+/* Header menu style*/
+.ad-name {
+    text-align: center;
+    font-weight : bold;
+    font-size : 20px;
+    line-height : 41.14px;
+    letter-spacing : 0.6px;
+    text-transform : uppercase;
+    color : #FFFFFF;
+    height: 44px;
+    width: 100%;
+    background-color: #64709e;
+    z-index: 1000;
+}
+
+    .menu1 {
+        background-color: #3f476e;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .menu-item {
+        text-align: center;
+    }
+
+    .menu-name {
+        font-size : 18px;
+        color : #A9B2D6;
+    }
+
+    .menu-name.active {
+        color : #F5F6FA;
+    }
+
+    .sprite-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        background: url("../img/sprite.png") no-repeat;
+        margin: 0 auto;
+    }
+
+
+/* Map menu-item style*/
+.map-ref {
+    padding: 20px 30px 10px 35px;
+    margin: 0 auto;
+}
+
+    .map-wrapper {
+        width: 64px;
+        height: 45px;
+    }
+
+    .header-map             { background-position: -1px -1px;}
+    .header-map-active      { background-position: -1px -47px;}
+
+
+
+/* People menu-item style*/
+.people-ref {
+    padding: 20px 15px 10px 15px;
+    margin: 0 auto;
+}
+
+    .people-wrapper {
+        width: 39px;
+        height: 45px;
+    }
+
+    .header-people          { background-position: -71px -1px;}
+    .header-people-active   { background-position: -71px -47px;}
+
+
+
+/* Facebook menu-item style*/
+.fb-ref {
+    padding: 20px 25px 10px 25px;
+    margin: 0 auto;
+}
+
+    .fb-wrapper{
+        width: 39px;
+        height: 45px;
+    }
+
+    .header-fb              { background-position: -115px -1px;}
+    .header-fb-active       { background-position:  -115px -47px;}
+
+
+
+/* Placement menu-item style*/
+.pc-ref {
+    padding: 20px 45px 10px 25px;
+    margin: 0 auto;
+}
+
+    .pc-wrapper {
+        width: 57px;
+        height: 45px;
+    }
+
+    .header-pc              { background-position: -158px -1px;}
+    .header-pc-active       { background-position: -158px -47px;}
+
+/* Menu animation style*/
+.map-ref,
+.people-ref,
+.fb-ref,
+.pc-ref {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.map-ref:hover,
+.people-ref:hover,
+.fb-ref:hover,
+.pc-ref:hover {
+    opacity: 0.65;
+}
+
+.crosss, .crosss-popup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cross-high {
+    margin: 10px 0 0 0;
+    height: 3px;
+    background-color: black;
+    transform: rotate(135deg);
+    width: 100%;
+}
+
+.cross-low {
+    margin: -3px 0 0 0;
+    height: 3px;
+    background-color: black;
+    transform: rotate(225deg);
+    width: 100%;
+}
+
+
+
+
+

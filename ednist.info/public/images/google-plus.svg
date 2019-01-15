@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 24.375">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <g id="google-plus" transform="translate(0 -96)">
+    <g id="Group_13" data-name="Group 13" transform="translate(26.813 100.875)">
+      <g id="Group_12" data-name="Group 12">
+        <path id="Path_26" data-name="Path 26" class="cls-1" d="M359.313,164.875V160h-2.437v4.875H352v2.438h4.875v4.875h2.438v-4.875h4.875v-2.437Z" transform="translate(-352 -160)"/>
+      </g>
+    </g>
+    <g id="Group_15" data-name="Group 15" transform="translate(0 96)">
+      <g id="Group_14" data-name="Group 14">
+        <path id="Path_27" data-name="Path 27" class="cls-1" d="M12.188,105.75v4.875h6.9a7.313,7.313,0,1,1-6.9-9.75,7.2,7.2,0,0,1,4.736,1.765l3.2-3.676A12.078,12.078,0,0,0,12.188,96a12.187,12.187,0,1,0,12.188,12.187V105.75Z" transform="translate(0 -96)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,234 @@
+<% if(
+	page != "login" && 
+	(
+		!userEmail || 
+		!userPass || 
+		userBdate == "0000-00-00" || 
+		!userGenderId || 
+		!userNickname || 
+		userPhoto == "/img/guestAva.png" || 
+		!userCity || 
+		!userCountry ||
+		!userWantToVisit || 
+		!userSearchSettings
+	)
+){ %>
+<div class="after-reg-modal" style="display:none;">
+	<% active = 0; %>
+
+	<% if(!userEmail || !userPass || userBdate == "0000-00-00" || !userGenderId) active = 1; %>
+	<!--info-->
+    <div class="step info <%= (active == 1) ? "active" : "" %>" data-step="1">
+        <h5>E-mail</h5>
+        <input type="text" class="email" value="<%=userEmail%>" placeholder="E-mail...">
+        <% if(!userPass) { %>
+		<h5>Password</h5>
+        <input type="password" class="password" placeholder="Password...">
+        <h5>Confirm Password</h5>
+        <input type="password" class="password-confirm" placeholder="Confirm password...">
+		<% } %>
+        <h5>Enter your date of birth</h5>
+        <div class="row justify-content-center">
+            <div class="col">
+                <p>Day</p>
+                <select class="day">
+					<option value="">---</option>
+                    <% for(var i=1; i<=31; i++){%><option value="<%=i%>" <%= (bDate[2] == i) ? "selected" : "" %>><%=i%></option><% }%>
+                </select>
+            </div>
+            <div class="col" style="margin: 0 15px;">
+                <p>Month</p>
+                <select class="mounth">
+                    <option value="">---</option>
+                    <% for(var i=1; i<=12; i++){%><option value="<%=i%>" <%= (bDate[1] == i) ? "selected" : "" %>><%=i%></option><% }%>
+                </select>
+            </div>
+            <div class="col">
+                <p>Year</p>
+                <select class="year">
+                    <option value="">---</option>
+                    <% for(var i=2005; i>=1918; i--){%><option value="<%=i%>" <%= (bDate[0] == i) ? "selected" : "" %>><%=i%></option><% }%>
+                </select>
+            </div>
+        </div>
+        <div class="error-reg-notification">
+            <p>Error! Check your data.</p>
+            <button>Continue</button>
+        </div>
+        <h5>gender</h5>
+        <div class="select-gender true-select-gender" style="padding-bottom: 5px;">
+            <div class="gender-container <%= (userGenderId == 1) ? "active" : "" %>" data-val="1" style="padding: 20px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25.69" height="33" viewBox="0 0 25.69 33"><title>in-female</title><path d="M25.1,31.186a13.549,13.549,0,0,0-7.421-6.751V22.479c1.6-.088,4.611-.494,6.378-2.3a.922.922,0,0,0,.23-.873.912.912,0,0,0-.637-.643c-.027-.007-2.356-.806-1.889-5.573a20.706,20.706,0,0,0-.095-5.43,8.261,8.261,0,0,0-1.8-4.2,4.816,4.816,0,0,0-3.724-1.6h-.176A5.683,5.683,0,0,0,12.2.5a7.76,7.76,0,0,0-2.8.555l-.041.014A6.939,6.939,0,0,0,6,3.473c-1.388,1.842-2.052,4.57-1.971,8.1s-.5,5.275-1,6.108c-.413.684-.806.819-.907.846a.832.832,0,0,0-.8.447.924.924,0,0,0,.088.989,4.816,4.816,0,0,0,1.7,1.374,11.205,11.205,0,0,0,4.868,1.185v1.862A13.612,13.612,0,0,0,.59,31.193.909.909,0,0,0,1.409,32.5H24.282a.912.912,0,0,0,.772-.426.938.938,0,0,0,.047-.887Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Female
+            </div>
+            <div class="gender-container <%= (userGenderId == 2) ? "active" : "" %>" data-val="2" style="padding: 20px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28.837" height="33" viewBox="0 0 28.837 33"><title>in-male</title><path d="M8.93,21.255v2.1A15.347,15.347,0,0,0,.6,31.027,1.025,1.025,0,0,0,1.525,32.5H27.313a1.028,1.028,0,0,0,.87-.481,1.057,1.057,0,0,0,.053-1h0a15.276,15.276,0,0,0-8.367-7.611V21.2l0-1.422c.261-.581,1.763-1.214,1.927-1.9.953-.343,1.475-1.743,1.825-2.98.469-1.646.417-2.8-.134-3.442.581-3.166.321-5.5-.767-6.936a3.413,3.413,0,0,0-1.691-1.214,6.243,6.243,0,0,0-2.064-1.8A7.344,7.344,0,0,0,15.155.5c-.253,0-.506.015-.73.03A6.99,6.99,0,0,0,12.57.88c-.008,0-.015.008-.023.008a8.252,8.252,0,0,0-1.959,1A10.345,10.345,0,0,0,8.629,3.51a8.148,8.148,0,0,0-2.19,3.852,7.243,7.243,0,0,0-.075,3.457,1.727,1.727,0,0,0-.358.343c-.514.678-.536,1.743-.082,3.36a5.253,5.253,0,0,0,1.438,2.771A11.177,11.177,0,0,0,8.93,20.2Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Male
+            </div>
+        </div>
+    </div>
+
+	<% if(!active && (!userNickname || userPhoto == "/img/guestAva.png")) active = 2; %>
+	<!--photo-->
+    <div class="step photo <%= (active == 2) ? "active" : "" %>" data-step="2">
+        <h5>nick name</h5>
+        <input type="text" class="nickname" value="<%=userNickname%>" placeholder="Nick name...">
+        <h5>Upload photo</h5>
+        <div class="upload-photo">
+			<% if(userPhoto == "/img/guestAva.png" || userPhoto[0] != "/") {%>
+			<svg xmlns="http://www.w3.org/2000/svg" width="137.308" height="137.308" viewBox="0 0 137.308 137.308"><title>upload-photo</title><rect x="0.5" y="0.5" width="136.308" height="136.308" rx="4" ry="4" fill="#fff" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><circle cx="68.654" cy="68.654" r="30.187" fill="#fff" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><line x1="68.654" y1="51.816" x2="68.654" y2="85.492" fill="#fff" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/><line x1="51.816" y1="68.654" x2="85.492" y2="68.654" fill="#fff" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			<% } else { %>
+			<img src="<%=userPhoto%>" alt="" style="display: block; margin: 0 auto;">
+			<% } %>
+		</div>
+    </div>
+
+	<% if(!active && (!userCity || !userCountry || !userWantToVisit)) active = 3; %>
+	<!--place-->
+    <div class="step place <%= (active == 3) ? "active" : "" %>" data-step="3">
+        <h5>i live in</h5>
+        <div class="wtv-container country-old" style="padding: 10px 0;">
+            <svg style="left: 10px;" class="search__icosearch " xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24.88 24.88">
+                <path fill="gray" d="M24.66,23.61l-6-6a10.62,10.62,0,1,0-1,1l6,6a.75.75,0,0,0,.52.22.73.73,0,0,0,.52-.22.75.75,0,0,0,0-1Zm-23.18-13a9.12,9.12,0,1,1,9.12,9.12,9.13,9.13,0,0,1-9.12-9.12Zm0,0"></path>
+            </svg>
+            <div id="country-to-visit" style="display: none;"></div>
+            <input id="i-live-in" class="google-places-input"  style=" width: 100%" type="text" placeholder="City...">
+            <svg style="right: 10px;" class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg>
+        </div>
+
+        <div id="i-live-in-container" style="padding: 10px 0;" class="tag-place-container">
+            <% if(userCity){%>
+              <div class="tag-place" style="text-transform: capitalize">
+                <%= userCity %>, <%= userCountry %>
+              </div>
+            <% }%>
+        </div>
+
+        <h5 style="display: block; padding-bottom: 5px;"> i want to visit</h5>
+        <h5 style="color: #000000;">popular places</h5>
+        <div class="tag-place-container popular-places">
+            <% if(popularPlaces.length > 0){%>
+            <% popularPlaces.forEach((row, i) => {%>
+            <div class="tag-place" style="text-transform: capitalize">
+                <%=row.place%>
+            </div>
+            <% })%>
+            <% }%>
+        </div>
+        <div class="wtv-container country-old" style="padding: 10px 0;">
+            <svg style="left: 10px;" class="search__icosearch " xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24.88 24.88">
+                <path fill="gray" d="M24.66,23.61l-6-6a10.62,10.62,0,1,0-1,1l6,6a.75.75,0,0,0,.52.22.73.73,0,0,0,.52-.22.75.75,0,0,0,0-1Zm-23.18-13a9.12,9.12,0,1,1,9.12,9.12,9.13,9.13,0,0,1-9.12-9.12Zm0,0"></path>
+            </svg>
+            <div id="country-to-visit" style="display: none;"></div>
+            <input class="google-places-input place-visit" style=" width: 100%" type="text" placeholder="Places...">
+            <svg style="right: 10px;" class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="gray" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg>
+        </div>
+
+        <div style="padding: 10px 0 5px;" class="tag-place-container want-to-visit-container">
+            <% if(userWantToVisit){%>
+              <% userWantToVisit.split(", ").forEach(function(row, i){%>
+              <% var item = row.split(":");%>
+              <div class="tag-place"  data-id="<%=item[0]%>" style="text-transform: capitalize">
+                  <span  class="place-name"><%=item[1]%></span>
+                  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="20.354" height="20.354" viewBox="0 0 20.354 20.354"><title>close</title><line x1="0.177" y1="0.177" x2="20.177" y2="20.177" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line><line x1="19.72" y1="0.634" x2="0.634" y2="19.72" fill="none" stroke="#4d4d4d" stroke-miterlimit="10" stroke-width="1.5"></line></svg></div>
+              <% })%>
+            <% }%>
+        </div>
+    </div>
+
+	<% if(!active && !userSearchSettings) active = 4; %>
+    <!--partner-->
+    <div class="step partner <%= (active == 4) ? "active" : "" %>" data-step="4">
+        <h5>i am looking for</h5>
+        <div class="select-gender true-select-gender" style="padding-bottom: 5px;">
+            <div class="gender-container" data-val="1" style="padding: 20px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25.69" height="33" viewBox="0 0 25.69 33"><title>in-female</title><path d="M25.1,31.186a13.549,13.549,0,0,0-7.421-6.751V22.479c1.6-.088,4.611-.494,6.378-2.3a.922.922,0,0,0,.23-.873.912.912,0,0,0-.637-.643c-.027-.007-2.356-.806-1.889-5.573a20.706,20.706,0,0,0-.095-5.43,8.261,8.261,0,0,0-1.8-4.2,4.816,4.816,0,0,0-3.724-1.6h-.176A5.683,5.683,0,0,0,12.2.5a7.76,7.76,0,0,0-2.8.555l-.041.014A6.939,6.939,0,0,0,6,3.473c-1.388,1.842-2.052,4.57-1.971,8.1s-.5,5.275-1,6.108c-.413.684-.806.819-.907.846a.832.832,0,0,0-.8.447.924.924,0,0,0,.088.989,4.816,4.816,0,0,0,1.7,1.374,11.205,11.205,0,0,0,4.868,1.185v1.862A13.612,13.612,0,0,0,.59,31.193.909.909,0,0,0,1.409,32.5H24.282a.912.912,0,0,0,.772-.426.938.938,0,0,0,.047-.887Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                She
+            </div>
+            <div class="gender-container" data-val="2" style="padding: 20px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28.837" height="33" viewBox="0 0 28.837 33"><title>in-male</title><path d="M8.93,21.255v2.1A15.347,15.347,0,0,0,.6,31.027,1.025,1.025,0,0,0,1.525,32.5H27.313a1.028,1.028,0,0,0,.87-.481,1.057,1.057,0,0,0,.053-1h0a15.276,15.276,0,0,0-8.367-7.611V21.2l0-1.422c.261-.581,1.763-1.214,1.927-1.9.953-.343,1.475-1.743,1.825-2.98.469-1.646.417-2.8-.134-3.442.581-3.166.321-5.5-.767-6.936a3.413,3.413,0,0,0-1.691-1.214,6.243,6.243,0,0,0-2.064-1.8A7.344,7.344,0,0,0,15.155.5c-.253,0-.506.015-.73.03A6.99,6.99,0,0,0,12.57.88c-.008,0-.015.008-.023.008a8.252,8.252,0,0,0-1.959,1A10.345,10.345,0,0,0,8.629,3.51a8.148,8.148,0,0,0-2.19,3.852,7.243,7.243,0,0,0-.075,3.457,1.727,1.727,0,0,0-.358.343c-.514.678-.536,1.743-.082,3.36a5.253,5.253,0,0,0,1.438,2.771A11.177,11.177,0,0,0,8.93,20.2Z" fill="none" stroke="#2c3a48" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                He
+            </div>
+        </div>
+        <div class="input-range-wrapper">
+            <div class="input-title">Age</div>
+            <input name="ageFrom" class="age-input from-age" value="18">
+            <div class="dash"></div>
+            <input name="ageTo" class="age-input to-age" value="100">
+        </div>
+        <div id="ageSlider_modal" class="slider-ui"></div>
+    </div>
+
+    <div class="row justify-content-between two-btn <%= (active < 4) ? "active" : "" %>">
+        <div class="btn prev <%= (active == 1) ? "hidden" : "" %>">‹‹ Previous</div>
+        <div class="btn next">Next ››</div>
+    </div>
+    <div class="row justify-content-center one-btn <%= (active == 4) ? "active" : "" %>">
+        <div class="btn next">Search</div>
+    </div>
+</div>
+<% }%>
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KPL52B"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
+
+<!--Lib-->
+<script src="/js/socket.io-1.4.5.js"></script>
+<script src="/js/cookie.js"></script>
+<script src="/js/jquery.ajaxupload-1.2.js"></script>
+<script src="/js/jquery.select2.min.js"></script>
+<script src="/js/jquery.inputmask.min.js"></script>
+<script src="/js/jquery.inputmask.phone.extensions.min.js"></script>
+<script src="/js/jquery.chosen.min.js"></script>
+<script src="/js/tappy.js"></script>
+<script src="/js/croppic.min.js"></script>
+<script src="/js/chat-lib.js"></script>
+<script src="/js/svg.js"></script>
+<script src="/js/moment.min.js"></script>
+
+<!--Language-->
+<script src="/js/<%=langFile%>"></script>
+
+<script src="/js/formstone.core.js"></script>
+<script src="/js/formstone.upload.js"></script>
+<script src="/js/clipboard.min.js"></script>
+
+<!--Classes-->
+<script src="/js/class.notifications.js"></script>
+<script src="/js/class.stickers.js"></script>
+<script src="/js/class.user.js"></script>
+<script src="/js/class.messages.js"></script>
+<script src="/js/class.chat.js"></script>
+<script src="/js/class.chatList.js"></script>
+<script src="/js/class.bot-chat.js"></script>
+<script src="/js/class.bot-chatList.js"></script>
+<script src="/js/class.urlhash.js"></script>
+
+<!--Socket-->
+<script src="/js/datasocket.js"></script>
+
+<!--Start point-->
+<script src="/js/auth.js"></script>
+
+<!--helper files-->
+<script src="/js/main.js"></script>
+<script src="/js/after-reg.js"></script>
+<script src="/js/google-places.js"></script>
+
+<!--google places api-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAg2kMpAdD7v862bpo3OEUoJ7Tuq4y_IM&libraries=places&language=en&callback=initAutocomplete"></script>
+
+
+<!--Pages-->
+<script src="/js/page.<%= page %>.js"></script>
+</body>
+</html>

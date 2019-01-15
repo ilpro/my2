@@ -1,0 +1,217 @@
+/* Common style*/
+iframe {
+    border: none;
+}
+
+#advertising {
+    height: 250px;
+}
+
+
+
+
+/* Submenu*/
+.submenu {
+    background-color: #929bc4;
+    z-index: 1000;
+    position: relative;
+}
+
+    .ad {
+        padding: 10px 10px;
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    .ad1  {
+        margin-left: 23px;
+    }
+
+    .ad4 {
+        margin-right: 25px;
+    }
+
+    .ad-text {
+        font-weight : bold;
+        font-size : 15px;
+        letter-spacing : 0.48px;
+        color : #353B57;
+        text-transform: uppercase;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    .ad-text.active {
+        color: white;
+    }
+
+    .ad-text:hover {
+        opacity: 0.65;
+    }
+
+
+
+/* Main Content */
+.main-content {
+    color : #3F476E;
+    background-color: transparent;
+}
+
+.ad-places-text {
+    font-size : 27px;
+    line-height : 40px;
+    letter-spacing : 0.48px;
+    color : white;
+    align-self: center;
+    margin: 0 auto;
+}
+
+
+    .adware-main-top {
+        width: 960px;
+        height: 250px;
+        background-color: #f63435;
+        z-index: 1000;
+        position: relative;
+    }
+
+
+
+.ad-indent {
+    margin: 7px 0 7px 0;
+}
+
+
+    .adware-main-middle-top {
+        width: 728px;
+        height: 90px;
+        background-color: #f63435;
+        z-index: 1000;
+        position: relative;
+    }
+
+        .empty {
+            width: 229px;
+            height: 90px;
+            background-color: black;
+        }
+
+
+
+
+    .adware-main-middle-bottom {
+        width: 300px;
+        height: 250px;
+        background-color: #f63435;
+        z-index: 1000;
+        position: relative;
+    }
+
+
+
+        /* Publish page style*/
+
+    .video-container {
+        background: #ECEDED;
+        width: 653px;
+        height: 487px;
+        margin: -10px 0 0 0;
+    }
+
+        .adware-publish-video {
+            width: 640px;
+            height: 480px;
+            background-color: #f63435;
+            margin: 0 auto;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .video-min {
+            width: 580px;
+            height: 360px;
+            background-color: darkred;
+            align-self: center;
+            margin: 0 auto;
+        }
+        /* Publish page  end*/
+
+
+
+
+    .adware-main-bottom {
+        width: 960px;
+        height: 250px;
+        background-color: #f63435;
+        z-index: 1000;
+        position: relative;
+    }
+
+
+    .adware-main-footer {
+        width: 100%;
+        max-height: 240px;
+        min-height: 110px;
+        height: 20%;
+        background-color: #f63435;
+        z-index: 1000;
+        position: fixed;
+        bottom: 0;
+        transition: opacity .4s ease;
+        opacity: 0;
+    }
+
+    .adware-popup {
+        width: 40%;
+        height: 70%;
+        min-height: 140px;
+        margin: 0 auto;
+        align-self: center;
+        background-color: #d42121;
+        z-index: 1000;
+        position: fixed;
+        top: 15%;
+        left: 30%;
+        transition: opacity .5s ease;
+        opacity: 0;
+        box-shadow: 0 0 30px rgba(0,0,0,.7);
+    }
+
+ .site-img {
+     width: 960px;
+     height: 3296px;
+     margin: 0 auto;
+ }
+
+ .site-img-wrapper {
+     margin: 0 auto;
+     width: 960px;
+ }
+
+ 
+
+ @media screen and (max-width:960px) {
+     .site-img {
+         width: 480px;
+         height: 1648px;
+     }
+
+     .site-img-wrapper {
+         width: 480px;
+     }
+
+     .adware-popup {
+         height: 50%;
+         top: 25%;
+         left: 30%;
+     }
+
+     .crosss, .crosss-popup {
+         width: 48px;
+         height: 48px;
+     }
+
+    .cross-high {
+        margin: 21px 0 0 0;
+    }
+ }

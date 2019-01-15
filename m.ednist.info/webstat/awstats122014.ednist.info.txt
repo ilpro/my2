@@ -1,0 +1,580 @@
+AWSTATS DATA FILE 7.1 (build 1.983)
+# If you remove this file, all statistics for date 201412 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.ednist.info.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1991                
+POS_TIME 2649                
+POS_VISITOR 12188               
+POS_DAY 15893               
+POS_DOMAIN 3685                
+POS_LOGIN 3919                
+POS_ROBOT 4074                
+POS_WORMS 4649                
+POS_EMAILSENDER 4780                
+POS_EMAILRECEIVER 4923                
+POS_SESSION 15982               
+POS_SIDER 16188               
+POS_FILETYPES 5058                
+POS_DOWNLOADS 5345                
+POS_OS 5393                
+POS_BROWSER 5600                
+POS_SCREENSIZE 6090                
+POS_UNKNOWNREFERER 6164                
+POS_UNKNOWNREFERERBROWSER 6544                
+POS_ORIGIN 6792                
+POS_SEREFERRALS 6936                
+POS_PAGEREFS 7112                
+POS_SEARCHWORDS 7581                
+POS_KEYWORDS 8050                
+POS_MISC 2313                
+POS_ERRORS 8317                
+POS_CLUSTER 3775                
+POS_SIDER_404 8486                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20150101000101 1 0 4407038519785
+FirstTime 0
+LastTime 20141231225702
+LastUpdate 20150101000101 1 0 0 0 0
+TotalVisits 100                 
+TotalUnique 81                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 97                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 25 2324 10975324 71645 71725 21655980
+1 80 7760 54008399 54543 54785 16384143
+2 346 10675 25178473 48816 48992 18259443
+3 3 15 886334 32261 32292 11409233
+4 9 42 1901600 37548 37584 13126746
+5 2 2 111788 38401 38430 14600743
+6 3 4 52488 34044 34067 10685534
+7 2 2 122408 37067 37085 12798746
+8 9 180 5731686 28850 28876 9778648
+9 213 304 3489003 49105 49120 15728323
+10 15 589 18762564 81981 82003 25518834
+11 36 1350 38701277 102616 102660 30395639
+12 76 1315 26447629 104854 104903 30514807
+13 5 238 5050100 101538 101552 31189859
+14 16 451 4567398 94410 94428 27341631
+15 2 31 1668854 106133 106157 31118646
+16 13 165 5487608 134451 134469 40021067
+17 3 4 67358 137261 137266 38805493
+18 13 222 8926323 124070 124083 35337832
+19 2 39 2872374 93637 93658 28213792
+20 17 170 5007405 86146 86179 25288755
+21 7 27 1118549 80626 80641 24904372
+22 10 158 5062613 62268 62412 22223646
+23 0 0 0 1250 1250 348783
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 907 26067 226197555
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 12
+googlebot 500 14684634 20141231225918 3
+yandex 437 11298843 20141231225910 2
+bingbot 239 7147978 20141231225719 27
+bingpreview 125 3915777 20141231224100 0
+no_user_agent 115 9352591 20141231225351 0
+baiduspider 41 1025738 20141231215235 0
+mj12bot 33 569715 20141231133813 2
+facebook 32 907484 20141231184156 0
+python 3 74029 20141231194358 0
+slurp 2 20635 20141231214620 1
+favicon 1 412 20141231080919 0
+^java\/[0-9] 2 32970 20141231101400 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 11
+css 1063 8738394 0 0
+png 1362 3022444 0 0
+woff 6 45984 0 0
+12 2 149215 0 0
+otf 7 152068 0 0
+php 358 1699664 0 0
+html 387 32561972 0 0
+js 2234 44754881 0 0
+jpg 20366 130900094 0 0
+Unknown 147 4039105 0 0
+gif 135 133734 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 10
+macosx 20120 469
+linuxandroid 323 35
+winlong 50 26
+winxp 105 19
+winnt 3 3
+win2000 3 3
+Unknown 89 33
+winvista 63 7
+linux 567 18
+win7 4744 294
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 25
+chrome39.0.2171.93 232 34
+msie6.0 3 3
+chrome32.0.1667.0 2 2
+opera7.11 3 3
+android 6 0
+chrome34.0.1847.114 85 1
+chrome41.0.2251.0 1 1
+safari6.0 262 4
+chrome39.0.2171.95 24363 755
+firefox34.0 152 6
+opera9.80 39 2
+msie8.0 73 11
+firefox33.0 1 1
+mozilla 255 6
+chrome39.0.2171.65 1 0
+netscape5.0 1 1
+msie7.0 24 24
+chrome38.0.2125.122 21 2
+msie10.0 1 1
+msie2.0 3 3
+safari5.1 2 0
+safari8.0 2 0
+msie9.0 53 5
+Unknown 69 31
+chrome37.0.2062.94 413 11
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 7
+Mozilla/5.0_() 20141231221738
+\ 20141231121642
+Ruby 20141231215411
+Disqus/1.0 20141231211157
+mifetcher/1.0 20141231075143
+masscan/1.0_(https://github.com/robertdavidgraham/masscan) 20141231203237
+Opera/9.80_(iPhone;_Opera_Mini/7.0.5/35.6368;_U;_ru)_Presto/2.8.119_Version/11.10 20141231143426
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 5
+\ 20141231121642
+Ruby 20141231215411
+Disqus/1.0 20141231211157
+mifetcher/1.0 20141231075143
+masscan/1.0_(https://github.com/robertdavidgraham/masscan) 20141231203237
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 107 129
+From1 0 0
+From2 11 21
+From3 17 58
+From4 772 25859
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 3
+google 8 18
+bing 2 2
+yandex 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 11
+http://jointpoint.org 3 3
+http://portal-eu.ru 3 3
+http://dosug-lux.ru 3 3
+http://megakalyan.com 3 3
+http://webmail.meta.ua/read_body.php 2 2
+http://www.facebook.com/l.php 1 1
+http://searches.omiga-plus.com/search/web 1 1
+https://www.facebook.com 1 1
+http://dev1.ednist.info 0 14
+http://devednist2 0 5
+http://ednist 0 22
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 3
+%d0%b7%d0%b2%d0%b0%d0%b6%d0%b5%d0%bd%d1%96+%d1%82%d0%b0+%d1%89%d0%b0%d1%81%d0%bb%d0%b8%d0%b2%d1%96+%d1%84%d1%96%d0%bd%d0%b0%d0%bb+4+%d1%81%d0%b5%d0%b7%d0%be%d0%bd%d1%83 1
+%d0%b7%d0%b2%d0%b0%d0%b6%d0%b5%d0%bd%d1%96+%d1%96+%d1%89%d0%b0%d1%81%d0%bb%d0%b8%d0%b2%d1%96+%d1%84%d1%96%d0%bd%d0%b0%d0%bb+4 1
+www.ednist.info 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 8
+%d0%b7%d0%b2%d0%b0%d0%b6%d0%b5%d0%bd%d1%96 2
+4 2
+%d1%84%d1%96%d0%bd%d0%b0%d0%bb 2
+%d1%89%d0%b0%d1%81%d0%bb%d0%b8%d0%b2%d1%96 2
+%d1%81%d0%b5%d0%b7%d0%be%d0%bd%d1%83 1
+%d1%82%d0%b0 1
+www.ednist.info 1
+%d1%96 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 7
+403 5 1525
+302 9 0
+206 14 183917
+500 28 518
+400 208 62200
+404 1742515 486257792
+301 294 97195
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 90
+/media/images/5734/main/400.jpg 3 http://www.ednist.info/
+/news/5839 1 -
+/news/5691 1 -
+/news/5705 1 -
+/Content/Worker/5/64/v140204.exe 5 -
+/media/images/5836/main/240.jpg 15 http://www.ednist.info/
+/news/5041 2 -
+/admin/assets/css/page.account.css 2 http://www.ednist.info/admin/account/confirm/
+/news/5679 1 -
+/news/4975 3 -
+/news/vesti.lv 1 -
+/Content/Worker/1/64/v140204.exe 5 -
+/version.txt 1 -
+/media/brand/81/d0504bd25f111d2207cb3cdde3a14678.jpg 1 -
+/content/updater/ 5 -
+/media/images/5837/main/240.jpg 27 http://www.ednist.info/
+/media/brand/83/big.jpg 1 -
+/media/images/5415/main/400.jpg 5 http://www.ednist.info/
+/media/images/5453/main/400.jpg 4 http://www.ednist.info/
+/log/error 14 -
+/nyet.gif 2 -
+/news/5619 1 -
+/media/brand/78/48a4e69c1ffa8dbfaf8f8cb148964819.jpg 1 -
+/news/5535 1 -
+/admin/assets/js/page.account.js 2 http://www.ednist.info/admin/account/confirm/
+/media/images/5296/main/400.jpg 8 http://www.ednist.info/
+/media/images/5392/main/400.jpg 6 http://www.ednist.info/
+/media/images/5448/main/400.jpg 4 http://www.ednist.info/
+/media/images/5442/main/400.jpg 5 http://www.ednist.info/
+/Content/Worker/1.5/32/v140204.exe 5 -
+/news/5682 1 -
+/media/images/5840/main/240.jpg 26 http://www.ednist.info/
+/news/5707 1 -
+/media/images/5245/main/400.jpg 8 http://www.ednist.info/
+/assets/fonts/glyphicons-halflings-regular.woff 2 http://www.ednist.info/assets/css/bootstrap.min.css
+/news/5597 1 -
+/media/images/5840/big/ 3 -
+/myadmin/scripts/setup.php 8 http://130.255.190.12/myadmin/scripts/setup.php
+/media/images/5340/main/400.jpg 7 http://www.ednist.info/
+/content/updater/v153.exe 5 -
+/news/5542 1 -
+/news/5554 1 -
+/media/images/5824/main/400.jpg 1 http://www.ednist.info/
+/news/5620 1 -
+/media/images/5353/main/400.jpg 7 http://www.ednist.info/
+/media/images/5328/main/400.jpg 7 http://www.ednist.info/
+/news/5530 1 -
+/assets/fonts/glyphicons-halflings-regular.ttf 2 http://www.ednist.info/assets/css/bootstrap.min.css
+/log/info 1729999 -
+/news/5685 1 -
+/news/5537 1 -
+/apple-touch-icon.png 2 -
+/news/5684 1 -
+/media/images/5437/main/400.jpg 5 http://www.ednist.info/
+/media/images/5310/main/400.jpg 7 http://www.ednist.info/
+/ireland-beats-power-beats.html 1 -
+/media/images/5433/main/400.jpg 5 http://www.ednist.info/
+/news/5777 1 -
+/news/5567 1 -
+/news/5626 1 -
+/assets/fonts/glyphicons-halflings-regular.svg 2 http://www.ednist.info/assets/css/bootstrap.min.css
+/media/images/5426/main/400.jpg 5 http://www.ednist.info/
+/media/images/5457/main/400.jpg 4 http://www.ednist.info/
+/news/5627 1 -
+/news/5678 1 -
+/news/5544 1 -
+/news/5838 1 -
+/apple-touch-icon-precomposed.png 2 -
+/news/5622 1 -
+/media/images/5319/main/400.jpg 7 http://www.ednist.info/
+/dossier/53 1 -
+/news/5540 1 -
+/news/5498 1 -
+/media/brand/79/9eb0299eec6d400a302e977c50a1ae24.jpg 1 -
+/news/5520 1 -
+/assets/fonts/glyphicons-halflings-regular.eot 7 http://www.ednist.info/news/5327
+/media/brand/80/big.jpg 1 https://www.google.com/
+/media/images/5067/main/400.jpg 9 http://www.ednist.info/
+/news/5835 6 -
+/css/css 1 -
+/media/images/5456/main/400.jpg 4 http://www.ednist.info/
+/news/5431 2 -
+/media/images/5836/big/ 2 -
+/Content/Worker/1.5/64/v140204.exe 5 -
+/media/images/5370/main/400.jpg 7 http://www.ednist.info/
+/media/images/5441/main/400.jpg 5 http://www.ednist.info/
+/media/images/5444/main/400.jpg 4 http://www.ednist.info/
+/media/images/5837/big/ 1 -
+/log/progress 12189 -
+/news/5623 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 97
+94.244.60.126 483 19903 88914915 20141231201307
+178.151.25.202 215 666 15087318 20141231225543
+37.115.177.59 58 3793 75075833 20141231121914
+46.118.168.252 10 78 2243397 20141231161215
+91.218.89.42 8 272 6267873 20141231143632
+94.179.128.133 7 373 1474044 20141231140628
+66.249.81.149 6 25 733566 20141231022311
+50.23.254.154 6 6 100127 20141231143427
+178.95.26.9 6 152 4463901 20141231184324
+94.153.9.175 6 6 121260 20141231225702
+157.56.1.110 1 13 763130 20141231045408
+94.231.67.142 1 20 1436393 20141231191812
+69.171.231.162 0 2 46653 
+93.126.122.119 0 1 16219 
+37.52.107.33 0 1 97513 
+75.126.28.194 2 2 47338 20141231124952
+209.147.118.210 1 13 763606 20141231031737
+118.238.220.238 1 1 91701 20141231075752
+54.236.216.158 2 2 22022 20141231181614
+202.46.55.33 1 1 16485 20141231144031
+91.207.67.218 0 1 40740 
+184.173.90.200 2 2 38647 20141231023933
+180.76.4.241 1 1 16485 20141231204729
+194.44.211.86 3 26 1016817 20141231112251
+150.70.173.37 1 1 92021 20141231035219
+178.150.81.63 0 1 142129 
+69.171.231.161 0 4 354401 
+1.46.232.5 1 85 3203041 20141231161026
+202.46.62.34 1 1 16651 20141231004421
+202.46.54.48 1 1 16485 20141231084649
+180.76.4.233 1 1 16485 20141231123944
+202.46.56.41 1 1 16485 20141231064529
+198.101.240.186 1 1 91501 20141231215411
+180.76.4.248 1 1 16485 20141231084716
+91.229.240.105 0 2 138195 
+31.31.97.19 3 141 4240881 20141231011044
+69.171.231.163 0 6 440131 
+65.55.107.192 1 16 780091 20141231121639
+202.46.62.106 1 1 24685 20141231164706
+93.73.114.44 3 127 3644030 20141231155539
+180.76.4.250 1 1 16485 20141231224603
+82.145.223.41 1 19 803795 20141231143424
+95.69.206.108 2 21 838230 20141231223637
+108.168.151.16 2 2 35189 20141231102915
+180.76.4.189 1 1 16485 20141231064552
+150.70.75.167 1 1 91939 20141231041243
+180.76.4.68 1 1 16485 20141231024734
+208.101.7.48 5 5 78831 20141231142415
+202.46.53.32 2 2 32970 20141231204701
+65.52.104.65 1 21 896970 20141231043900
+66.249.81.155 5 18 370593 20141231022308
+150.70.75.212 1 1 91869 20141231054248
+180.76.4.19 1 1 16485 20141231045027
+209.147.118.139 1 13 763606 20141231183308
+37.115.187.63 1 19 831856 20141231102910
+62.213.111.105 1 1 91618 20141231082029
+202.46.49.13 1 1 16485 20141231024705
+42.62.74.31 1 1 30707 20141231075143
+77.91.156.46 0 2 46836 
+180.76.4.190 1 1 16651 20141231004441
+77.120.34.185 0 1 141052 
+180.76.4.239 1 1 32970 20141231104359
+109.229.19.193 0 5 197682 
+208.101.7.43 1 1 26073 20141231011050
+65.55.107.220 1 4 144433 20141231002722
+188.230.64.8 4 40 2933376 20141231214232
+180.76.4.80 1 1 24685 20141231184616
+150.70.173.6 1 1 30707 20141231034539
+202.46.55.24 1 1 16485 20141231224531
+180.76.4.200 1 1 16485 20141231164733
+194.44.160.158 1 20 921601 20141231142411
+173.193.17.201 3 3 47512 20141231112239
+202.46.62.92 1 1 16485 20141231184552
+180.76.4.247 1 1 16485 20141231144041
+93.73.185.32 0 1 12301 
+78.159.41.25 0 3 412 
+91.207.8.46 6 6 118152 20141231215524
+93.75.76.195 0 1 7505 
+192.237.203.184 1 1 57714 20141231113904
+95.134.163.36 0 1 70278 
+173.193.17.200 2 2 37064 20141231211157
+182.118.45.229 1 1 91680 20141231120110
+208.101.7.44 1 1 18498 20141231092605
+94.179.143.184 0 5 0 
+5.164.88.209 1 1 19106 20141231060551
+150.70.97.112 1 1 19106 20141231040808
+104.167.107.175 1 1 91622 20141231203237
+157.56.1.115 1 13 763257 20141231183912
+150.70.97.96 1 1 19919 20141231053711
+94.231.75.177 1 20 817760 20141231211151
+69.171.231.160 1 8 595208 20141231183802
+202.46.48.13 1 1 16485 20141231104340
+202.46.52.20 1 1 16485 20141231123937
+66.249.81.152 1 12 125004 20141231022259
+91.207.5.214 1 1 32743 20141231122416
+192.241.235.184 1 21 1436753 20141231184049
+74.112.131.245 1 1 30707 20141231221738
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20141231 907 26067 226197555 100
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 4
+5mn-15mn 1
+30s-2mn 4
+15mn-30mn 2
+0s-30s 82
+2mn-5mn 2
+30mn-1h 5
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 65
+/ 362 32144721 44 40
+/admin/controllers/news.controller.php 189 270264 1 2
+/controllers/main.controller.php 139 1227150 1 2
+/news/5802 16 283308 0 0
+/news/5158/ 12 239412 4 4
+/article/5285 12 361061 9 9
+/admin/controllers/upload.controller.php 12 603 0 0
+/admin/news 9 519470 2 0
+/search/ 8 137788 0 1
+/tag/64 8 563881 0 1
+/news/5008 3 61134 2 1
+/tag/212 1 43692 0 0
+/news/5327 2 37676 2 1
+/tag/44 1 43407 0 0
+/dossier/101 2 42552 1 0
+/news/5199 1 32743 1 1
+/tag/114 1 50751 0 0
+/news/5823 2 38212 2 2
+/news/5704 2 26998 1 0
+/tag/214 1 49891 0 0
+/admin/controllers/cleanHTML.controller.php 7 17197 0 0
+/admin/controllers/user.controller.php 4 380 0 0
+/admin/assets/js/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.woff 6 45984 0 0
+/newsline 4 50012 0 0
+/news/5785 1 21243 1 1
+http://130.255.190.12 2 149215 2 2
+/news/5712 3 41175 0 0
+//index.php 1 91618 1 1
+/i.php 1 92441 0 0
+/news/5834 4 58933 0 0
+/news/5815 2 34806 1 0
+/news/5791 1 779 1 1
+/news/5476 1 16871 1 1
+/news/5822 3 63489 1 2
+/news/5762 2 26458 1 0
+/article/4761 2 26123 0 0
+/photo 3 106967 0 1
+/tag/71 6 479227 0 0
+/news/5837 4 74293 1 1
+/article/5063 5 70029 0 0
+/admin/account/confirm/ 2 7094 0 0
+/news/5713 2 34742 0 1
+/news/5773 4 81071 2 3
+/news/5830 1 19919 1 1
+/category/ 3 32957 0 0
+/dossier/74 2 47426 2 2
+/news/5832 2 30016 0 1
+/news/5840 3 47271 1 1
+/news/5829 2 32238 0 1
+/news/5744 2 29686 0 1
+/news/5779 1 24456 1 1
+/admin/assets/css/Proxima_Nova_ScOsf_Extrabold.otf 7 152068 0 0
+/article/5222 4 65996 1 2
+/dossier/102 3 48465 1 0
+/news/5816 1 16751 0 0
+/tag/514 1 779 1 1
+/dossier/72 2 45592 2 2
+/news/5742 2 40020 2 2
+/news/5458 1 16744 1 1
+/controllers/site.controller.php 4 0 0 1
+/news/5836 4 78350 2 2
+/article/5474 4 67299 0 1
+/news/5710 2 34440 2 2
+/news/5801 2 52663 1 0
+/admin/controllers/settings.controller.php 1 11 0 0
+END_SIDER

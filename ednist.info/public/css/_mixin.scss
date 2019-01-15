@@ -1,0 +1,15 @@
+@mixin dflex($df, $ai, $sb){
+	display: $df;
+	align-items: $ai;
+	justify-content: $sb;
+}
+
+@mixin dflexa($df, $sarnd){
+	display: $df;
+	justify-content: $sarnd;
+}
+
+@mixin dflexb($df, $sbett){
+	display: $df;
+	justify-content: $sbett;
+}

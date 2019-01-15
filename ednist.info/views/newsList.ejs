@@ -1,0 +1,44 @@
+<!-- NEWS -->
+<div class="popular-page">
+  <p><%= page %></p>
+</div>
+
+<!-- CONTENT -->
+<div class="wrapper-popular">
+  <% news.forEach(newsObj => { %>
+
+    <div class="popular-item popular-item_style popular-item_section">
+      <a href="/news/<%= newsObj.newsId %>">
+        <div class="popular-item_images" style="background-image: url(https://www.ednist.info/media/images/<%= newsObj.newsId %>/big/<%= newsObj.newsImage %>); background-size: cover; background-position: 50%">
+          <div class="popular-grad"></div>
+          <span class="signature-images" style="display: none;"><p>Політика</p></span>
+        </div>
+      </a>
+    <article>
+      <div class="popular-style">
+         <div class="hashtag-block">
+            <div class="hashtag">
+             <ul class="hashtag-news">
+             <% newsObj.newsTags.forEach(tag => { %>
+               <li><a href="/tags/<%=tag%>">#<%=tag%></a></li>
+             <% }) %>
+           </ul>
+           </div>
+         </div>
+          <a href="/news/<%= newsObj.newsId %>">
+          <div class="text-block">
+                <p><%= newsObj.newsHeader %></p>
+                <p><%= newsObj.newsSubheader %></p>
+                    <p>
+                      <span class="date">
+                <%=newsObj.time%> <!--  |  <% newsObj.newsTags.forEach(tag => { %> #<%=tag%> <% }) %> -->
+                      </span>
+                    </p>
+          </div>
+          </a>
+      </div>
+    </article>
+  </div>
+  <%})%>
+  <a href="#" class="button-more"> <button>Читати більше</button> </a>
+</div>

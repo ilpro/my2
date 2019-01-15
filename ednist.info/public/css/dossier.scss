@@ -1,0 +1,72 @@
+@import 'mixin';
+@import 'vars';
+
+/* DOSSIER */
+
+.wrapper-dossier_page {
+  width: 1130px;
+  margin: 0 auto;
+}
+
+.dossier-page, .alphabet {
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 2px 0 2px 20px;
+  cursor: pointer;
+}
+
+.dossier-page h4 {
+  font-family: $ffrs;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $violet;
+}
+
+.alphabet_menu {
+  @include dflexa (flex, space-around);
+  a {
+    font-family: $ffrm;
+    font-size: 20px;
+    text-transform: uppercase;
+    &:hover {
+      color: $violet;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* PEOPLES NAMES */
+
+.peoples-names {
+  width: 1130px;
+  background-color: $white;
+  padding: 18px 18px 30px 18px;
+  box-sizing: $bxb;
+}
+
+.letter p {
+  font-family: $ff;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $violet;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.all-peoples_names {
+  @include dflexb(flex, space-between);
+  a {
+    font-family: $ffrm;
+    font-size: 20px;
+    line-height: 1.4;
+    transition: color 1s;
+    &:hover {
+      color: $violet;
+    }
+  }
+}
+
+.list-item_people {
+  width: 220px;
+}

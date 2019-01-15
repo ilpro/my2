@@ -1,0 +1,1 @@
+<h1 class="sortnews"><a href="/admin/news"><span>SORT</span>NEWS</a></h1>

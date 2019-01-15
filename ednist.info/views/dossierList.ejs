@@ -1,0 +1,33 @@
+<!-- DOSSIER PAGE -->
+<section>
+    <div class="wrapper-dossier_page-human">
+
+        <%- include('./dossierAlphabet') %>
+
+        <!--DOSSIER LIST-->
+        <div class="peoples-names">
+            <div class="letter">
+                <p><%= letter %></p>
+            </div>
+            <div class="all-peoples_names">
+                <%
+                  // split array to smaller arrays
+                  const processedDossiers = dossiers.length > 1 ? dossiers.sort((a, b) => a.dossierName - b.dossierName) : dossiers
+                  const iterationCount = Math.ceil(processedDossiers.length / 10);
+                  const matrix = [];
+
+                  for(let i = 0; i < iterationCount; i++){
+                      matrix.push(processedDossiers.splice(0, 11))
+                  }
+
+                    matrix.forEach(block => { %>
+                      <ul class="peoples-names_menu1 list-item_people"
+                        <% block.forEach(dossier => { %>
+                          <li><a href="/dossier/<%= dossier.dossierId %>"><%= dossier.dossierName %></a></li>
+                        <%})%>
+                      </ul>
+                  <%})%>
+            </div>
+        </div>
+    </div>
+</section>

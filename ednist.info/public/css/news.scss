@@ -1,0 +1,369 @@
+@import 'mixin';
+@import 'vars';
+
+
+/* NEWS */
+
+.news-page {
+  display: none;
+  width: 1130px;
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 15px 0 15px 20px;
+  cursor: pointer;
+  a {
+    font-family: $ff;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $violet;
+  }
+}
+
+/* CONTENT */
+
+.wrapper-news {
+  width: 1130px;
+  margin: 25px auto;
+  padding-bottom: 35px;
+  background-color: $white;
+}
+
+.wrapper-news2 {
+  width: 1130px;
+  margin: -20px auto 0;
+  padding-bottom: 35px;
+  background-color: $white;
+}
+
+.wrapper-page_news {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: -35px;
+  .hashtag {
+    margin: 15px 0 10px 0;
+  }
+}
+
+
+.caption-news {
+  padding: 45px;
+  h1 {
+    margin: 15px 0;
+    font-family: $ff;
+    font-size: 44px;
+    line-height: 48px;
+  }
+  p {
+    font-family: $ff;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.caption-news_images {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.75), rgba(36, 116, 252, 0.75));
+    background-color: $black;
+    img {
+      max-width: 100%;
+      min-width: 100%;
+      opacity: 0.5;
+    }
+    .caption-news_images-link {
+      a {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        display: block;
+        height: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: #ffffff;
+        margin-left: 10px;
+        padding: 5px 11px 7px 7px;
+        border: 1px solid #ffffff;
+        &:hover {
+          color: #e5e519;
+        }
+      }
+    }
+}
+
+
+/* ABOUT NEWS PAGE*/
+
+
+.page-news {
+  p{
+    font-family: $ff;
+    font-size: 17px;
+    line-height: 24px;
+    iframe {
+      margin-top: 15px;
+    }
+  }
+  img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+  a {
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: $violet;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+.quote {
+  margin: 15px 0;
+  font-size: 18px;
+  line-height: 22px;
+  min-height: 50px;
+}
+
+.qSign {
+  font-size: 80px;
+  line-height: 0.7;
+  font-weight: bold;
+  width: 35px;
+  padding-top: 10px;
+  vertical-align: top;
+  color: $violet;
+}
+
+.qText {
+  padding-left: 15px;
+  font-style: italic;
+  color: $violet;
+}
+
+.also {
+  margin-top: 15px;
+}
+
+.aSign {
+  font-size: 20px;
+  font-weight: bold;
+  width: 150px;
+  padding: 15px;
+  color: $white;
+  background-color: $violet;
+}
+
+.aText {
+  position: relative;
+  left: -2px;
+  width: 582px;
+  padding: 15px;
+  font-style: italic;
+  color: $violet;
+  border: 1px solid $violet;
+}
+
+.page-news blockquote {
+  font-family: $ff;
+  font-size: 18px;
+  font-style: italic;
+  margin: -40px 0 0 67px;
+}
+
+.date {
+  font-family: $ff;
+  font-size: 12px;
+  color:#C1C2CD;
+}
+
+
+.foot-page_news {
+  @include dflexb(flex, space-between);
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* SHARE */
+
+.share {
+  display: $df;
+  align-items: center;
+  p {
+    font-size: 14px;
+    margin-right: 25px;
+  }
+  a {
+    font-size: 28px;
+    margin-right: 10px;
+    &:hover {
+      color: #ababab;
+    }
+    &:active {
+      color: $violet;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* READ ALSO*/
+
+.read-also_page {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.read-also {
+  display: $df;
+  align-items: center;
+  margin: 45px 0;
+  border: 2px solid $violet;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 5px $violet;
+  }
+  h2 {
+    margin-right: 20px;
+    cursor: pointer;
+    a {
+      color: $white;
+      &:hover {
+        color: $black;
+      }
+      &:active {
+        color: #ababab;
+      }
+    }
+  }
+  a {
+    display: block;
+    font-family: $ff;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    color: $violet;
+    &:hover {
+      color: $black;
+    }
+    &:active {
+      color: #ababab;
+    }
+  }
+}
+
+.read-also_caption {
+  font-family: $ff;
+  font-size: 20px !important;
+  min-width: 185px;
+  height: 25px;
+  padding: 20px 20px;
+  background-color: $violet;
+  color: $white;
+  cursor: pointer;
+}
+
+
+/* TOPIC */
+
+.wrapper-news_topic {
+  width: 1130px;
+  margin: 25px auto;
+  padding-bottom: 35px;
+  background-color: #F2F2F2;
+  .seo-block {
+    padding: 15px;
+    color: #474747;
+    margin-top: 6px;
+    background: $white;
+  }
+}
+
+.topic-content {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.topic {
+  width: 271px;
+  height: 359px;
+  margin-top: 20px;
+  box-sizing: $bxb;
+  margin: 0 15px 31px 0;
+  text-align: center;
+  box-shadow: 0 0 10px $grey;
+  background-color: $white;
+  p {
+    font-family: $ff;
+    font-size: 22px;
+    font-weight: bold;
+    color: $black;
+    cursor: pointer;
+    &:hover {
+      color: $violet;
+    }
+    &:active {
+      color: #ababab ;
+    }
+  }
+  .topic-images {
+    position: relative;
+    width: 271px;
+    height: 168px;
+    font-size: 0;
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.75), rgba(36, 116, 252, 0.75));
+    background-color: $black;
+    .topic-grad {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 271px;
+      height: 168px;
+      opacity: 0.5;
+      background-color: #000;
+      background: linear-gradient(to right, rgba(106, 17, 203, 0.75), rgba(36, 116, 252, 0.75));
+      transition: 0s;
+    }
+    img {
+      max-height: 100%;
+      min-height: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      opacity: 0.5;
+    }
+  }
+}
+
+.topic-text {
+  text-align: start;
+  margin: 15px 10px 0 10px;
+}
+
+.caption-topic {
+  h3 {
+    font-size: 34px;
+    font-weight: bold;
+    color: $black;
+    margin: 0 0 15px 45px;
+  }
+}

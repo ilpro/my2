@@ -1,0 +1,81 @@
+@import 'mixin';
+@import 'vars';
+
+/* POLITICS */
+
+.politics {
+  width: 1130px;
+  margin: 16px auto;
+  background-color: $white;
+  box-sizing: $bxb;
+  padding: 2px 0 2px 20px;
+  cursor: pointer;
+  p {
+    font-family: $ff;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $violet;
+  }
+}
+
+/* ABOUT POLITICS */
+
+.wrapper-politics {
+  width: 1130px;
+  margin: 0 auto;
+}
+
+.politics-page {
+  background-color: $white;
+}
+
+.politics-page_wrapper {
+  width: 801px;
+  margin: 0 auto;
+  padding: 5px 0 31px 0;
+}
+
+.caption-politics {
+  h1 {
+    font-family: $ffrs;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  h2 {
+    font-family: $ffrs;
+    font-size: 24px;
+  }
+}
+
+
+/* VIDEO QUOTE*/
+
+.video-quote {
+  margin-top: 20px;
+}
+
+/* DESCRIPTION NEWS*/
+
+.description-news_video p {
+  font-family: $ff;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.video-quote blockquote {
+  font-family: $ffrm;
+  font-size: 18px;
+  font-style: italic;
+  margin: -40px 0 0 67px;
+}
+
+/* FOOT PAGE NEWS*/
+
+.foot-page_politics {
+  @include dflexb(flex, space-between);
+  margin-top: 35px;
+}
+
+
+
+

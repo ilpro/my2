@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouProud – Free LGBT social network</title>
+    <link rel="stylesheet" href="/css/normalize_myouproud.css">
+    <link rel="stylesheet" href="/css/mobile_myouproud.css">
+    <meta name="description" content="Find your kindred spirit on progressive LGBT platform 🔍, Find local places to meet with your like thinkers, communicate without restrictions. Be proud 🌈">
+    <meta name="keywords" content="LGBT, gay meetings, lesbian couples, , lgbt event, , gay dating, lesbian dating, gay party, lgbt blog, find gay, find lesbian">
+
+    <meta property="og:title" content="YouProud – ultimate LGBT network">
+    <meta property="og:description" content="Best platform for LGBT activities, partner search, event planning, safe meetings 🌈. Become a member of progressive society 😘">
+    <link rel="image_src" href="https://m.youproud.com/img/YouProud.jpg">
+    <meta property="og:image" content="https://m.youproud.com/img/YouProud.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="624">
+    <meta property="og:image:height" content="624">
+
+    <link rel="shortcut icon" href="/img/favicon/favicon-image.ico" type="image/x-icon">
+    <meta name="theme-color" content="#fff">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46835384-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-46835384-10');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5KPL52B');</script>
+    <!-- End Google Tag Manager -->
+
+    <!--<title>Mobile</title>-->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/mobile.css">-->
+    <!--<link rel="stylesheet" href="icon/icon.css">-->
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="wrapper-top">
+        <div class="caption-top">
+            <div class="logo">
+                <img src="/img/landing/logo.png" alt="">
+            </div>
+            <div class="captions">
+                <h1>YouProud</h1>
+                <p>totally free social network</p>
+            </div>
+        </div>
+        <div class="subheading">
+            <h2>Progressive <span class="lgbt">lgbt</span> platform.</h2>
+        </div>
+    </div>
+    <div class="buttons-top">
+        <a href="https://itunes.apple.com/ua/app/youproud-lgbt-platform/id1437064839" class="but-top" style="display: block;"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.youproud3" class="but-top but-googleplay" style="display: block;"></a>
+    </div>
+</header>
+<!-- POPULAR PEOPLE -->
+<div class="popular-people">
+    <h3>popular people today</h3>
+</div>
+
+<!-- POPULAR PHOTO -->
+<% if(popularUsres.length >= 6){ %>
+<div class="coll-image-wrap">
+  <div class="col-grid--1">
+    <div class="collage_image__image grid-item--height2" style="background:url(<%= popularUsres[0].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[0].userName %></br>   
+    <%= popularUsres[0].userAge %> years</p>
+    </div>
+  </div> 
+   <div class="col-grid--2">
+    <div class="collage_image__image grid-item--width2" style="background:url(<%= popularUsres[1].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[1].userName %></br>   
+    <%= popularUsres[1].userAge %> years</p>
+    </div>
+  </div>
+   <div class="col-grid--3">
+    <div class="collage_image__image grid-item--width2" style="background:url(<%= popularUsres[2].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[2].userName %></br>   
+    <%= popularUsres[2].userAge %> years</p>
+    </div>
+  </div>
+ 
+   <div class="col-grid--6">
+    <div class="collage_image__image grid-item--height3" style="background:url(<%= popularUsres[3].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[3].userName %></br>   
+    <%= popularUsres[3].userAge %> years</p>
+    </div>
+  </div>  
+   <div class="col-grid--9">
+    <div class="collage_image__image grid-item--width3" style="background:url(<%= popularUsres[4].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[4].userName %></br>   
+    <%= popularUsres[4].userAge %> years</p>
+    </div>
+  </div>  
+   <div class="col-grid--10">
+    <div class="collage_image__image grid-item--width3" style="background:url(<%= popularUsres[5].userPhoto %>) no-repeat center; background-size: cover">
+      <p><%= popularUsres[5].userName %></br>   
+    <%= popularUsres[5].userAge %> years</p>
+    </div>
+  </div>  
+</div>
+<% }%>
+
+
+
+<!-- LGBT COMUNITY -->
+<div class="comunity-lgbt">
+    <h3>widest lgbt community</h3>
+</div>
+
+<div class="kindred-spirit">
+    <div class="wrapper-kindred_spirit">
+        <article>
+            <div class="caption-kindred_spirit">
+                <h3>Youproud - find your kindred spirit on progressive lgbt platform</h3>
+            </div>
+            <div class="text-about_kindred-spirit">
+                <p>Are you looking for a place with like thinkers all over the world? Have you ever wanted to
+                    communicate without restrictions?<br/>Feel free wherever you are.<br/>
+                    <span class="be-proud">Be proud who we are!</span>
+                </p>
+            </div>
+        </article>
+        <div class="kindred-spirit_image">
+
+        </div>
+    </div>
+</div>
+<!-- MAP PEOPLE -->
+<div class="map-people">
+    
+</div>
+
+
+<!-- OFFER -->
+<div class="offer">
+    <div class="offer-content">
+        <ul class="offer-list_item">
+            <li>- choose a life with no<br/>limits and restrictions</li>
+            <li>- use built-in translator<br/>for easy communication</li>
+            <li>- open minded community</li>
+            <li>- feel safe to be yourself</li>
+        </ul>
+    </div>
+</div>
+
+<!-- LOCATOR -->
+
+<div class="locator">
+    <div class="locator-wrapper">
+        <div class="locator-caption">
+            <h2>You Proud is</h2>
+        </div>
+        <div class="locator-use">
+            <img src="/img/landing/avatar.png" alt="" width="61" height="80"/>
+            <p>locator - unlimited dating near you</p>
+        </div>
+        <div class="locator-use_description">
+            <p>Use locator to see all your friends <br/> nearby. Meet, date wherever you are!</p>
+        </div>
+
+        <div class="locator-friendly">
+            <p>lgb-friendly <br/> places</p>
+            <img src="/img/landing/heart.png" alt="" width="80" height="80"/>
+        </div>
+        <div class="locator-friendly_description">
+            <p>See all friendly places in your city.Be confident in your choice and have a rest in the best safe and
+                popular places.</p>
+        </div>
+
+        <div class="locator-events">
+            <img src="/img/landing/disco.png" alt="" width="72" height="80">
+            <p>real events with <br/> real people</p>
+        </div>
+        <div class="locator-events_description">
+            <p>Create events and invite friends and new acquaintances. Look through the current list of events – it is
+                so easy to plan weekends and holidays.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- DOWNLOAD -->
+
+<div class="download">
+    <div class="download-wrapper">
+        <div class="download-description">
+            <p>Download the FREE app to get the benefits of being a part of YouProud community</p>
+            <div class="download-button">
+                <a href="https://itunes.apple.com/ua/app/youproud-lgbt-platform/id1437064839" class="down-icon download-appstore"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.youproud3" class="down-icon down-googleplay"></a>
+            </div>
+        </div>
+        <div class="download-image">
+            <img src="/img/landing/mobile.png" alt="" class="mw100">
+        </div>
+    </div>
+</div>
+
+<!-- VIDEO -->
+
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jznXydqfhyI?autoplay=1;loop=1;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!-- bacground -->
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    <a href="https://kyivpride.org" class="partners">
+        <p>our partners</p>
+        <img src="/img/landing/kyivpride.png" alt="">
+    </a>
+    <a href="https://www.facebook.com/PrideHub/" class="new-partners">
+        <img src="/img/landing/pridehub.png" alt="">
+        <p><span class="praid">праид</span> хаб</p>
+    </a>
+    <div class="footer-information">
+        <p>Information</p>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-social">
+        <p>Follow us on Social Media</p>
+        <ul class="footer-social_icon">
+            <li class="icon icon-instagram"><a href="https://www.instagram.com/you_proud/?hl=ru"></a></li>
+            <li class="icon icon-facebook"><a href="https://www.facebook.com/1youproud/"></a></li>
+            <li class="icon icon-twitter"><a href="https://twitter.com/youproud1"></a></li>
+            <li class="icon icon-google_plus"><a href="https://plus.google.com/u/0/110759101077627746141"></a></li>
+        </ul>
+    </div>
+    <div class="footer-download">
+        <p>Download our app</p>
+        <div class="footer-download_button">
+            <a href="https://itunes.apple.com/ua/app/youproud-lgbt-platform/id1437064839" class="down appstore" style="display: block;"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.youproud3" class="down googleplay" style="display: block;"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

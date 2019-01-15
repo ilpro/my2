@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.dropdown.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link href="flat/green.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C"
+
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+
+
+</head>
+<body class="light">
+
+<div class="wrapper box sources settings" id="auth">
+    <div class="head">
+        <div class="clear"></div>
+        <h1 class="sortnews"><span>SORT</span>NEWS</h1>
+
+        <div class="nav" data-dropdown="#dropdown-1">
+            <i class="nav-icon"></i>
+
+            <p>Настройки</p>
+
+        </div>
+        <div class="search">
+            <form>
+                <i class="search-icon"></i>
+                <input type="text" name="country" id="tags" placeholder="Поиск">
+
+
+            </form>
+            <div id="dropdown-1" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+                <ul class="dropdown-menu">
+                    <li><a href="#1">Item 1</a></li>
+                    <li><a href="#2">Item 2</a></li>
+                    <li><a href="#3">Item 3</a></li>
+
+                    <li><a href="#4">Item 4</a></li>
+                    <li><a href="#5">Item 5</a></li>
+                    <li><a href="#5">Item 6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="people" data-dropdown="#dropdown-2">
+                <p>Люди/учереждения <i class="caret"></i></p>
+
+            </div>
+
+
+            <div class="update">
+                <i></i>
+
+            </div>
+            <div class="save">
+                <i></i>
+            </div>
+            <div class="exit">
+                <i></i>
+            </div>
+        </div>
+        <div id="dropdown-2" class="dropdown dropdown-tip dropdown-anchor-right dropdown-relative">
+            <ul class="dropdown-menu">
+                <li><a href="#1">Item 1</a></li>
+                <li><a href="#2">Item 2</a></li>
+                <li><a href="#3">Item 3</a></li>
+
+                <li><a href="#4">Item 4</a></li>
+                <li><a href="#5">Item 5</a></li>
+                <li><a href="#5">Item 6</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+        <!--
+        <div id="flavor-nav">
+            <a rel="all" class="current">All</a>
+            <a rel="cla">Classic</a>
+            <a rel="adv">Adventurous</a>
+            <a rel="tea">Tea-Inspired</a>
+        </div>-->
+
+
+    </div>
+
+
+    <div class="clear"></div>
+
+    <div class="content" id="all-flavors">
+        <form>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Модераторы долго не добавляют новости
+                    <span>(Период в минутах)</span>
+                </div>
+
+                <div class="setting-input">
+                    <input type="text" value="60">
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Модераторы долго не добавляют новости
+                    <span>(Email адрес)</span>
+                </div>
+
+                <div class="setting-input">
+                    <span class="tag" id="tag">Ходорковский  <a href="javascript:void(0);"
+                                                                onclick="this.parentElement.style.display='none';"><i
+                            id="del" class="tagclose"></i></a></span>
+                    <span class="tag" id="tag1">Путин  <a href="javascript:void(0);"
+                                                          onclick="this.parentElement.style.display='none';"><i id="del"
+                                                                                                                class="tagclose"></i></a></span>
+                    <span class="tag" id="tag2">Крым  <a href="javascript:void(0);"
+                                                         onclick="this.parentElement.style.display='none';"><i id="del"
+                                                                                                               class="tagclose"></i></a></span>
+                    <span class="tag-input"><input type="text" id="autocomplete-ajax3" name="country"
+                                                   class="label-input" value="" placeholder=""/></span>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Сообщение об ошибке
+                    <span>(Email адрес)</span>
+                </div>
+
+                <div class="setting-input">
+                    <span class="tag" id="tag">Ходорковский  <a href="javascript:void(0);"
+                                                                onclick="this.parentElement.style.display='none';"><i
+                            id="del" class="tagclose"></i></a></span>
+                    <span class="tag" id="tag1">Путин  <a href="javascript:void(0);"
+                                                          onclick="this.parentElement.style.display='none';"><i id="del"
+                                                                                                                class="tagclose"></i></a></span>
+                    <span class="tag" id="tag2">Крым  <a href="javascript:void(0);"
+                                                         onclick="this.parentElement.style.display='none';"><i id="del"
+                                                                                                               class="tagclose"></i></a></span>
+                    <span class="tag-input"><input type="text" id="autocomplete-ajax3" name="country"
+                                                   class="label-input" value="" placeholder=""/></span>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Минимальная длина содержимого новости
+                </div>
+
+                <div class="setting-input">
+                    <input type="text" value="60">
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Минимальная ширина фото новости (px)
+                </div>
+
+                <div class="setting-input">
+                    <input type="text" value="60">
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="row flavor all adv">
+                <div class="setting-info">
+                    Минимальная высота фото новости(px)
+
+                </div>
+
+                <div class="setting-input">
+                    <input type="text" value="60">
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+
+            <form>
+
+
+    </div>
+
+
+    <script>
+        $(".switch").checkable()
+        $("[data-name=human]").checkable("check", false)
+        $("[data-name=alien]").checkable("check", true)
+    </script>
+</div>
+<div class="helper"></div>
+
+<script type="text/javascript" src="js/jquery.mockjax.js"></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="js/countries.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/* Main Content */
+.main-content {
+    padding: 0 0 0 35px;
+    color: #f1f1f1;
+}
+
+
+/* Main title */
+.audithory {
+    font-weight : bold;
+    font-size : 17px;
+    text-transform : uppercase;
+    color : #3F476E;
+    padding: 36px 0 16px 0;
+}
+
+    /* Amount per time */
+    .per-month {
+        position: relative;
+        padding: 0 26px 0 0;
+    }
+
+    .per-week {
+        position: relative;
+        padding: 0 26px 0 0;}
+
+    .per-day {
+        position: relative;
+        padding: 0 26px 0 0;}
+
+    .amount-to {
+        font-weight : bold;
+        font-size : 27px;
+        line-height : 39.04px;
+        letter-spacing : 1.05px;
+        color : #45549F;
+    }
+
+    .amount {
+        font-weight : bold;
+        font-size : 35px;
+        line-height : 39.04px;
+        letter-spacing : 1.05px;
+        color : #45549F;
+    }
+
+    .divider{
+        height: 2px;
+        background-color: #45549F;;
+    }
+
+    .caret{
+        margin: 0 auto;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        color: #45549F;
+    }
+
+    .per-time {
+        font-size : 16px;
+        line-height : 17.51px;
+        letter-spacing : 0.48px;
+        color : #353B57;
+        text-align: center;
+    }
+
+    /*  Center MAP */
+    .main-map {
+        width: 574px;
+        height: 314px;
+        background-position:  -1px -92px;
+        margin: 35px 0 0 0;
+    }
+
+
+    /* City & percentage table*/
+    .data-percentage {
+        padding: 0 0 0 25px;
+    }
+
+    .city-percentage {
+        padding: 0 0 12px 0;
+    }
+
+    .city {
+        font-size : 15px;
+        line-height : 17px;
+        color : #353B57;
+        width: 145px;
+    }
+
+    .percentage-bold {
+        font-size : 18px;
+        line-height : 17px;
+        letter-spacing : -0.16px;
+        color : #353B57;
+        font-weight: bold;
+    }
+
+    .percentage {
+        font-size : 16px;
+        line-height : 17px;
+        letter-spacing : -0.16px;
+        color : #353B57;
+    }
+
+
+/* About block */
+.footer-container {
+    margin: 22px 0 0 0;
+}
+
+.ico {
+    width: 55px;
+    height: 54px;
+    background-position:  -219px -1px;
+}
+
+.footer-info {
+    font-size : 16px;
+    line-height : 21px;
+    color : #353B57;
+    margin: 0  55px 30px 22px;
+    width: 797px;
+}
+
+
+

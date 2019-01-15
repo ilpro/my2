@@ -1,0 +1,10 @@
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  imagecreatefrompng(/home/politcenter/public_html/ednist.info/classes/LogoSoc440.png): failed to open stream: Нет такого файла или каталога in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 48
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 54
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 54
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  imagecopy() expects parameter 2 to be resource, boolean given in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 54
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/politcenter/public_html/ednist.info/classes/Img.class.php:48) in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 56
+[16-Nov-2014 10:18:32 Europe/Kiev] PHP Warning:  imagejpeg(): Invalid 2nd parameter, it must a filename or a stream in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 57
+[16-Nov-2014 10:20:02 Europe/Kiev] PHP Warning:  imagejpeg(): Invalid 2nd parameter, it must a filename or a stream in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 57
+[16-Nov-2014 10:20:29 Europe/Kiev] PHP Warning:  imagejpeg(): Invalid 2nd parameter, it must a filename or a stream in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 57
+[16-Nov-2014 10:22:30 Europe/Kiev] PHP Warning:  imagejpeg(): Invalid 2nd parameter, it must a filename or a stream in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 57
+[16-Nov-2014 10:22:45 Europe/Kiev] PHP Warning:  imagejpeg(): Invalid 2nd parameter, it must a filename or a stream in /home/politcenter/public_html/ednist.info/classes/Img.class.php on line 57

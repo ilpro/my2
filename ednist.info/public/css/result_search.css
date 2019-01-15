@@ -1,0 +1,34 @@
+/* RESULT SEARCH */
+.result-search {
+  width: 1130px;
+  margin: 16px auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 2px 0 2px 20px;
+  cursor: pointer; }
+  .result-search p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #372a6e; }
+
+/* NOTHING FOUND*/
+.wrapper-nothing_found {
+  width: 1130px;
+  height: 335px;
+  margin: 20px auto;
+  padding-bottom: 35px;
+  background-color: #ffffff; }
+
+.nothing-found {
+  padding: 2px 0 0 20px; }
+  .nothing-found p {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 18px; }
+
+.icon-nothing_found {
+  width: 104px;
+  margin: 100px auto;
+  font-size: 91px; }
+
+/*# sourceMappingURL=result_search.css.map */

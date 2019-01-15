@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /assets/
+Disallow: /cgi-bin/
+Disallow: /classes/
+Disallow: /config/
+Disallow: /controllers/
+Disallow: /lib/
+Disallow: /views/
+Disallow: /sql/
+Host: http://www.ednist.info/
+Sitemap: http://www.ednist.info/sitemap.xml

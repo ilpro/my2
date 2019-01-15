@@ -1,0 +1,2 @@
+<span class="keyword"
+      data-source='{"id":"<?= $source['sourceId'] ?>","sourceName":"<?= $source['sourceName'] ?>","sourceLink":"<?= $source['sourceLink'] ?>"}'><?= $source['sourceName'] ?></span>

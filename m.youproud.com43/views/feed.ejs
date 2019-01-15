@@ -1,0 +1,214 @@
+<%- include('header') %>
+<%- include('sidemenu') %>
+<div class="page-ribbon">
+
+	<div class="popular" style="display: none;">
+		<p class="title">Популярні у твоєму місті</p>
+		<div class="row-cell">
+			<div class="profile-cell">
+				<img class="avatar" src="/uploads/cabinet/287_1495540380180_thumb.jpg" alt="user" width="85" height="85">
+				<p class="nickname">ALEXX Alekseev</p>
+				<div class="follow">Стежити</div>
+				<div class="follow-amount">
+					<svg class="subscribe-ico" xmlns="http://www.w3.org/2000/svg" width="16.6" height="20" viewBox="0 0 17 20">
+						<g fill="#666">
+							<path d="M3.67 1.27c.3-.3.3-.76 0-1.05-.3-.3-.76-.3-1.05 0-3.25 3.24-3.25 8.52 0 11.76.14.15.33.22.52.22.2
+				0 .4-.07.53-.22.3-.3.3-.76 0-1.05-2.66-2.66-2.66-7 0-9.66zm0 0M14.38.22c-.3-.3-.76-.3-1.05 0-.3.3-.3.76 0
+				1.05 1.3 1.3 2 3 2 4.83 0 1.82-.7 3.54-2 4.83-.3.3-.3.76 0 1.05.14.15.33.22.52.22.2 0 .4-.07.53-.22
+				1.57-1.57 2.44-3.66 2.44-5.88s-.87-4.3-2.44-5.88zm0 0"></path>
+							<path d="M4.62 9.97c.15.15.34.22.53.22.2 0 .38-.08.53-.22.3-.3.3-.77 0-1.06-1.56-1.55-1.56-4.08 0-5.64.3-.3.3-.76
+				0-1.05-.3-.3-.77-.3-1.06 0-2.13 2.13-2.13 5.6 0 7.74zm0 0M11.32 9.97c.14.15.33.22.52.22.2 0 .4-.08.53-.22
+				1.04-1.04 1.6-2.42 1.6-3.88s-.56-2.84-1.6-3.87c-.3-.3-.76-.3-1.05 0-.3.3-.3.76 0 1.05.75.75 1.17 1.76 1.17
+				2.82s-.43 2.07-1.18 2.82c-.3.3-.3.76 0 1.05zm0 0M8.5 8c1.04 0 1.9-.85 1.9-1.9 0-1.04-.86-1.9-1.9-1.9s-1.9.85-1.9 1.9c0
+				1.05.85 1.9 1.9 1.9zm0 0M9.2 9.05c-.1-.3-.38-.52-.7-.52-.32 0-.6.2-.7.52l-3.24 9.97c-.13.4.08.82.48.94.07.03.15.04.23.04.3
+				0 .6-.2.7-.52l.4-1.2h4.26l.4 1.2c.12.4.54.6.93.48.4-.12.6-.54.48-.94L9.2 9.05zm-.7 2.64l.62
+				1.92H7.87l.63-1.92zm-1.65 5.08l.54-1.67h2.2l.54 1.68h-3.3zm0 0"></path>
+						</g>
+					</svg>
+					<div class="amount">Стежать 999999</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="writepost" style="display: block;margin-top: 0;">
+		<div class="avatar-holder">
+			<div class="user-avatar" title="">
+				<img src="<%=userPhoto%>" alt="user" style="max-width: 100%;">
+			</div>
+		</div>
+		<div placeholder="What are you thinking about?" contenteditable="true" class="writepost__input"></div>
+		<div class="controls clearfix">
+			<div id="attachments" class="pictures-holder">
+				<div id="attachment" class="template">
+					<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 100.862 100.862">
+						<rect x="0.5" y="0.5" width="99.862" height="99.862" fill="none" stroke="#666" stroke-miterlimit="10"/>
+						<circle cx="50.431" cy="50.431" r="17.437" fill="none" stroke="#666" stroke-miterlimit="10"/>
+						<line x1="39.588" y1="50.431" x2="61.275" y2="50.431" fill="none" stroke="#666" stroke-miterlimit="10"/>
+						<line x1="50.431" y1="61.275" x2="50.431" y2="39.588" fill="none" stroke="#666" stroke-miterlimit="10"/>
+					</svg>
+				</div>
+			</div id="attachments">
+			<!--<div class="soc-share">
+				<div class="soc-block">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
+						<path d="M17.3,0H2.7A2.7,2.7,0,0,0,0,2.7V17.3A2.7,2.7,0,0,0,2.7,20H9.9l.012-7.147H8.056a.438.438,0,0,1-.438-.436l-.009-2.3a.438.438,0,0,1,.438-.44H9.9V7.447a3.637,3.637,0,0,1,3.882-3.99h1.891a.438.438,0,0,1,.438.438V5.838a.438.438,0,0,1-.438.438h-1.16c-1.253,0-1.5.6-1.5,1.469V9.673h2.754a.438.438,0,0,1,.435.49l-.273,2.3a.438.438,0,0,1-.435.387H13.03L13.018,20H17.3A2.7,2.7,0,0,0,20,17.305V2.7A2.7,2.7,0,0,0,17.3,0Z" fill="#49528f"></path>
+					</svg>
+
+					<div class="check-container">
+						<input name="facebook" type="checkbox" id="crossPostFb">
+						<label for="crossPostFb">
+							<div class="clickable">
+								<i class="ico check-img"></i>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="soc-block">
+					<img src="img/instagram.png" width="40" height="40">
+					<div class="check-container">
+						<input name="instagram" type="checkbox" id="crossPostInst">
+						<label for="crossPostInst">
+							<div class="clickable">
+								<i class="ico check-img"></i>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="soc-block">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 112.197 112.197">
+						<circle cx="56.099" cy="56.098" r="56.098" fill="#55ACEE"></circle>
+						<path d="M90.46 40.316c-2.403 1.066-4.99 1.787-7.7 2.11 2.768-1.66 4.893-4.285 5.896-7.418-2.59 1.537-5.462 2.652-8.515 3.253-2.445-2.604-5.93-4.232-9.79-4.232-7.403 0-13.408 6.005-13.408 13.41 0 1.05.12 2.073.35 3.055-11.145-.56-21.026-5.897-27.64-14.012-1.154 1.98-1.816 4.286-1.816 6.743 0 4.65 2.37 8.757 5.965 11.16-2.196-.068-4.265-.67-6.072-1.678v.17c0 6.497 4.623 11.916 10.756 13.147-1.124.308-2.31.47-3.532.47-.866 0-1.705-.082-2.523-.238 1.705 5.326 6.656 9.203 12.525 9.312-4.59 3.597-10.37 5.74-16.655 5.74-1.08 0-2.15-.063-3.197-.188 5.93 3.806 12.98 6.025 20.553 6.025 24.664 0 38.152-20.432 38.152-38.153 0-.58-.013-1.16-.04-1.734 2.623-1.89 4.896-4.25 6.693-6.94z" fill="#F1F2F2"></path>
+					</svg>
+					<div class="check-container">
+						<input name="twitter" type="checkbox" id="crossPostTwit">
+						<label for="crossPostTwit">
+							<div class="clickable">
+								<i class="ico check-img"></i>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div> -->
+
+			<div class="cancel-post control-btn">Cancel</div>
+			<div class="save-post control-btn">Post</div>
+		</div>
+
+	</div>
+
+	<div class="newpost" style="display: none;">
+		<div class="post-type-holder">
+			<select class="post-type">
+				<option value="Маркет">Market</option>
+				<option value="Стрiчка">Feed</option>
+			</select>
+			<!--<div class="pth-arrow"></div>-->
+		</div>
+		<div class="photo-holder">
+			<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100.862 100.862">
+				<rect x="0.5" y="0.5" width="99.862" height="99.862" fill="none" stroke="#666" stroke-miterlimit="10"></rect>
+				<circle cx="50.431" cy="50.431" r="17.437" fill="none" stroke="#666" stroke-miterlimit="10"></circle>
+				<line x1="39.588" y1="50.431" x2="61.275" y2="50.431" fill="none" stroke="#666" stroke-miterlimit="10"></line>
+				<line x1="50.431" y1="61.275" x2="50.431" y2="39.588" fill="none" stroke="#666" stroke-miterlimit="10"></line>
+			</svg>
+		</div>
+		<div class="newpost-divider"></div>
+		<label for="title" class="hide-for-ribbon">Name</label>
+		<input type="text" id="title" class="hide-for-ribbon">
+		<div class="newpost-divider hide-for-ribbon"></div>
+		<label for="description" class="hide-for-ribbon">Description</label>
+		<textarea id="description" class="hide-for-ribbon"></textarea>
+		<div class="newpost-divider hide-for-ribbon"></div>
+		<input class="tags hide-for-ribbon" type="text" placeholder="#теги">
+		<div class="newpost-divider hide-for-ribbon"></div>
+		<div class="category-dropdown hide-for-ribbon">Catrgory</div>
+		<div class="newpost-divider hide-for-ribbon"></div>
+		<div class="price-holder hide-for-ribbon">
+			<input class="price" type="text" placeholder="Цiна">
+			<span>грн</span>
+		</div>
+		<div class="newpost-divider"></div>
+		<div class="soc-share">
+			<div class="soc-block">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20">
+					<path d="M17.3,0H2.7A2.7,2.7,0,0,0,0,2.7V17.3A2.7,2.7,0,0,0,2.7,20H9.9l.012-7.147H8.056a.438.438,0,0,1-.438-.436l-.009-2.3a.438.438,0,0,1,.438-.44H9.9V7.447a3.637,3.637,0,0,1,3.882-3.99h1.891a.438.438,0,0,1,.438.438V5.838a.438.438,0,0,1-.438.438h-1.16c-1.253,0-1.5.6-1.5,1.469V9.673h2.754a.438.438,0,0,1,.435.49l-.273,2.3a.438.438,0,0,1-.435.387H13.03L13.018,20H17.3A2.7,2.7,0,0,0,20,17.305V2.7A2.7,2.7,0,0,0,17.3,0Z"
+						  fill="#49528f"/>
+				</svg>
+				<div class="newpost-checkbox clickable">
+					<i class="ico check-img"></i>
+				</div>
+			</div>
+			<div class="soc-block">
+				<img src="img/instagram.png" width="40" height="40">
+				<div class="newpost-checkbox clickable">
+					<i class="ico check-img"></i>
+				</div>
+			</div>
+			<div class="soc-block">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 112.197 112.197">
+					<circle cx="56.099" cy="56.098" r="56.098" fill="#55ACEE"/>
+					<path d="M90.46 40.316c-2.403 1.066-4.99 1.787-7.7 2.11 2.768-1.66 4.893-4.285 5.896-7.418-2.59 1.537-5.462 2.652-8.515 3.253-2.445-2.604-5.93-4.232-9.79-4.232-7.403 0-13.408 6.005-13.408 13.41 0 1.05.12 2.073.35 3.055-11.145-.56-21.026-5.897-27.64-14.012-1.154 1.98-1.816 4.286-1.816 6.743 0 4.65 2.37 8.757 5.965 11.16-2.196-.068-4.265-.67-6.072-1.678v.17c0 6.497 4.623 11.916 10.756 13.147-1.124.308-2.31.47-3.532.47-.866 0-1.705-.082-2.523-.238 1.705 5.326 6.656 9.203 12.525 9.312-4.59 3.597-10.37 5.74-16.655 5.74-1.08 0-2.15-.063-3.197-.188 5.93 3.806 12.98 6.025 20.553 6.025 24.664 0 38.152-20.432 38.152-38.153 0-.58-.013-1.16-.04-1.734 2.623-1.89 4.896-4.25 6.693-6.94z"
+						  fill="#F1F2F2"/>
+				</svg>
+				<div class="newpost-checkbox clickable">
+					<i class="ico check-img"></i>
+				</div>
+			</div>
+			<div class="soc-block">
+				<svg class="gplus-ico" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30">
+					<path fill="#FFF" d="M0 0h30v30H0z"></path>
+					<path fill="#B85146" d="M0 0v30h30V0H0zm17.5 16.26c-.53 3.37-3.04 5.3-6.3 5.3-3.65 0-6.6-2.96-6.6-6.6
+                    0-3.67 2.96-6.63 6.6-6.63 1.78 0 3.33.63 4.46 1.72l-1.9 1.9c-.65-.64-1.53-1-2.55-1-2.14 0-3.9 1.84-3.9
+                    4 0 2.15 1.76 3.93 3.9 3.93 1.8 0 3.18-.87 3.57-2.62H11.2V13.6h6.27c.08.43.12.88.12 1.35 0 .46-.05.9-.1
+                    1.3zm7.94-.82h-2.32v2.32h-1.65v-2.32h-2.32V13.8h2.32v-2.33h1.65v2.32h2.32v1.64zm0 0"></path>
+				</svg>
+				<div class="newpost-checkbox clickable">
+					<i class="ico check-img"></i>
+				</div>
+			</div>
+		</div>
+		<div class="newpost-control">
+			<div class="newpost-btn cancel">Cancel</div>
+			<div class="newpost-btn save">Publish</div>
+		</div>
+		<div class="newpost-status hide-for-ribbon">
+			<span>Активне</span>
+			<div class="newpost-checkbox clickable">
+				<i class="ico check-img checked"></i>
+			</div>
+		</div>
+	</div>
+
+    <div class="photos-wrapper">
+        <%- include('multi-parts/userpost-template') %>
+
+	</div>
+</div>
+
+<div class="modal-wrapper">
+	<div id="croppic-modal" class="crop-modal"></div>
+</div>
+
+<div class="popup-post-wrapper modal-wrapper-style">
+	<div class="popup-post-modal modal-style">
+		<div class="popup-post-bg modal-bg-style"></div>
+		<div class="post-control modal-popup-style">
+			<div class="menu-item post-edit-option">
+				<div class="item-title">Edit</div>
+			</div>
+			<div class="menu-item post-delete-option">
+				<div class="item-title">Delete</div>
+			</div>
+			<div class="menu-item make-main-option">
+				<div class="item-title">On avatar</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- include('multi-parts/popups/claim-post-popup') %>
+<%- include('multi-parts/popups/share-popup') %>
+
+<%- include('footer-info') %>
+
+<%- include('footer') %>

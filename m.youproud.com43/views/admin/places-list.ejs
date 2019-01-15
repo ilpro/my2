@@ -1,0 +1,61 @@
+<%- include('../header') %>
+<%- include('sidemenu-admin') %>
+<div class="emails center-content page-users" style="margin-top: 50px">
+    <div class="emails-outer-wrapper">
+        <div class="emails-header">
+            <a href="/places/add" class="from">Add new place</a>
+        </div>
+        <br>
+        <div class="emails-inner-wrapper" style="text-align: center;">
+            <ul class="emails-wrapper">
+                <% places.forEach(function(row){ %>
+                <li class="single-email" data-userId="<%=row.placeId%>">
+                    <div class="single-cell">
+                        <p class="user-id">ID: <span><%= row.placeId %></span></p>
+                        <a href="/places/<%= row.placeId %>" class="user-avatar" target="_blank">
+                            <img src="<%= row.mainPhoto %>" alt="user" class="" style="max-width: 100%;">
+                        </a>
+                        <a href="/places/<%= row.placeId %>" class="user-nickname" target="_blank">
+                            <%=row.name%>
+                        </a>
+                        <div class="location" title="<%=row.city%>"><%=row.city%></div>
+                        <div class="visit" title="<%=row.address%>"><%=row.address%></div>
+                        <div class="location" title="<%=row.phone%>"><%=row.phone%></div>
+                        <div class="location" title="<%=row.email%>"><%=row.email%></div>
+                        <div class="location" title="<%=row.site%>"><%=row.site%></div>
+                        <div class="visit" title="<%=row.details%>"><%=row.details%></div>
+                        <div class="register-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+                                <path fill="#22416d" d="M684.8 378.7h139v139H685v-139zM684.8 549.2h139v139H685V549zM786
+                                50.7c0-22.3-18.3-40.7-40.6-40.7H738c-22.2 0-40.6 18.4-40.6 40.7V128H786V50.6zM515.2
+                                375h139v139h-139V375zM309 50.7c0-22.3-18.4-40.7-41-40.7h-7c-22.4 0-40.8 18.4-40.8
+                                40.7V128H309V50.6zM345.5 377h138.8v139H345.5V377zM172 722.6h138.8v139H172v-139zM175.6
+                                551h139v139h-139V551z"/>
+                                <path fill="#22416d" d="M851.8 128H786v85.7c0 22.3-18.4 40.7-40.7 40.7H738c-22.3
+                                0-40.7-18.4-40.7-40.7V128H309v85.7c0 22.3-18.4 40.7-41 40.7h-7c-22.4
+                                0-40.8-18.4-40.8-40.7V128h-72c-43.5 0-79 35.4-79 79v704c0 43.4 35.5 79 79
+                                79h526L931 729V207c-.2-43.6-35.6-79-79.2-79zm40.7 605l-155-.6c-43.6-.3-70.8
+                                28.5-70.5 71.8l.8 147h-522c-19.7 0-40.4-13-40.4-36.4V288.3l787-.3v445z"/>
+                                <path fill="#22416d" d="M345.5 547.2h138.8v139.2H345.5V547.2zM175.6 380.5h139v139h-139v-139zM515.2
+                                545.3h139v139h-139v-139zM341.6 719h139v139h-139V719z"/>
+                            </svg>
+                            <span><%=row.date%></span>
+                        </div>
+                        <div class="coins-amount">
+                            <button class="delete-user">delete</button>
+                        </div>
+                        <div class="verify-user">
+                            <a href="/models/edit/<%= row.userId %>">Edit</a>
+                        </div>
+                    </div>
+                </li>
+                <% }); %>
+            </ul>
+
+            <div id="loader" style="display: none; margin-top: 20px;">Loading...</div>
+            <button id="load-more" style="margin: 20px 0; width: 200px; height: 50px; font-weight: bold; text-transform: uppercase; background: #1c1b17; color: #fff; border: 1px solid #000; border-radius: 10px; cursor: pointer">Load more</button>
+        </div>
+    </div>
+</div>
+
+<%- include('../footer') %>

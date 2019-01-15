@@ -1,0 +1,23 @@
+#slideshow {
+    margin: 0 auto;
+    width: 640px;
+    height: 100px;
+    /*background:transparent url(../images/avatar.png) no-repeat 0 0;*/
+    position: relative;
+}
+
+#slideshow #slidesContainer {
+    margin: 0 auto;
+    width: 640px;
+    height: 150px;
+    overflow: auto; /* allow scrollbar */
+    position: relative;
+}
+
+#slideshow #slidesContainer .slide {
+    margin: 0 auto;
+    width: 640px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+    height: 150px;
+}
+
+

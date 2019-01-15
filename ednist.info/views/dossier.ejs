@@ -1,0 +1,38 @@
+<!-- DOSSIER PAGE -->
+<section>
+    <div class="wrapper-dossier_page-human">
+
+        <%- include('./dossierAlphabet') %>
+
+        <!-- ABOUT PERSON -->
+
+        <div class="about-human">
+            <div class="about-human_page">
+                <div class="photo-dossier" style="background-image: url(https://www.ednist.info/media/brand/<%= dossier.dossierId %>/main/400.jpg); background-size: cover; background-position: 0;">
+                </div>
+                <div class="short-about"><h1><%= dossier.dossierName %></h1></div>
+            </div>
+
+            <div class="human-page">
+                <article>
+                    <div class="dossier-description">
+                        <%- dossier.dossierDesc %>
+                    </div>
+
+                    <div class="foot-human_page">
+                        <div class="date-dossier">
+                            <p><%= dossier.time %> |  ДОСЬЄ</p>
+                        </div>
+                        <div class="share-dossier">
+                            <p>Поділитися:</p>
+                            <a href="#"><span class="icon-facebook"></span></a>
+                            <a href="#"><span class="icon-google-plus"></span></a>
+                            <a href="#"><span class="icon-twitter"></span></a>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

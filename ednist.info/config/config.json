@@ -1,0 +1,30 @@
+{
+  "development": {
+    "HTTP_PORT": "14000",
+    "HTTPS_PORT": "14001",
+    "DB_URI": "5.9.69.204",
+    "DB_user": "developer",
+    "DB_password": "MEkCqa2K",
+    "DB_name": "ednist",
+    "newsNumToCache": 300,
+    "cacheNewsMaxAge": 86400000,
+    "cacheNewsListMaxAge": 1800000,
+    "cacheDossierMaxAge": 86400000,
+    "cacheDossierListMaxAge": 1800000,
+    "cacheClearInterval": 172800000
+  },
+  "production": {
+    "HTTP_PORT": "14000",
+    "HTTPS_PORT": "14001",
+    "DB_URI": "5.9.69.204",
+    "DB_user": "developer",
+    "DB_password": "MEkCqa2K",
+    "DB_name": "ednist",
+    "newsNumToCache": 300,
+    "cacheNewsMaxAge": 86400000,
+    "cacheNewsListMaxAge": 1800000,
+    "cacheDossierMaxAge": 86400000,
+    "cacheDossierListMaxAge": 1800000,
+    "cacheClearInterval": 172800000
+  }
+}
